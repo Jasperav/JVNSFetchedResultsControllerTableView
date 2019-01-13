@@ -7,22 +7,22 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     private unowned let tableView: GenericUITableView<T>
     
     /// Most likely the UIViewController.view property.
-    private unowned let nothingFoundViewSuperView: UIView
+    private unowned let middleTextViewSuperView: UIView
     
-    private let nothingFoundView: NothingFoundView
+    private let middleTextView: MiddleTextView
     private let resultController:  NSFetchedResultsController<U>
     
     /// Should be an unowned reference.
     private let configure: ((_ cell: T, _ result: U) -> ())
     
     public init(tableView: GenericUITableView<T>,
-                nothingFoundViewSuperView: UIView,
-                nothingFoundView: NothingFoundView,
+                middleTextViewSuperView: UIView,
+                middleTextView: MiddleTextView,
                 resultController: NSFetchedResultsController<U>,
                 configure: @escaping ((_ cell: T, _ result: U) -> ())) {
         self.tableView = tableView
-        self.nothingFoundViewSuperView = nothingFoundViewSuperView
-        self.nothingFoundView = nothingFoundView
+        self.middleTextViewSuperView = middleTextViewSuperView
+        self.middleTextView = middleTextView
         self.resultController = resultController
         self.configure = configure
         
@@ -31,19 +31,19 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         self.resultController.delegate = self
     }
     
-    private func showNothingFoundView() {
+    private func showMiddleTextView() {
         guard resultController.fetchedObjects!.count == 0
-            && nothingFoundView.superview == nil
+            && middleTextView.superview == nil
             else { return }
         
-        nothingFoundView.fill(toSuperview: nothingFoundViewSuperView, toSafeMargins: true)
+        middleTextView.fill(toSuperview: middleTextViewSuperView, toSafeMargins: true)
         tableView.alpha = 0
     }
     
-    private func removeNothingFoundView() {
-        guard nothingFoundView.superview != nil else { return }
+    private func removeMiddleTextView() {
+        guard MiddleTextView.superview != nil else { return }
         
-        nothingFoundView.removeFromSuperview()
+        middleTextView.removeFromSuperview()
         tableView.alpha = 1
     }
     
@@ -55,10 +55,10 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         switch type {
         case .insert:
             tableView.insertRows(at: [newIndexPath!], with: .automatic)
-            removeNothingFoundView()
+            removeMiddleTextView()
         case .delete:
             tableView.deleteRows(at: [newIndexPath!], with: .automatic)
-            showNothingFoundView()
+            showMiddleTextView()
         case .move:
             tableView.deleteRows(at: [indexPath!], with: .automatic)
             tableView.insertRows(at: [newIndexPath!], with: .automatic)
