@@ -41,7 +41,7 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     }
     
     private func removeMiddleTextView() {
-        guard MiddleTextView.superview != nil else { return }
+        guard middleTextView.superview != nil else { return }
         
         middleTextView.removeFromSuperview()
         tableView.alpha = 1
