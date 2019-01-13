@@ -1,0 +1,22 @@
+{
+  "name": "JVNSFetchedResultsControllerTableView",
+  "version": "0.1.0",
+  "summary": "A short description of JVNSFetchedResultsControllerTableView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Jasper/JVNSFetchedResultsControllerTableView",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Jasper": "Jasperav@hotmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Jasper/JVNSFetchedResultsControllerTableView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JVNSFetchedResultsControllerTableView/Classes/**/*"
+}

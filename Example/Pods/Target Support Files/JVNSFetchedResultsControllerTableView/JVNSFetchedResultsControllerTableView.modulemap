@@ -1,0 +1,6 @@
+framework module JVNSFetchedResultsControllerTableView {
+  umbrella header "JVNSFetchedResultsControllerTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}

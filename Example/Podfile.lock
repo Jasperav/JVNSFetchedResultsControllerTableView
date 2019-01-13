@@ -1,0 +1,16 @@
+PODS:
+  - JVNSFetchedResultsControllerTableView (0.1.0)
+
+DEPENDENCIES:
+  - JVNSFetchedResultsControllerTableView (from `../`)
+
+EXTERNAL SOURCES:
+  JVNSFetchedResultsControllerTableView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JVNSFetchedResultsControllerTableView: abbc19b24f6787324ac153e0c703a5d316c41835
+
+PODFILE CHECKSUM: 28c110e502795914f99a813838feef315f279f7b
+
+COCOAPODS: 1.6.0.beta.1
