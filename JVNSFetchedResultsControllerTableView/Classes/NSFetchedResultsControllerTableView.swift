@@ -3,7 +3,7 @@ import CoreData
 import JVMiddleTextView
 import JVGenericTableView
 
-open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate {
+open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate, UITableViewDataSource {
     private unowned let tableView: GenericUITableView<T>
     
     /// Most likely the UIViewController.view property.
@@ -17,22 +17,29 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     
     public init(tableView: GenericUITableView<T>,
                 middleTextViewSuperView: UIView,
-                middleTextView: MiddleTextView,
+                middleTextViewText: String,
                 resultController: NSFetchedResultsController<U>,
                 configure: @escaping ((_ cell: T, _ result: U) -> ())) {
         self.tableView = tableView
         self.middleTextViewSuperView = middleTextViewSuperView
-        self.middleTextView = middleTextView
+        self.middleTextView = MiddleTextView(text: middleTextViewText)
         self.resultController = resultController
         self.configure = configure
         
         super.init()
         
-        self.resultController.delegate = self
+        tableView.tableFooterView = UIView()
+        
+        tableView.dataSource = self
+        resultController.delegate = self
+        
+        showMiddleTextView()
+        
+        try! resultController.performFetch() // Error handling.
     }
     
     private func showMiddleTextView() {
-        guard resultController.fetchedObjects!.count == 0
+        guard (resultController.fetchedObjects?.count ?? 0) == 0
             && middleTextView.superview == nil
             else { return }
         
@@ -75,4 +82,19 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return resultController.fetchedObjects!.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = self.tableView.getCell(indexPath: indexPath)
+        let object = resultController.object(at: indexPath)
+        
+        configure(cell, object)
+        
+        return cell
+    }
+    
+    
 }
