@@ -33,25 +33,30 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         tableView.dataSource = self
         resultController.delegate = self
         
-        showMiddleTextView()
-        
         try! resultController.performFetch() // Error handling.
+        
+        guard resultController.fetchedObjects!.count != 0 else {
+            showMiddleTextView()
+            
+            return
+        }
+        
+        removeMiddleTextView()
     }
     
     private func showMiddleTextView() {
-        guard (resultController.fetchedObjects?.count ?? 0) == 0
+        guard resultController.fetchedObjects!.count == 0
             && middleTextView.superview == nil
             else { return }
         
         middleTextView.fill(toSuperview: middleTextViewSuperView, toSafeMargins: true)
-        tableView.alpha = 0
     }
     
     private func removeMiddleTextView() {
         guard middleTextView.superview != nil else { return }
         
         middleTextView.removeFromSuperview()
-        tableView.alpha = 1
+        tableView.isHidden = false
     }
     
     public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
