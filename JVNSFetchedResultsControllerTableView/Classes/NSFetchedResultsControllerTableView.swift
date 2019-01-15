@@ -56,7 +56,6 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         guard middleTextView.superview != nil else { return }
         
         middleTextView.removeFromSuperview()
-        tableView.isHidden = false
     }
     
     public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
