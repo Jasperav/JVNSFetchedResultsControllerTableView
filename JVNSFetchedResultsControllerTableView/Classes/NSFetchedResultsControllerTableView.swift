@@ -68,7 +68,7 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
             tableView.insertRows(at: [newIndexPath!], with: .automatic)
             removeMiddleTextView()
         case .delete:
-            tableView.deleteRows(at: [newIndexPath!], with: .automatic)
+            tableView.deleteRows(at: [indexPath!], with: .automatic)
             showMiddleTextView()
         case .move:
             tableView.deleteRows(at: [indexPath!], with: .automatic)
