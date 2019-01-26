@@ -66,7 +66,7 @@
 		62D0C39817ABE14D5946463A178D508E /* JVCAGradientLayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0538B9972D9F7CCDE789C1747EF01 /* JVCAGradientLayerExtensions.swift */; };
 		648671D01B3C3C04DCEDBF6173C8323F /* JVFontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4148FF9D8A6695327697521112685AF5 /* JVFontUtils.swift */; };
 		6990A1E3D500E606D752F27E72BC9972 /* RestartableManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B830EC12A5E2B259AE3D46DF3F9201CE /* RestartableManageable.swift */; };
-		69A06B8721FB9253001EF644 /* NSFetchedResultsControllerTableViewContentOffsetYMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A06B8521FB924B001EF644 /* NSFetchedResultsControllerTableViewContentOffsetYMemory.swift */; };
+		69A06B8721FB9253001EF644 /* NSFetchedResultsControllerTableViewAutoScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A06B8521FB924B001EF644 /* NSFetchedResultsControllerTableViewAutoScroll.swift */; };
 		69A06B8921FB948B001EF644 /* ControllerRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A06B8821FB948B001EF644 /* ControllerRefresh.swift */; };
 		6A1D25432F6F08F9FFB5B735E959F394 /* JVContentType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46F311BF032B59AE2DC92B833B570E /* JVContentType.framework */; };
 		6A547C96188E6B8247942EEF9883CDEB /* JVGradientLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634874E323D5D1FF5BFAA8F3E8382165 /* JVGradientLayer.framework */; };
@@ -460,7 +460,7 @@
 		66225B4D64BA78D3204E7D138AAB3622 /* NSFetchedResultsControllerTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableView.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableView.swift; sourceTree = "<group>"; };
 		668A76F3DBBF66A157F8FBF114C8D033 /* JVFontUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFontUtils-umbrella.h"; sourceTree = "<group>"; };
 		68A1A606296109579C3C8813B7FC0197 /* JVConstraintEdges.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVConstraintEdges.xcconfig; sourceTree = "<group>"; };
-		69A06B8521FB924B001EF644 /* NSFetchedResultsControllerTableViewContentOffsetYMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableViewContentOffsetYMemory.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableViewContentOffsetYMemory.swift; sourceTree = "<group>"; };
+		69A06B8521FB924B001EF644 /* NSFetchedResultsControllerTableViewAutoScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableViewAutoScroll.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableViewAutoScroll.swift; sourceTree = "<group>"; };
 		69A06B8821FB948B001EF644 /* ControllerRefresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ControllerRefresh.swift; path = JVNSFetchedResultsControllerTableView/Classes/ControllerRefresh.swift; sourceTree = "<group>"; };
 		6A4AD1D9187837575D06861430239320 /* JVGradientLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVGradientLayer.swift; path = JVGradientLayer/Classes/JVGradientLayer.swift; sourceTree = "<group>"; };
 		6B3D8E49FBEDBD2D7A66A781C4E57353 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -803,7 +803,7 @@
 			isa = PBXGroup;
 			children = (
 				66225B4D64BA78D3204E7D138AAB3622 /* NSFetchedResultsControllerTableView.swift */,
-				69A06B8521FB924B001EF644 /* NSFetchedResultsControllerTableViewContentOffsetYMemory.swift */,
+				69A06B8521FB924B001EF644 /* NSFetchedResultsControllerTableViewAutoScroll.swift */,
 				63CA519F1852483B43D0BB181F3D9972 /* Pod */,
 				21ED313931A08E35E8F716EDCF3DEC2D /* Support Files */,
 				69A06B8821FB948B001EF644 /* ControllerRefresh.swift */,
@@ -2017,7 +2017,7 @@
 			files = (
 				E3531682E9A33AD4B4DC42F54F2157AB /* JVNSFetchedResultsControllerTableView-dummy.m in Sources */,
 				69A06B8921FB948B001EF644 /* ControllerRefresh.swift in Sources */,
-				69A06B8721FB9253001EF644 /* NSFetchedResultsControllerTableViewContentOffsetYMemory.swift in Sources */,
+				69A06B8721FB9253001EF644 /* NSFetchedResultsControllerTableViewAutoScroll.swift in Sources */,
 				4713F1DB0C77177D4FCE3333B8015775 /* NSFetchedResultsControllerTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
