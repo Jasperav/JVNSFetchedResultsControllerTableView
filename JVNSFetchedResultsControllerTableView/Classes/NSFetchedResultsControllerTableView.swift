@@ -115,5 +115,8 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         return cell
     }
     
+    public func getObject(indexPath: IndexPath) -> U {
+        return resultController.object(at: indexPath)
+    }
     
 }
