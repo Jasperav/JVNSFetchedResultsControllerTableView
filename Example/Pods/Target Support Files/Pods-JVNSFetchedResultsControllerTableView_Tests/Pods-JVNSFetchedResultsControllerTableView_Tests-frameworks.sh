@@ -148,10 +148,38 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVCAGradientLayerExtensions/JVCAGradientLayerExtensions.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVCAShapeLayerExtensions/JVCAShapeLayerExtensions.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVConstraintEdges/JVConstraintEdges.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVContentType/JVContentType.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVCurrentDevice/JVCurrentDevice.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVFontUtils/JVFontUtils.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVGenericTableView/JVGenericTableView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVGradientLayer/JVGradientLayer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVMiddleTextView/JVMiddleTextView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVRestartable/JVRestartable.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVShapeHalfMoon/JVShapeHalfMoon.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVView/JVView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVCAGradientLayerExtensions/JVCAGradientLayerExtensions.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVCAShapeLayerExtensions/JVCAShapeLayerExtensions.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVConstraintEdges/JVConstraintEdges.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVContentType/JVContentType.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVCurrentDevice/JVCurrentDevice.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVFontUtils/JVFontUtils.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVGenericTableView/JVGenericTableView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVGradientLayer/JVGradientLayer.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVMiddleTextView/JVMiddleTextView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVRestartable/JVRestartable.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVShapeHalfMoon/JVShapeHalfMoon.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/JVView/JVView.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -1,0 +1,6 @@
+framework module JVShapeHalfMoon {
+  umbrella header "JVShapeHalfMoon-umbrella.h"
+
+  export *
+  module * { export * }
+}

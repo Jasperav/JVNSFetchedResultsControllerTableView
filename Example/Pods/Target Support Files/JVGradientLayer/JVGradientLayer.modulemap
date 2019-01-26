@@ -1,0 +1,6 @@
+framework module JVGradientLayer {
+  umbrella header "JVGradientLayer-umbrella.h"
+
+  export *
+  module * { export * }
+}

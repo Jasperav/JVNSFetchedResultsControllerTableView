@@ -1,0 +1,6 @@
+framework module JVMiddleTextView {
+  umbrella header "JVMiddleTextView-umbrella.h"
+
+  export *
+  module * { export * }
+}

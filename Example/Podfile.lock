@@ -1,16 +1,81 @@
 PODS:
-  - JVNSFetchedResultsControllerTableView (0.1.0)
+  - DeviceKit (1.11.0)
+  - JVCAGradientLayerExtensions (0.1.0)
+  - JVCAShapeLayerExtensions (0.1.0)
+  - JVConstraintEdges (0.2.2):
+    - JVContentType
+    - JVSizeable
+  - JVContentType (0.1.7)
+  - JVCurrentDevice (0.1.1):
+    - DeviceKit
+  - JVFontUtils (0.1.0)
+  - JVGenericTableView (0.1.1)
+  - JVGradientLayer (0.1.2):
+    - JVCAGradientLayerExtensions
+    - JVContentType
+  - JVMiddleTextView (0.1.2):
+    - JVConstraintEdges
+    - JVView
+  - JVNSFetchedResultsControllerTableView (0.1.7):
+    - JVGenericTableView
+    - JVMiddleTextView
+  - JVRestartable (0.1.6)
+  - JVShapeHalfMoon (0.1.1):
+    - JVCAShapeLayerExtensions
+    - JVContentType
+  - JVSizeable (0.1.0)
+  - JVView (0.1.9):
+    - JVConstraintEdges
+    - JVContentType
+    - JVCurrentDevice
+    - JVFontUtils
+    - JVGradientLayer
+    - JVRestartable
+    - JVShapeHalfMoon
+    - JVSizeable
 
 DEPENDENCIES:
   - JVNSFetchedResultsControllerTableView (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DeviceKit
+  "https://Jasperav@bitbucket.org/Jasperav/specs.git":
+    - JVCAGradientLayerExtensions
+    - JVCAShapeLayerExtensions
+    - JVConstraintEdges
+    - JVContentType
+    - JVCurrentDevice
+    - JVFontUtils
+    - JVGenericTableView
+    - JVGradientLayer
+    - JVMiddleTextView
+    - JVRestartable
+    - JVShapeHalfMoon
+    - JVSizeable
+    - JVView
 
 EXTERNAL SOURCES:
   JVNSFetchedResultsControllerTableView:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JVNSFetchedResultsControllerTableView: abbc19b24f6787324ac153e0c703a5d316c41835
+  DeviceKit: a3a86f8dddbe1317a9a243cdf9646858bf135dce
+  JVCAGradientLayerExtensions: fb18d708faf5adef4cb26e9c50f84c536865d18c
+  JVCAShapeLayerExtensions: efbb4e48e07c68d434fa3a2c5623e787326303e4
+  JVConstraintEdges: 1a594996cb53977875766280fcd67e7ae2a1acc8
+  JVContentType: bf617302d029baefccde48eb79edc7634fd15f55
+  JVCurrentDevice: 36aaad85ebb56d935de74e7b3bc47c852899dc39
+  JVFontUtils: e390fee698f64889fafa4ccabd25084bdbf136b7
+  JVGenericTableView: e46f595cbe1b918efaaecbec04f574ee81db23c6
+  JVGradientLayer: 34e464b6f5624370653606c94229e81dcf1282ea
+  JVMiddleTextView: 05ffd924e0bdb7413f17ba26d62ee9b05e13739c
+  JVNSFetchedResultsControllerTableView: 31e22ed9dd614322fa050a56781b08494c5f1223
+  JVRestartable: 008c47ae1b36de3bf2cdad2299852231b5749f2a
+  JVShapeHalfMoon: 31444957e7a226e800003afaee2634c8ba8129a1
+  JVSizeable: 1252e6b1bed411b3fc34f6119d8eaf6803876cd3
+  JVView: ffe411d1b5080257200c3b878d1be6c87aabad79
 
-PODFILE CHECKSUM: 28c110e502795914f99a813838feef315f279f7b
+PODFILE CHECKSUM: f5f741f7e08ce3f595fea43cc6e591898482ef78
 
 COCOAPODS: 1.6.0.beta.1

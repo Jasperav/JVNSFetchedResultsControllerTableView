@@ -1,0 +1,6 @@
+framework module JVView {
+  umbrella header "JVView-umbrella.h"
+
+  export *
+  module * { export * }
+}

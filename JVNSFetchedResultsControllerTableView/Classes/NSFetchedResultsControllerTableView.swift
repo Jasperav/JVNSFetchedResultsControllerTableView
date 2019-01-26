@@ -4,16 +4,19 @@ import JVMiddleTextView
 import JVGenericTableView
 
 open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate, UITableViewDataSource {
-    private unowned let tableView: GenericUITableView<T>
+    unowned let tableView: GenericUITableView<T>
     
     /// Most likely the UIViewController.view property.
     private unowned let middleTextViewSuperView: UIView
     
     private let middleTextView: MiddleTextView
-    private let resultController:  NSFetchedResultsController<U>
+    let resultController: NSFetchedResultsController<U>
     
     /// Should be an unowned reference.
     private let configure: ((_ cell: T, _ result: U) -> ())
+    
+    /// Subclasses may use those values to determine the correct content offset y when the controller did refresh.
+    var controllerRefresh = ControllerRefresh()
     
     public init(tableView: GenericUITableView<T>,
                 middleTextViewSuperView: UIView,
@@ -59,27 +62,39 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     }
     
     public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        controllerRefresh = ControllerRefresh()
+        controllerRefresh.fetchedResultsBeforeUpdate = controller.fetchedObjects!.count
+        
         tableView.beginUpdates()
     }
     
     public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:
+            controllerRefresh.didInsertRowAtBottom = newIndexPath!.row == tableView.numberOfRows(inSection: 0)
             tableView.insertRows(at: [newIndexPath!], with: .automatic)
             removeMiddleTextView()
+            
+            controllerRefresh.didInsert = true
         case .delete:
             tableView.deleteRows(at: [indexPath!], with: .automatic)
             showMiddleTextView()
+            
+            controllerRefresh.didDelete = true
         case .move:
             tableView.deleteRows(at: [indexPath!], with: .automatic)
             tableView.insertRows(at: [newIndexPath!], with: .automatic)
+            
+            controllerRefresh.didMove = true
         case .update:
             let cell = tableView.dequeueReusableCell(withIdentifier: tableView.cellIdentifier, for: newIndexPath!) as! T
             let result = resultController.object(at: newIndexPath!)
             
             configure(cell, result)
             
-            tableView.reloadRows(at: [indexPath!], with: .automatic)
+            tableView.moveRow(at: indexPath!, to: newIndexPath!)
+            
+            controllerRefresh.didUpdate = true
         }
     }
     

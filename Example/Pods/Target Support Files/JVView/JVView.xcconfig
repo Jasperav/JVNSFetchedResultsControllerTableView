@@ -1,0 +1,11 @@
+CONFIGURATION_BUILD_DIR = ${PODS_CONFIGURATION_BUILD_DIR}/JVView
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/DeviceKit" "${PODS_CONFIGURATION_BUILD_DIR}/JVCAGradientLayerExtensions" "${PODS_CONFIGURATION_BUILD_DIR}/JVCAShapeLayerExtensions" "${PODS_CONFIGURATION_BUILD_DIR}/JVConstraintEdges" "${PODS_CONFIGURATION_BUILD_DIR}/JVContentType" "${PODS_CONFIGURATION_BUILD_DIR}/JVCurrentDevice" "${PODS_CONFIGURATION_BUILD_DIR}/JVFontUtils" "${PODS_CONFIGURATION_BUILD_DIR}/JVGradientLayer" "${PODS_CONFIGURATION_BUILD_DIR}/JVRestartable" "${PODS_CONFIGURATION_BUILD_DIR}/JVShapeHalfMoon" "${PODS_CONFIGURATION_BUILD_DIR}/JVSizeable"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+OTHER_LDFLAGS = $(inherited) -framework "DeviceKit" -framework "JVCAGradientLayerExtensions" -framework "JVCAShapeLayerExtensions" -framework "JVConstraintEdges" -framework "JVContentType" -framework "JVCurrentDevice" -framework "JVFontUtils" -framework "JVGradientLayer" -framework "JVRestartable" -framework "JVShapeHalfMoon" -framework "JVSizeable"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}
+PODS_TARGET_SRCROOT = ${PODS_ROOT}/JVView
+PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.${PRODUCT_NAME:rfc1034identifier}
+SKIP_INSTALL = YES

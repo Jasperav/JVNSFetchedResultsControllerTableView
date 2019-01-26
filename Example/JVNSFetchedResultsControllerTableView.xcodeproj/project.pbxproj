@@ -175,13 +175,41 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JVNSFetchedResultsControllerTableView_Tests/Pods-JVNSFetchedResultsControllerTableView_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
+				"${BUILT_PRODUCTS_DIR}/JVCAGradientLayerExtensions/JVCAGradientLayerExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/JVCAShapeLayerExtensions/JVCAShapeLayerExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/JVConstraintEdges/JVConstraintEdges.framework",
+				"${BUILT_PRODUCTS_DIR}/JVContentType/JVContentType.framework",
+				"${BUILT_PRODUCTS_DIR}/JVCurrentDevice/JVCurrentDevice.framework",
+				"${BUILT_PRODUCTS_DIR}/JVFontUtils/JVFontUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/JVGenericTableView/JVGenericTableView.framework",
+				"${BUILT_PRODUCTS_DIR}/JVGradientLayer/JVGradientLayer.framework",
+				"${BUILT_PRODUCTS_DIR}/JVMiddleTextView/JVMiddleTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView.framework",
+				"${BUILT_PRODUCTS_DIR}/JVRestartable/JVRestartable.framework",
+				"${BUILT_PRODUCTS_DIR}/JVShapeHalfMoon/JVShapeHalfMoon.framework",
+				"${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework",
+				"${BUILT_PRODUCTS_DIR}/JVView/JVView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVCAGradientLayerExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVCAShapeLayerExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVConstraintEdges.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVContentType.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVCurrentDevice.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVFontUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVGenericTableView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVGradientLayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVMiddleTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVNSFetchedResultsControllerTableView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVRestartable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVShapeHalfMoon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVSizeable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -269,11 +297,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -315,10 +344,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -340,7 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JVNSFetchedResultsControllerTableView_Example.app/JVNSFetchedResultsControllerTableView_Example";
 			};
 			name = Debug;
@@ -358,7 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JVNSFetchedResultsControllerTableView_Example.app/JVNSFetchedResultsControllerTableView_Example";
 			};
 			name = Release;

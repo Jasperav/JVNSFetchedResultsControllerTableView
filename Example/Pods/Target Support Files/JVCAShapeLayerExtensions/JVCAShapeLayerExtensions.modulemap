@@ -1,0 +1,6 @@
+framework module JVCAShapeLayerExtensions {
+  umbrella header "JVCAShapeLayerExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}

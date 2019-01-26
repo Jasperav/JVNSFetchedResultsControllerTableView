@@ -1,0 +1,6 @@
+framework module JVCAGradientLayerExtensions {
+  umbrella header "JVCAGradientLayerExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}

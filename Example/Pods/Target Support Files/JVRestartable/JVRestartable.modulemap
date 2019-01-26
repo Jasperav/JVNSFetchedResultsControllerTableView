@@ -1,0 +1,6 @@
+framework module JVRestartable {
+  umbrella header "JVRestartable-umbrella.h"
+
+  export *
+  module * { export * }
+}

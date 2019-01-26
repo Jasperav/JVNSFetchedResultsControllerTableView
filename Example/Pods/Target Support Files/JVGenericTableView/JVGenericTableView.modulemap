@@ -1,0 +1,6 @@
+framework module JVGenericTableView {
+  umbrella header "JVGenericTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}
