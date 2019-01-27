@@ -7,8 +7,16 @@ import JVGenericTableView
 /// row has inserted, moved or deleted.
 open class NSFetchedResultsControllerTableViewAutoScroll<T: UITableViewCell, U: NSFetchRequestResult>: NSFetchedResultsControllerTableView<T, U> {
     
+    private let autoScrollWhenRowsAtBottomAreInserted: Bool
+    
+    public init(tableView: GenericUITableView<T>, middleTextViewSuperView: UIView, middleTextViewText: String, resultController: NSFetchedResultsController<U>, autoScrollWhenRowsAtBottomAreInserted: Bool = true, configure: @escaping ((_ cell: T, _ result: U) -> ())) {
+        self.autoScrollWhenRowsAtBottomAreInserted = autoScrollWhenRowsAtBottomAreInserted
+        
+        super.init(tableView: tableView, middleTextViewSuperView: middleTextViewSuperView, middleTextViewText: middleTextViewText, resultController: resultController, configure: configure)
+    }
+    
     public override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        guard !controllerRefresh.didOnlyInsertRowsAtBottom() else {
+        if autoScrollWhenRowsAtBottomAreInserted && controllerRefresh.didOnlyInsertRowsAtBottom() {
             autoScrollTableView()
             
             return

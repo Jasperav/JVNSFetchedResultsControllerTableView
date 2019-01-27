@@ -4,19 +4,17 @@ import JVMiddleTextView
 import JVGenericTableView
 
 open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate, UITableViewDataSource {
-    unowned let tableView: GenericUITableView<T>
-    
-    /// Most likely the UIViewController.view property.
-    private unowned let middleTextViewSuperView: UIView
-    
-    private let middleTextView: MiddleTextView
-    let resultController: NSFetchedResultsController<U>
-    
-    /// Should be an unowned reference.
-    private let configure: ((_ cell: T, _ result: U) -> ())
     
     /// Subclasses may use those values to determine the correct content offset y when the controller did refresh.
     var controllerRefresh = ControllerRefresh()
+    let resultController: NSFetchedResultsController<U>
+    unowned let tableView: GenericUITableView<T>
+    
+    /// Should be an unowned reference.
+    private let configure: ((_ cell: T, _ result: U) -> ())
+    private let middleTextView: MiddleTextView
+    /// Most likely the UIViewController.view property.
+    private unowned let middleTextViewSuperView: UIView
     
     public init(tableView: GenericUITableView<T>,
                 middleTextViewSuperView: UIView,
