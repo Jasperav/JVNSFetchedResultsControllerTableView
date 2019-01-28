@@ -1,5 +1,6 @@
 import CoreData
 import JVGenericTableView
+import JVMiddleTextView
 
 /// Changes the contentoffsety when a row has changed conditionally. https://stackoverflow.com/questions/54281617/bounce-occurs-when-changing-rows
 /// It doesn't animate row changes.
@@ -9,15 +10,16 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: UITableViewCell, U: 
     
     private let autoScrollWhenRowsAtBottomAreInserted: Bool
     
-    public init(tableView: GenericUITableView<T>, middleTextViewSuperView: UIView, middleTextViewText: String, resultController: NSFetchedResultsController<U>, autoScrollWhenRowsAtBottomAreInserted: Bool = true, configure: @escaping ((_ cell: T, _ result: U) -> ())) {
+    public init(tableView: GenericTableView<T>, view: UIView, middleTextViewConfig: MiddleTextView.SingleParameterInitializableObject, resultController: NSFetchedResultsController<U>, mode: Mode, autoScrollWhenRowsAtBottomAreInserted: Bool = true, configure: @escaping ((_ cell: T, _ result: U) -> ())) {
         self.autoScrollWhenRowsAtBottomAreInserted = autoScrollWhenRowsAtBottomAreInserted
         
-        super.init(tableView: tableView, middleTextViewSuperView: middleTextViewSuperView, middleTextViewText: middleTextViewText, resultController: resultController, configure: configure)
+        super.init(tableView: tableView, view: view, middleTextViewConfig: middleTextViewConfig, resultController: resultController, mode: mode, configure: configure)
     }
     
     public override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         if autoScrollWhenRowsAtBottomAreInserted && controllerRefresh.didOnlyInsertRowsAtBottom() {
             autoScrollTableView()
+            updateMiddleTextView()
             
             return
         }
@@ -30,6 +32,8 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: UITableViewCell, U: 
             
             return
         }
+        
+        updateMiddleTextView()
         
         // It isn't allowed to combine an insert with any other row change.
         // This is because this class doesn't animate row changes.

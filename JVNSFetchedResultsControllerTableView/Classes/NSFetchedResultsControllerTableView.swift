@@ -8,55 +8,53 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     /// Subclasses may use those values to determine the correct content offset y when the controller did refresh.
     var controllerRefresh = ControllerRefresh()
     let resultController: NSFetchedResultsController<U>
-    unowned let tableView: GenericUITableView<T>
+    unowned let tableView: GenericTableView<T>
     
     /// Should be an unowned reference.
     private let configure: ((_ cell: T, _ result: U) -> ())
-    private let middleTextView: MiddleTextView
-    /// Most likely the UIViewController.view property.
-    private unowned let middleTextViewSuperView: UIView
+
+    /// Viewcontrollers view property
+    private unowned let view: UIView
+    private unowned let middleTextView: MiddleTextView
     
-    public init(tableView: GenericUITableView<T>,
-                middleTextViewSuperView: UIView,
-                middleTextViewText: String,
+    /// Determine if we add a load cell at the bottom of the tableView
+    private let isBatchable: Bool
+    
+    private let middleTextViewPresenter: MiddleTextViewPresenter
+    
+    private var mode: Mode
+    
+    public init(tableView: GenericTableView<T>,
+                view: UIView,
+                middleTextViewConfig: MiddleTextView.SingleParameterInitializableObject,
                 resultController: NSFetchedResultsController<U>,
+                mode: Mode,
                 configure: @escaping ((_ cell: T, _ result: U) -> ())) {
         self.tableView = tableView
-        self.middleTextViewSuperView = middleTextViewSuperView
-        self.middleTextView = MiddleTextView(text: middleTextViewText)
         self.resultController = resultController
         self.configure = configure
+        self.isBatchable = middleTextViewConfig.startMode?.queryingText != nil
+        self.mode = mode
+        self.view = view
+        
+        let middleTextView = MiddleTextView(from: middleTextViewConfig)
+        
+        middleTextView.fill(toSuperview: view, toSafeMargins: true)
+        view.sendSubviewToBack(middleTextView)
+        
+        self.middleTextView = middleTextView
+        self.middleTextViewPresenter = MiddleTextViewPresenter(view: view, middleTextView: middleTextView)
         
         super.init()
         
         tableView.tableFooterView = UIView()
-        
         tableView.dataSource = self
+        
         resultController.delegate = self
         
         try! resultController.performFetch() // Error handling.
         
-        guard resultController.fetchedObjects!.count != 0 else {
-            showMiddleTextView()
-            
-            return
-        }
-        
-        removeMiddleTextView()
-    }
-    
-    private func showMiddleTextView() {
-        guard resultController.fetchedObjects!.count == 0
-            && middleTextView.superview == nil
-            else { return }
-        
-        middleTextView.fill(toSuperview: middleTextViewSuperView, toSafeMargins: true)
-    }
-    
-    private func removeMiddleTextView() {
-        guard middleTextView.superview != nil else { return }
-        
-        middleTextView.removeFromSuperview()
+        updateMiddleTextView()
     }
     
     public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -71,12 +69,10 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         case .insert:
             controllerRefresh.didInsertRowAtBottom = newIndexPath!.row == tableView.numberOfRows(inSection: 0)
             tableView.insertRows(at: [newIndexPath!], with: .automatic)
-            removeMiddleTextView()
             
             controllerRefresh.didInsert = true
         case .delete:
             tableView.deleteRows(at: [indexPath!], with: .automatic)
-            showMiddleTextView()
             
             controllerRefresh.didDelete = true
         case .move:
@@ -85,7 +81,7 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
             
             controllerRefresh.didMove = true
         case .update:
-            let cell = tableView.dequeueReusableCell(withIdentifier: tableView.cellIdentifier, for: newIndexPath!) as! T
+            let cell = tableView.getCell(indexPath: newIndexPath!)
             let result = resultController.object(at: newIndexPath!)
             
             configure(cell, result)
@@ -98,13 +94,39 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     
     public func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
+        
+        updateMiddleTextView()
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultController.fetchedObjects!.count
+        switch mode {
+        case .notQuerying:
+            return resultController.fetchedObjects!.count
+        case .querying:
+            return resultController.fetchedObjects!.count + 1
+        }
+        
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch mode {
+        case .notQuerying:
+            return createCell(indexPath: indexPath)
+        case .querying:
+            if (indexPath.row - 1) == tableView.numberOfRows(inSection: indexPath.section) {
+                return self.tableView.configureLoadCell(indexPath: indexPath)
+            } else {
+                return createCell(indexPath: indexPath)
+            }
+        }
+
+    }
+    
+    public func getObject(indexPath: IndexPath) -> U {
+        return resultController.object(at: indexPath)
+    }
+    
+    private func createCell(indexPath: IndexPath) -> T {
         let cell = self.tableView.getCell(indexPath: indexPath)
         let object = resultController.object(at: indexPath)
         
@@ -113,8 +135,10 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         return cell
     }
     
-    public func getObject(indexPath: IndexPath) -> U {
-        return resultController.object(at: indexPath)
+    func updateMiddleTextView() {
+        let hasMinimalOneRow = resultController.fetchedObjects!.count > 0
+        
+        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: mode as! NSFetchedResultsControllerTableView<UITableViewCell, NSFetchRequestResult>.Mode)
     }
     
 }

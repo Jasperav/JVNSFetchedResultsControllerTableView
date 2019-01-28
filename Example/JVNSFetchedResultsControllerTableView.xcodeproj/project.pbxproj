@@ -188,6 +188,7 @@
 				"${BUILT_PRODUCTS_DIR}/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView.framework",
 				"${BUILT_PRODUCTS_DIR}/JVRestartable/JVRestartable.framework",
 				"${BUILT_PRODUCTS_DIR}/JVShapeHalfMoon/JVShapeHalfMoon.framework",
+				"${BUILT_PRODUCTS_DIR}/JVSingleParameterInitializable/JVSingleParameterInitializable.framework",
 				"${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework",
 				"${BUILT_PRODUCTS_DIR}/JVView/JVView.framework",
 			);
@@ -208,6 +209,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVNSFetchedResultsControllerTableView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVRestartable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVShapeHalfMoon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVSingleParameterInitializable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVSizeable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JVView.framework",
 			);

@@ -1,0 +1,6 @@
+framework module JVSingleParameterInitializable {
+  umbrella header "JVSingleParameterInitializable-umbrella.h"
+
+  export *
+  module * { export * }
+}
