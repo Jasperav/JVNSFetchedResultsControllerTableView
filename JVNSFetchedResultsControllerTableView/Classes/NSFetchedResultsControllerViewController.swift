@@ -3,7 +3,7 @@ import JVGenericTableView
 import JVMiddleTextView
 import CoreData
 
-open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFetchRequestResult>: UIViewController {
+open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFetchRequestResult>: UIViewController, UITableViewDelegate {
     
     public let tableView: GenericTableView<T>
     
@@ -14,6 +14,8 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
         
         super.init(nibName: nil, bundle: nil)
         
+        tableView.delegate = self
+        
         nsFetchedResultsControllerTableView = NSFetchedResultsControllerTableView(tableView: tableView, view: view, middleTextView: middleTextView, resultController: type(of: self).createResultsController(), mode: tableViewMode, configure: configure)
     }
     
@@ -23,5 +25,15 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
     
     open class func createResultsController() -> NSFetchedResultsController<U> {
         fatalError()
+    }
+    
+    open func tapped(object: U) {
+        fatalError()
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let object = nsFetchedResultsControllerTableView.getObject(indexPath: indexPath)
+        
+        tapped(object: object)
     }
 }
