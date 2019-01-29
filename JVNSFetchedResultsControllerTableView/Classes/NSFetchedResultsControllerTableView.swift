@@ -31,16 +31,20 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         self.view = view
         self.middleTextView = middleTextView
         self.middleTextViewPresenter = MiddleTextViewPresenter(view: view, middleTextView: middleTextView)
-        
-        middleTextView.fill(toSuperview: view, toSafeMargins: true)
-        view.sendSubviewToBack(middleTextView)
-        
+
         super.init()
         
-        tableView.tableFooterView = UIView()
-        tableView.dataSource = self
+        assert(tableView.superview == nil)
+        assert(middleTextView.superview == nil)
+        assert(view.subviews.count == 0)
         
         resultController.delegate = self
+        
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        tableView.fill(toSuperview: view, toSafeMargins: true)
+        
+        middleTextView.fill(toSuperview: view, toSafeMargins: true)
         
         try! resultController.performFetch() // Error handling.
         
