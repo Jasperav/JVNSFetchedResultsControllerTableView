@@ -126,6 +126,26 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         return resultController.object(at: indexPath)
     }
     
+    public func change(mode: Mode) {
+        guard self.mode != mode else { return }
+        
+        self.mode = mode
+        let indexPath = IndexPath(row: tableView.numberOfRows(inSection: 0), section: 0)
+        
+        switch mode {
+        case .notQuerying:
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        case .querying:
+            tableView.insertRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    func updateMiddleTextView() {
+        let hasMinimalOneRow = resultController.fetchedObjects!.count > 0
+        
+        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: mode as! NSFetchedResultsControllerTableView<UITableViewCell, NSFetchRequestResult>.Mode)
+    }
+    
     private func createCell(indexPath: IndexPath) -> T {
         let cell = self.tableView.getCell(indexPath: indexPath)
         let object = resultController.object(at: indexPath)
@@ -133,12 +153,6 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         configure(cell, object)
         
         return cell
-    }
-    
-    func updateMiddleTextView() {
-        let hasMinimalOneRow = resultController.fetchedObjects!.count > 0
-        
-        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: mode as! NSFetchedResultsControllerTableView<UITableViewCell, NSFetchRequestResult>.Mode)
     }
     
 }
