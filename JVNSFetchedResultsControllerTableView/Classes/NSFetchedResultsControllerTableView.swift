@@ -10,19 +10,13 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     let resultController: NSFetchedResultsController<U>
     unowned let tableView: GenericTableView<T>
     
-    /// Should be an unowned reference.
+    private var mode: Mode
     private let configure: ((_ cell: T, _ result: U) -> ())
+    private let middleTextViewPresenter: MiddleTextViewPresenter
 
     /// Viewcontrollers view property
     private unowned let view: UIView
     private unowned let middleTextView: MiddleTextView
-    
-    /// Determine if we add a load cell at the bottom of the tableView
-    private let isBatchable: Bool
-    
-    private let middleTextViewPresenter: MiddleTextViewPresenter
-    
-    private var mode: Mode
     
     public init(tableView: GenericTableView<T>,
                 view: UIView,
@@ -33,7 +27,6 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         self.tableView = tableView
         self.resultController = resultController
         self.configure = configure
-        self.isBatchable = middleTextViewConfig.startMode?.queryingText != nil
         self.mode = mode
         self.view = view
         
