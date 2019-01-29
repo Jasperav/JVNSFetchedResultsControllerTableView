@@ -9,8 +9,11 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
     
     private var nsFetchedResultsControllerTableView: NSFetchedResultsControllerTableView<T, U>!
     
-    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableView<T, U>.Mode, configure: @escaping ((_ cell: T, _ result: U) -> ())) {
+    public var tapped: ((U) -> ())!
+    
+    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableView<T, U>.Mode, configure: @escaping ((_ cell: T, _ result: U) -> ()), tapped: ((U) -> ())? = nil) {
         tableView = GenericTableView(cellType: T.self, style: .plain, rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight)
+        self.tapped = tapped
         
         super.init(nibName: nil, bundle: nil)
         
@@ -27,13 +30,9 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
         fatalError()
     }
     
-    open func tapped(object: U) {
-        fatalError()
-    }
-    
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let object = nsFetchedResultsControllerTableView.getObject(indexPath: indexPath)
         
-        tapped(object: object)
+        tapped!(object)
     }
 }
