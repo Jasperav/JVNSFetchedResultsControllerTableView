@@ -20,7 +20,7 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     
     public init(tableView: GenericTableView<T>,
                 view: UIView,
-                middleTextViewConfig: MiddleTextView.SingleParameterInitializableObject,
+                middleTextView: MiddleTextView,
                 resultController: NSFetchedResultsController<U>,
                 mode: Mode,
                 configure: @escaping ((_ cell: T, _ result: U) -> ())) {
@@ -29,14 +29,11 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         self.configure = configure
         self.mode = mode
         self.view = view
-        
-        let middleTextView = MiddleTextView(from: middleTextViewConfig)
+        self.middleTextView = middleTextView
+        self.middleTextViewPresenter = MiddleTextViewPresenter(view: view, middleTextView: middleTextView)
         
         middleTextView.fill(toSuperview: view, toSafeMargins: true)
         view.sendSubviewToBack(middleTextView)
-        
-        self.middleTextView = middleTextView
-        self.middleTextViewPresenter = MiddleTextViewPresenter(view: view, middleTextView: middleTextView)
         
         super.init()
         

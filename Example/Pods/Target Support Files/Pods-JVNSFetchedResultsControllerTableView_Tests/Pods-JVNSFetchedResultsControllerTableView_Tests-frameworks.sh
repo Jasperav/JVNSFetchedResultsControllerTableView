@@ -161,7 +161,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVRestartable/JVRestartable.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVShapeHalfMoon/JVShapeHalfMoon.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/JVSingleParameterInitializable/JVSingleParameterInitializable.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVView/JVView.framework"
 fi
@@ -179,7 +178,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVRestartable/JVRestartable.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVShapeHalfMoon/JVShapeHalfMoon.framework"
-  install_framework "${BUILT_PRODUCTS_DIR}/JVSingleParameterInitializable/JVSingleParameterInitializable.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVSizeable/JVSizeable.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JVView/JVView.framework"
 fi

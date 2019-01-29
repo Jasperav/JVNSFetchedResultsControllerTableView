@@ -10,10 +10,10 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: UITableViewCell, U: 
     
     private let autoScrollWhenRowsAtBottomAreInserted: Bool
     
-    public init(tableView: GenericTableView<T>, view: UIView, middleTextViewConfig: MiddleTextView.SingleParameterInitializableObject, resultController: NSFetchedResultsController<U>, mode: Mode, autoScrollWhenRowsAtBottomAreInserted: Bool = true, configure: @escaping ((_ cell: T, _ result: U) -> ())) {
+    public init(tableView: GenericTableView<T>, view: UIView, middleTextView: MiddleTextView, resultController: NSFetchedResultsController<U>, mode: Mode, autoScrollWhenRowsAtBottomAreInserted: Bool = true, configure: @escaping ((_ cell: T, _ result: U) -> ())) {
         self.autoScrollWhenRowsAtBottomAreInserted = autoScrollWhenRowsAtBottomAreInserted
         
-        super.init(tableView: tableView, view: view, middleTextViewConfig: middleTextViewConfig, resultController: resultController, mode: mode, configure: configure)
+        super.init(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController, mode: mode, configure: configure)
     }
     
     public override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

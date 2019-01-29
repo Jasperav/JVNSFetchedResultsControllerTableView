@@ -1,9 +1,8 @@
 import UIKit
 import JVView
 import JVConstraintEdges
-import JVSingleParameterInitializable
 
-open class MiddleTextView: UIView, SingleParameterInitializable {
+open class MiddleTextView: UIView {
     
     /// Content type for the label
     public static var contentType: ContentTypeJVLabelText!
@@ -30,10 +29,6 @@ open class MiddleTextView: UIView, SingleParameterInitializable {
         }
         
         change(mode: startMode?.startMode ?? .notQuerying)
-    }
-    
-    public required convenience init(from: SingleParameterInitializer) {
-        self.init(notQueryingText: from.notQueryingText, startMode: from.startMode)
     }
     
     public required init?(coder aDecoder: NSCoder) {

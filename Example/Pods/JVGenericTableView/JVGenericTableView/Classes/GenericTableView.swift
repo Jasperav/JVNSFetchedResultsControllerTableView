@@ -7,13 +7,21 @@ open class GenericTableView<T: UITableViewCell>: UITableView {
     private let cellType: T.Type
     
     public init(cellType: T.Type,
-                style: UITableView.Style) {
+                style: UITableView.Style,
+                rowHeight: CGFloat,
+                estimatedRowHeight: CGFloat) {
         self.cellType = cellType
         
         super.init(frame: .zero, style: style)
         
         register(cellType, forCellReuseIdentifier: cellIdentifier)
         register(LoadCell.self, forCellReuseIdentifier: loadCellIdentifier)
+        
+        self.rowHeight = rowHeight
+        self.estimatedRowHeight = estimatedRowHeight
+        
+        // Always set a estimated row height.
+        assert(estimatedRowHeight != UITableView.automaticDimension)
     }
     
     public required init?(coder aDecoder: NSCoder) {
