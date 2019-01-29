@@ -21,7 +21,7 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
         fatalError("init(coder:) has not been implemented")
     }
     
-    public class func createResultsController() -> NSFetchedResultsController<U> {
+    open class func createResultsController() -> NSFetchedResultsController<U> {
         fatalError()
     }
 }
