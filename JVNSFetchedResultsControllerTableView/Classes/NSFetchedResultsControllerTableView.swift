@@ -5,13 +5,16 @@ import JVGenericTableView
 
 open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate, UITableViewDataSource {
     
+    /// 'var' because sometimes we need 'self' available in the super.init.
+    /// The user can than later on set the configuration.
+    public var configure: ((_ cell: T, _ result: U) -> ())!
+    
     /// Subclasses may use those values to determine the correct content offset y when the controller did refresh.
     var controllerRefresh = ControllerRefresh()
     let resultController: NSFetchedResultsController<U>
     unowned let tableView: GenericTableView<T>
     
     private var mode: Mode
-    private let configure: ((_ cell: T, _ result: U) -> ())
     private let middleTextViewPresenter: MiddleTextViewPresenter
 
     /// Viewcontrollers view property
@@ -23,7 +26,7 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
                 middleTextView: MiddleTextView,
                 resultController: NSFetchedResultsController<U>,
                 mode: Mode,
-                configure: @escaping ((_ cell: T, _ result: U) -> ())) {
+                configure: ((_ cell: T, _ result: U) -> ())?) {
         self.tableView = tableView
         self.resultController = resultController
         self.configure = configure
