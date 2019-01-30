@@ -5,11 +5,9 @@ import CoreData
 
 open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFetchRequestResult>: UIViewController, UITableViewDelegate {
     
-    public let tableView: GenericTableView<T>
-    
-    private var nsFetchedResultsControllerTableView: NSFetchedResultsControllerTableView<T, U>!
-    
     public var tapped: ((U) -> ())!
+    public let tableView: GenericTableView<T>
+    public private (set) var nsFetchedResultsControllerTableView: NSFetchedResultsControllerTableView<T, U>!
     
     public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableView<T, U>.Mode, configure: @escaping ((_ cell: T, _ result: U) -> ()), tapped: ((U) -> ())? = nil) {
         tableView = GenericTableView(cellType: T.self, style: .plain, rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight)
