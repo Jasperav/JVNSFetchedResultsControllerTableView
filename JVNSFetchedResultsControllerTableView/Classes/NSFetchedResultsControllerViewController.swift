@@ -9,7 +9,7 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
     public let tableView: GenericTableView<T>
     public private (set) var nsFetchedResultsControllerTableView: NSFetchedResultsControllerTableView<T, U>!
     
-    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableView<T, U>.Mode, configure: @escaping ((_ cell: T, _ result: U) -> ()), tapped: ((U) -> ())? = nil) {
+    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableView<T, U>.Mode, configure: ((_ cell: T, _ result: U) -> ())?, tapped: ((U) -> ())? = nil) {
         tableView = GenericTableView(cellType: T.self, style: .plain, rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight)
         self.tapped = tapped
         
