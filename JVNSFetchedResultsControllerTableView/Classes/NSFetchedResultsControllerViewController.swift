@@ -38,7 +38,7 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
 }
 
 
-open class NSFetchedResultsControllerViewControllerAutoScoll<T: UITableViewCell, U: NSFetchRequestResult> : NSFetchedResultsControllerViewController<T, U, NSFetchedResultsControllerTableViewAutoScroll<T, U>> {
+open class NSFetchedResultsControllerViewControllerAutoScoll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult> : NSFetchedResultsControllerViewController<T, U, NSFetchedResultsControllerTableViewAutoScroll<T, U>> {
     public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableView<T, U>.Mode, autoScrollWhenRowsAtBottomAreInserted: Bool, configure: ((_ cell: T, _ result: U) -> ())?, tapped: ((U) -> ())? = nil) {
         super.init(rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight, middleTextView: middleTextView, tableViewMode: tableViewMode, configure: configure, tapped: tapped)
         
@@ -50,7 +50,7 @@ open class NSFetchedResultsControllerViewControllerAutoScoll<T: UITableViewCell,
     }
 }
 
-open class NSFetchedResultsControllerViewControllerNonScroll<T: UITableViewCell, U: NSFetchRequestResult> : NSFetchedResultsControllerViewController<T, U, NSFetchedResultsControllerTableView<T, U>> {
+open class NSFetchedResultsControllerViewControllerNonScroll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult> : NSFetchedResultsControllerViewController<T, U, NSFetchedResultsControllerTableView<T, U>> {
     
     public override init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableView<T, U>.Mode, configure: ((_ cell: T, _ result: U) -> ())?, tapped: ((U) -> ())? = nil) {
         super.init(rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight, middleTextView: middleTextView, tableViewMode: tableViewMode, configure: configure, tapped: tapped)

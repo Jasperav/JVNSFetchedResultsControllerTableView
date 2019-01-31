@@ -6,7 +6,7 @@ import JVMiddleTextView
 /// It doesn't animate row changes.
 /// This class ensures that the tableview stays in the same position when a new
 /// row has inserted, moved or deleted.
-open class NSFetchedResultsControllerTableViewAutoScroll<T: UITableViewCell, U: NSFetchRequestResult>: NSFetchedResultsControllerTableView<T, U> {
+open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult>: NSFetchedResultsControllerTableView<T, U> {
     
     private let autoScrollWhenRowsAtBottomAreInserted: Bool
     

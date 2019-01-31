@@ -3,7 +3,7 @@ import CoreData
 import JVMiddleTextView
 import JVGenericTableView
 
-open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate, UITableViewDataSource {
+open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult>: NSObject, NSFetchedResultsControllerDelegate, UITableViewDataSource {
     
     /// 'var' because sometimes we need 'self' available in the super.init.
     /// The user can than later on set the configuration.
@@ -36,6 +36,12 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
         self.middleTextViewPresenter = MiddleTextViewPresenter(view: view, middleTextView: middleTextView)
 
         super.init()
+        
+        if self.configure == nil {
+            self.configure = { (cell, object) in
+                cell.configure(fetchRequestResult: object)
+            }
+        }
         
         assert(tableView.superview == nil)
         assert(middleTextView.superview == nil)
@@ -140,7 +146,7 @@ open class NSFetchedResultsControllerTableView<T: UITableViewCell, U: NSFetchReq
     func updateMiddleTextView() {
         let hasMinimalOneRow = resultController.fetchedObjects!.count > 0
         
-        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: mode as! NSFetchedResultsControllerTableView<UITableViewCell, NSFetchRequestResult>.Mode)
+        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: mode as! NSFetchedResultsControllerTableView<ConfigurableTableViewCell<U>, U>.Mode)
     }
     
     private func createCell(indexPath: IndexPath) -> T {

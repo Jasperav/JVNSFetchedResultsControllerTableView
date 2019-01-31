@@ -67,6 +67,7 @@
 		682005892C4DEF6D6E82914C31EF5D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		69131A62B5E903BDE2D4685800138C0F /* JVGenericTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61886564059CB39F23FD54D5FB3D8D63 /* JVGenericTableView.framework */; };
 		69C4F7902200DC7C00494DCC /* NSFetchedResultsControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C4F78F2200DC7C00494DCC /* NSFetchedResultsControllerViewController.swift */; };
+		69C4F794220387D800494DCC /* ConfigurableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C4F793220387D800494DCC /* ConfigurableTableViewCell.swift */; };
 		6A1D25432F6F08F9FFB5B735E959F394 /* JVContentType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46F311BF032B59AE2DC92B833B570E /* JVContentType.framework */; };
 		6AE9A4A0321CF2ED9A595E911CF9EF34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		6CF2CDFA854E99323EFEB85BD7E9F1AC /* GenericTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60963F613F233A60AE989D6153ADEE13 /* GenericTableView.swift */; };
@@ -484,6 +485,7 @@
 		6824D143AA0DD5945AAFFA797C58EC23 /* ContentTypeStarLabelCounter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabelCounter.swift; path = JVView/Classes/ContentTypeStarLabelCounter.swift; sourceTree = "<group>"; };
 		68909802DB1BAD64F3734E5788887582 /* JVGradientLayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVGradientLayer.xcconfig; sourceTree = "<group>"; };
 		69C4F78F2200DC7C00494DCC /* NSFetchedResultsControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerViewController.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerViewController.swift; sourceTree = "<group>"; };
+		69C4F793220387D800494DCC /* ConfigurableTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfigurableTableViewCell.swift; path = JVNSFetchedResultsControllerTableView/Classes/ConfigurableTableViewCell.swift; sourceTree = "<group>"; };
 		6E09F52572F7B05A7E753B2102C457EA /* NSFetchedResultsControllerTableViewAutoScroll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableViewAutoScroll.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableViewAutoScroll.swift; sourceTree = "<group>"; };
 		6F1ADAE5E705AFF635E77747A15FC6B3 /* BatchTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatchTableView.swift; path = JVNSFetchedResultsControllerTableView/Classes/BatchTableView.swift; sourceTree = "<group>"; };
 		71509C6C867629A38BA65A39B9865EEF /* JVRestartable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVRestartable-prefix.pch"; sourceTree = "<group>"; };
@@ -1202,6 +1204,7 @@
 				F88690162D7601FDF41A01A8B814F240 /* Pod */,
 				BE591FD2D413308317A540CA8DEA154B /* Support Files */,
 				69C4F78F2200DC7C00494DCC /* NSFetchedResultsControllerViewController.swift */,
+				69C4F793220387D800494DCC /* ConfigurableTableViewCell.swift */,
 			);
 			name = JVNSFetchedResultsControllerTableView;
 			path = ../..;
@@ -1934,6 +1937,7 @@
 				6E783BDECB425E286F6EFC07EB6AA181 /* MiddleTextViewPresenter.swift in Sources */,
 				5562733E46C6CF1C1475A0EE366251C9 /* Mode.swift in Sources */,
 				29E76D00141DA602EB658B4F317D5B94 /* NSFetchedResultsControllerTableView.swift in Sources */,
+				69C4F794220387D800494DCC /* ConfigurableTableViewCell.swift in Sources */,
 				5E95E23659905F9B4D47002B298321AD /* NSFetchedResultsControllerTableViewAutoScroll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
