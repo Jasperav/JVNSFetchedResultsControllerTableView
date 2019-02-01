@@ -11,7 +11,7 @@ struct MiddleTextViewPresenter {
         self.middleTextView = middleTextView
     }
     
-    func updateMiddleTextView<U: NSFetchRequestResult>(hasMinimalOneRow: Bool, mode: NSFetchedResultsControllerTableView<ConfigurableTableViewCell<U>, U>.Mode) {
+    func updateMiddleTextView<U: NSFetchedResultsControllerTableView<ConfigurableTableViewCell<T>, T>, T: NSFetchRequestResult>(hasMinimalOneRow: Bool, mode: U.Mode) {
         if middleTextView.isHidden && hasMinimalOneRow {
             removeMiddleTextView()
         } else if !middleTextView.isHidden && !hasMinimalOneRow {
@@ -19,7 +19,7 @@ struct MiddleTextViewPresenter {
         }
     }
     
-    private func showMiddleTextView<U: NSFetchRequestResult>(mode: NSFetchedResultsControllerTableView<ConfigurableTableViewCell<U>, U>.Mode) {
+    private func showMiddleTextView<U: NSFetchedResultsControllerTableView<ConfigurableTableViewCell<T>, T>, T: NSFetchRequestResult>(mode: U.Mode) {
         middleTextView.isHidden = false
         
         view.bringSubviewToFront(middleTextView)

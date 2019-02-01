@@ -39,6 +39,7 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
         
         if self.configure == nil {
             self.configure = { (cell, object) in
+
                 cell.configure(fetchRequestResult: object)
             }
         }
