@@ -48,15 +48,16 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
         assert(middleTextView.superview == nil)
         assert(view.subviews.count == 0)
         
-        resultController.delegate = self
-        
-        tableView.dataSource = self
-        tableView.tableFooterView = UIView()
         tableView.fill(toSuperview: view, toSafeMargins: true)
-        
         middleTextView.fill(toSuperview: view, toSafeMargins: true)
         
+        resultController.delegate = self
+        
         try! resultController.performFetch() // Error handling.
+        
+        // The delegate of the tableview needs to be after the fetch have been performed.
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
         
         updateMiddleTextView()
     }
