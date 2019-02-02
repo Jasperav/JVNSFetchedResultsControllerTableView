@@ -32,6 +32,14 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
         tapped!(object)
     }
     
+    public func change(sortDescription: NSSortDescriptor) {
+        nsFetchedResultsControllerTableView.resultController.fetchRequest.sortDescriptors = [sortDescription]
+        
+        try! nsFetchedResultsControllerTableView.resultController.performFetch()
+        
+        tableView.reloadData()
+    }
+    
     func createResultControllerDynamic() -> NSFetchedResultsController<U> {
         return type(of: self).createResultsController()
     }
