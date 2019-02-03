@@ -5,24 +5,37 @@ import CoreData
 struct MiddleTextViewPresenter {
     private unowned let view: UIView
     private unowned let middleTextView: MiddleTextView
+    private unowned let tableView: UITableView
     
-    init(view: UIView, middleTextView: MiddleTextView) {
+    init(view: UIView, middleTextView: MiddleTextView, tableView: UITableView) {
         self.view = view
         self.middleTextView = middleTextView
+        self.tableView = tableView
+    }
+    
+    func setup(hasMinimalOneRow: Bool) {
+        if hasMinimalOneRow {
+            removeMiddleTextView()
+        } else {
+            middleTextView.isHidden = false
+            tableView.isHidden = true
+        }
     }
     
     func updateMiddleTextView(hasMinimalOneRow: Bool, mode: NSFetchedResultsControllerTableViewMode) {
-        if middleTextView.isHidden && hasMinimalOneRow {
+        let hasZeroRows = !hasMinimalOneRow
+        let middleTextViewIsShown = !middleTextView.isHidden
+        
+        if middleTextViewIsShown && hasMinimalOneRow {
             removeMiddleTextView()
-        } else if !middleTextView.isHidden && !hasMinimalOneRow {
+        } else if middleTextView.isHidden && hasZeroRows {
             showMiddleTextView(mode: mode)
         }
     }
     
     private func showMiddleTextView(mode: NSFetchedResultsControllerTableViewMode) {
         middleTextView.isHidden = false
-        
-        view.bringSubviewToFront(middleTextView)
+        tableView.isHidden = true
         
         switch mode {
         case .notQuerying:
@@ -34,7 +47,6 @@ struct MiddleTextViewPresenter {
     
     private func removeMiddleTextView() {
         middleTextView.isHidden = true
-        
-        view.sendSubviewToBack(middleTextView)
+        tableView.isHidden = false
     }
 }

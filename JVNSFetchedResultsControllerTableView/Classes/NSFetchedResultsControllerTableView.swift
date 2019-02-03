@@ -12,10 +12,8 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
     /// Subclasses may use those values to determine the correct content offset y when the controller did refresh.
     var controllerRefresh = ControllerRefresh()
     let resultController: NSFetchedResultsController<U>
+    let middleTextViewPresenter: MiddleTextViewPresenter
     unowned let tableView: GenericTableView<T>
-    
-    private var mode: NSFetchedResultsControllerTableViewMode
-    private let middleTextViewPresenter: MiddleTextViewPresenter
 
     /// Viewcontrollers view property
     private unowned let view: UIView
@@ -25,31 +23,32 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
                 view: UIView,
                 middleTextView: MiddleTextView,
                 resultController: NSFetchedResultsController<U>,
-                mode: NSFetchedResultsControllerTableViewMode,
                 configure: ((_ cell: T, _ result: U) -> ())?) {
         self.tableView = tableView
         self.resultController = resultController
         self.configure = configure
-        self.mode = mode
         self.view = view
         self.middleTextView = middleTextView
-        self.middleTextViewPresenter = MiddleTextViewPresenter(view: view, middleTextView: middleTextView)
+        self.middleTextViewPresenter = MiddleTextViewPresenter(view: view, middleTextView: middleTextView, tableView: tableView)
 
         super.init()
         
         if self.configure == nil {
             self.configure = { (cell, object) in
-
                 cell.configure(fetchRequestResult: object)
             }
         }
         
+        assert((type(of: self) == NSFetchedResultsControllerTableView.self) ? !middleTextView.isQueryable : true)
         assert(tableView.superview == nil)
         assert(middleTextView.superview == nil)
         assert(view.subviews.count == 0)
         
-        tableView.fill(toSuperview: view, toSafeMargins: true)
         middleTextView.fill(toSuperview: view, toSafeMargins: true)
+        tableView.fill(toSuperview: view, toSafeMargins: true)
+        
+        // Setting the initial state to isHidden makes it easier for the middleTextViewPresenter
+        middleTextView.isHidden = true
         
         resultController.delegate = self
         
@@ -59,7 +58,7 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         
-        updateMiddleTextView()
+        middleTextViewPresenter.setup(hasMinimalOneRow: resultController.fetchedObjects!.count > 0)
     }
     
     public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -104,54 +103,24 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch mode {
-        case .notQuerying:
-            return resultController.fetchedObjects!.count
-        case .querying:
-            return resultController.fetchedObjects!.count + 1
-        }
-        
+        return resultController.fetchedObjects!.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch mode {
-        case .notQuerying:
-            return createCell(indexPath: indexPath)
-        case .querying:
-            if (indexPath.row - 1) == tableView.numberOfRows(inSection: indexPath.section) {
-                return self.tableView.configureLoadCell(indexPath: indexPath)
-            } else {
-                return createCell(indexPath: indexPath)
-            }
-        }
-
+        return createCell(indexPath: indexPath)
     }
     
     public func getObject(indexPath: IndexPath) -> U {
         return resultController.object(at: indexPath)
     }
     
-    public func change(mode: NSFetchedResultsControllerTableViewMode) {
-        guard self.mode != mode else { return }
-        
-        self.mode = mode
-        let indexPath = IndexPath(row: tableView.numberOfRows(inSection: 0), section: 0)
-        
-        switch mode {
-        case .notQuerying:
-            tableView.deleteRows(at: [indexPath], with: .automatic)
-        case .querying:
-            tableView.insertRows(at: [indexPath], with: .automatic)
-        }
-    }
-    
     func updateMiddleTextView() {
         let hasMinimalOneRow = resultController.fetchedObjects!.count > 0
 
-        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: mode)
+        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: .notQuerying)
     }
     
-    private func createCell(indexPath: IndexPath) -> T {
+    func createCell(indexPath: IndexPath) -> T {
         let cell = self.tableView.getCell(indexPath: indexPath)
         let object = resultController.object(at: indexPath)
         

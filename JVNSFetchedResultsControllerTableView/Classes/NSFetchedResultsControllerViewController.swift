@@ -47,23 +47,10 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
 
 
 open class NSFetchedResultsControllerViewControllerAutoScoll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult> : NSFetchedResultsControllerViewController<T, U, NSFetchedResultsControllerTableViewAutoScroll<T, U>> {
-    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableViewMode, autoScrollWhenRowsAtBottomAreInserted: Bool, configure: ((_ cell: T, _ result: U) -> ())?, resultController: NSFetchedResultsController<U>? = nil, tapped: ((U) -> ())? = nil) {
+    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableViewMode, autoScrollWhenRowsAtBottomAreInserted: Bool, loadPositionOffset: NSFetchedResultsControllerTableViewLoadCellOffset? = nil, configure: ((_ cell: T, _ result: U) -> ())?, resultController: NSFetchedResultsController<U>? = nil, tapped: ((U) -> ())? = nil) {
         super.init(rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight, middleTextView: middleTextView, tableViewMode: tableViewMode, configure: configure, tapped: tapped)
         
-        nsFetchedResultsControllerTableView = NSFetchedResultsControllerTableViewAutoScroll(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController ?? createResultControllerDynamic(), mode: tableViewMode, autoScrollWhenRowsAtBottomAreInserted: autoScrollWhenRowsAtBottomAreInserted, configure: configure)
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
-
-open class NSFetchedResultsControllerViewControllerNonScroll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult> : NSFetchedResultsControllerViewController<T, U, NSFetchedResultsControllerTableView<T, U>> {
-    
-    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableViewMode, configure: ((_ cell: T, _ result: U) -> ())?, resultController: NSFetchedResultsController<U>? = nil, tapped: ((U) -> ())? = nil) {
-        super.init(rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight, middleTextView: middleTextView, tableViewMode: tableViewMode, configure: configure, tapped: tapped)
-        
-        nsFetchedResultsControllerTableView = NSFetchedResultsControllerTableView(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController ?? createResultControllerDynamic(), mode: tableViewMode, configure: configure)
+        nsFetchedResultsControllerTableView = NSFetchedResultsControllerTableViewAutoScroll(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController ?? createResultControllerDynamic(), mode: tableViewMode, loadPositionOffset: loadPositionOffset, autoScrollWhenRowsAtBottomAreInserted: autoScrollWhenRowsAtBottomAreInserted, configure: configure)
     }
     
     public required init?(coder aDecoder: NSCoder) {

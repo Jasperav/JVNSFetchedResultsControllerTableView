@@ -6,14 +6,16 @@ import JVMiddleTextView
 /// It doesn't animate row changes.
 /// This class ensures that the tableview stays in the same position when a new
 /// row has inserted, moved or deleted.
-open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult>: NSFetchedResultsControllerTableView<T, U> {
+open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult>: NSFetchedResultsControllerTableViewLoadable<T, U> {
     
     private let autoScrollWhenRowsAtBottomAreInserted: Bool
     
-    public init(tableView: GenericTableView<T>, view: UIView, middleTextView: MiddleTextView, resultController: NSFetchedResultsController<U>, mode: NSFetchedResultsControllerTableViewMode, autoScrollWhenRowsAtBottomAreInserted: Bool = true, configure: ((_ cell: T, _ result: U) -> ())?) {
+    public init(tableView: GenericTableView<T>, view: UIView, middleTextView: MiddleTextView, resultController: NSFetchedResultsController<U>, mode: NSFetchedResultsControllerTableViewMode, loadPositionOffset: NSFetchedResultsControllerTableViewLoadCellOffset? = nil, autoScrollWhenRowsAtBottomAreInserted: Bool = true, configure: ((_ cell: T, _ result: U) -> ())?) {
         self.autoScrollWhenRowsAtBottomAreInserted = autoScrollWhenRowsAtBottomAreInserted
         
-        super.init(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController, mode: mode, configure: configure)
+        super.init(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController, mode: mode, loadPositionOffset: loadPositionOffset, configure: configure)
+        
+        assert(loadPositionOffset == nil ? true : loadPositionOffset!.scrollView === tableView)
     }
     
     public override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
