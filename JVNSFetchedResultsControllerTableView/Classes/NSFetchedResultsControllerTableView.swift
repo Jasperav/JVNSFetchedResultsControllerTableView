@@ -14,7 +14,7 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
     let resultController: NSFetchedResultsController<U>
     unowned let tableView: GenericTableView<T>
     
-    private var mode: Mode
+    private var mode: NSFetchedResultsControllerTableViewMode
     private let middleTextViewPresenter: MiddleTextViewPresenter
 
     /// Viewcontrollers view property
@@ -25,7 +25,7 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
                 view: UIView,
                 middleTextView: MiddleTextView,
                 resultController: NSFetchedResultsController<U>,
-                mode: Mode,
+                mode: NSFetchedResultsControllerTableViewMode,
                 configure: ((_ cell: T, _ result: U) -> ())?) {
         self.tableView = tableView
         self.resultController = resultController
@@ -131,7 +131,7 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
         return resultController.object(at: indexPath)
     }
     
-    public func change(mode: Mode) {
+    public func change(mode: NSFetchedResultsControllerTableViewMode) {
         guard self.mode != mode else { return }
         
         self.mode = mode
@@ -147,8 +147,8 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
     
     func updateMiddleTextView() {
         let hasMinimalOneRow = resultController.fetchedObjects!.count > 0
-        
-        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: mode as! NSFetchedResultsControllerTableView<ConfigurableTableViewCell<U>, U>.Mode)
+
+        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: mode)
     }
     
     private func createCell(indexPath: IndexPath) -> T {

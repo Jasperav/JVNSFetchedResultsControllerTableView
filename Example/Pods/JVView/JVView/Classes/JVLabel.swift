@@ -27,8 +27,10 @@ open class JVLabel: UILabel, Sizeable {
         }
     }
     
-    public init(contentType: ContentTypeJVLabel) {
+    public init(contentType: ContentTypeJVLabel, text: String? = nil) {
         super.init(frame: CGRect.zero)
+        
+        self.text = text
         
         self.contentType = contentType
         setContentType()
