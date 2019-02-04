@@ -10,12 +10,12 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableVie
     
     private let autoScrollWhenRowsAtBottomAreInserted: Bool
     
-    public init(tableView: GenericTableView<T>, view: UIView, middleTextView: MiddleTextView, resultController: NSFetchedResultsController<U>, mode: NSFetchedResultsControllerTableViewMode, loadPositionOffset: LoadCellOffset? = nil, autoScrollWhenRowsAtBottomAreInserted: Bool = true, configure: ((_ cell: T, _ result: U) -> ())?) {
+    public init(tableView: GenericTableView<T>, view: UIView, middleTextView: MiddleTextView, resultController: NSFetchedResultsController<U>, mode: NSFetchedResultsControllerTableViewMode, loadPositionOffset: NSFetchedResultsControllerTableViewLoadCellOffset? = nil, autoScrollWhenRowsAtBottomAreInserted: Bool = true, configure: ((_ cell: T, _ result: U) -> ())?) {
         self.autoScrollWhenRowsAtBottomAreInserted = autoScrollWhenRowsAtBottomAreInserted
         
         super.init(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController, mode: mode, loadPositionOffset: loadPositionOffset, configure: configure)
         
-        assert(mode == .notQuerying ? middleTextView.)
+        assert(loadPositionOffset == nil ? true : loadPositionOffset!.scrollView === tableView)
     }
     
     public override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
@@ -63,15 +63,14 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableVie
     /// Auto scrolls the tableview to the most bottom cell if the user is fully seeing the
     /// most bottom cell before the update.
     private func autoScrollTableView() {
-        let cellAtBottomRect = tableView.rectForRow(at: IndexPath(row: tableView.numberOfRows(inSection: 0) - 1, section: 0))
+        let cellAtBottomRect = tableView.rectForRow(at: IndexPath(row: controllerRefresh.fetchedResultsBeforeUpdate, section: 0))
         let cellAtBottomIsFullyVisible = tableView.bounds.contains(cellAtBottomRect)
         
         tableView.endUpdates()
         
         guard cellAtBottomIsFullyVisible else { return }
         
-        // TODO: Animated should be conditionally
-        tableView.scrollToRow(at: IndexPath(row: tableView.numberOfRows(inSection: 0) - 1, section: 0), at: .bottom, animated: true)
+        tableView.scrollToRow(at: IndexPath(row: resultController.fetchedObjects!.count - 1, section: 0), at: .bottom, animated: true)
     }
     
     private func tableViewIsScrolled() -> Bool {

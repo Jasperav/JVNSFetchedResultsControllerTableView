@@ -2,7 +2,6 @@ import JVMiddleTextView
 import UIKit
 import CoreData
 
-/// Handles the 
 struct MiddleTextViewPresenter {
     private unowned let view: UIView
     private unowned let middleTextView: MiddleTextView

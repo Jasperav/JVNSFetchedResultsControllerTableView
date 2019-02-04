@@ -43,17 +43,11 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
     func createResultControllerDynamic() -> NSFetchedResultsController<U> {
         return type(of: self).createResultsController()
     }
-    
-    // This is needed else it won't be called on the subclasses.
-    // This is a bug...
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-    }
 }
 
 
-open class NSFetchedResultsControllerViewControllerAutoScoll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult>: NSFetchedResultsControllerViewController<T, U, NSFetchedResultsControllerTableViewAutoScroll<T, U>> {
-    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableViewMode, autoScrollWhenRowsAtBottomAreInserted: Bool, loadPositionOffset: LoadCellOffset? = nil, configure: ((_ cell: T, _ result: U) -> ())?, resultController: NSFetchedResultsController<U>? = nil, tapped: ((U) -> ())? = nil) {
+open class NSFetchedResultsControllerViewControllerAutoScoll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult> : NSFetchedResultsControllerViewController<T, U, NSFetchedResultsControllerTableViewAutoScroll<T, U>> {
+    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableViewMode, autoScrollWhenRowsAtBottomAreInserted: Bool, loadPositionOffset: NSFetchedResultsControllerTableViewLoadCellOffset? = nil, configure: ((_ cell: T, _ result: U) -> ())?, resultController: NSFetchedResultsController<U>? = nil, tapped: ((U) -> ())? = nil) {
         super.init(rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight, middleTextView: middleTextView, tableViewMode: tableViewMode, configure: configure, tapped: tapped)
         
         nsFetchedResultsControllerTableView = NSFetchedResultsControllerTableViewAutoScroll(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController ?? createResultControllerDynamic(), mode: tableViewMode, loadPositionOffset: loadPositionOffset, autoScrollWhenRowsAtBottomAreInserted: autoScrollWhenRowsAtBottomAreInserted, configure: configure)
@@ -61,16 +55,5 @@ open class NSFetchedResultsControllerViewControllerAutoScoll<T: ConfigurableTabl
     
     public required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        switch nsFetchedResultsControllerTableView.mode {
-        case .notQuerying:
-            nsFetchedResultsControllerTableView.loadPositionOffset?.didScroll()
-            
-            assert(nsFetchedResultsControllerTableView.loadPositionOffset == nil ? true : nsFetchedResultsControllerTableView.loadPositionOffset!.reached != nil)
-        case .querying:
-            break // Don't do anything.
-        }
     }
 }

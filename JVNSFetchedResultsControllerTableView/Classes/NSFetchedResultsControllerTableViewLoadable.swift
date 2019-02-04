@@ -4,18 +4,34 @@ import JVMiddleTextView
 
 open class NSFetchedResultsControllerTableViewLoadable<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult>: NSFetchedResultsControllerTableView<T, U> {
     
-    private var mode: NSFetchedResultsControllerTableViewMode
-    private var loadPositionOffset: NSFetchedResultsControllerTableViewLoadCellOffset?
+    var loadPositionOffset: NSFetchedResultsControllerTableViewLoadCellOffset?
+    internal (set) var mode: NSFetchedResultsControllerTableViewMode
+
     
-    public init(tableView: GenericTableView<T>, view: UIView, middleTextView: MiddleTextView, resultController: NSFetchedResultsController<U>, mode: NSFetchedResultsControllerTableViewMode, loadPositionOffset: NSFetchedResultsControllerTableViewLoadCellOffset? = nil, configure: ((_ cell: T, _ result: U) -> ())?) {
+    public init(tableView: GenericTableView<T>, view: UIView, middleTextView: MiddleTextView, resultController: NSFetchedResultsController<U>, mode: NSFetchedResultsControllerTableViewMode, loadPositionOffset: LoadCellOffset? = nil, configure: ((_ cell: T, _ result: U) -> ())?) {
         self.mode = mode
-        self.loadPositionOffset = loadPositionOffset
+        if let loadPositionOffset = loadPositionOffset {
+            self.loadPositionOffset = NSFetchedResultsControllerTableViewLoadCellOffset(position: loadPositionOffset.position, offset: loadPositionOffset.offset, scrollView: tableView, reached: loadPositionOffset.reached)
+        }
         
+        assert(mode == .querying ? loadPositionOffset != nil : true)
+
         super.init(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController, configure: configure)
+    }
+    
+    /// Make sure you call this method after you called super.init.
+    open func addOffsetReachedNotification(_ reached: @escaping (() -> ())) {
+        loadPositionOffset!.reached = reached
+    }
+    
+    public func receivedData() {
+        loadPositionOffset!.receivedData()
     }
     
     public func change(mode: NSFetchedResultsControllerTableViewMode) {
         guard self.mode != mode else { return }
+        
+        assert(mode == .querying ? loadPositionOffset != nil : true)
         
         self.mode = mode
         let indexPath = IndexPath(row: tableView.numberOfRows(inSection: 0), section: 0)
@@ -48,19 +64,35 @@ open class NSFetchedResultsControllerTableViewLoadable<T: ConfigurableTableViewC
         case .notQuerying:
             return createCell(indexPath: indexPath)
         case .querying:
-            if (indexPath.row + 1) == tableView.numberOfRows(inSection: indexPath.section) {
-                return self.tableView.configureLoadCell(indexPath: indexPath)
-            } else {
+            guard let loadPositionOffset = loadPositionOffset else {
                 return createCell(indexPath: indexPath)
+            }
+            
+            switch loadPositionOffset.position {
+            case .top:
+                if indexPath.row == 0 {
+                    return self.tableView.configureLoadCell(indexPath: indexPath)
+                } else {
+                    let _indexPath = IndexPath(row: indexPath.row - 1, section: indexPath.section)
+                    
+                    return createCell(indexPath: _indexPath)
+                }
+            case .bottom:
+                if (indexPath.row + 1) == tableView.numberOfRows(inSection: indexPath.section) {
+                    return self.tableView.configureLoadCell(indexPath: indexPath)
+                } else {
+                    return createCell(indexPath: indexPath)
+                }
             }
         }
     }
     
-    public func receivedData() {
-        loadPositionOffset?.receivedData()
-    }
-    
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        loadPositionOffset?.didScroll()
+    override func determineAlienCellCount() -> Int {
+        switch mode {
+        case .notQuerying:
+            return 0
+        case .querying:
+            return 1
+        }
     }
 }

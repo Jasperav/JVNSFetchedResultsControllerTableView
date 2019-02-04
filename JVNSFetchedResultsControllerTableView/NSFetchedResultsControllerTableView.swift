@@ -19,10 +19,6 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
     private unowned let view: UIView
     private unowned let middleTextView: MiddleTextView
     
-    /// Describes the cells that aren't Configurable table view cells
-    /// but are present in the table view datasource minus the cellcount before update.
-    private var cellCountBeforeUpdate = 0
-    
     public init(tableView: GenericTableView<T>,
                 view: UIView,
                 middleTextView: MiddleTextView,
@@ -67,8 +63,7 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
     
     public func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         controllerRefresh = ControllerRefresh()
-        
-        cellCountBeforeUpdate = determineAlienCellCount() - tableView.numberOfRows(inSection: 0)
+        controllerRefresh.fetchedResultsBeforeUpdate = controller.fetchedObjects!.count
         
         tableView.beginUpdates()
     }
@@ -76,13 +71,10 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
     public func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:
+            controllerRefresh.didInsertRowAtBottom = newIndexPath!.row == tableView.numberOfRows(inSection: 0)
             tableView.insertRows(at: [newIndexPath!], with: .automatic)
             
             controllerRefresh.didInsert = true
-            
-            if controllerRefresh.didInsertRowAtBottom && newIndexPath!.row < cellCountBeforeUpdate {
-                controllerRefresh.didInsertRowAtBottom = false
-            }
         case .delete:
             tableView.deleteRows(at: [indexPath!], with: .automatic)
             
@@ -135,10 +127,6 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
         configure(cell, object)
         
         return cell
-    }
-    
-    func determineAlienCellCount() -> Int {
-        return 0
     }
     
 }
