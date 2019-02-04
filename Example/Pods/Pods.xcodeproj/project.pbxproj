@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02A6BDAB2697F1ACB5AAEA3A09DEB090 /* NSFetchedResultsControllerTableViewLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1F9DFBA9E313DF31640AF90B4B1A9 /* NSFetchedResultsControllerTableViewLoadable.swift */; };
 		0305F2531918EB42E6B591B59507D526 /* JVMiddleTextView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EDC2E0C91F07839123C838ABC7F2D14 /* JVMiddleTextView-dummy.m */; };
+		034A7DCF4A11CA076380036B88627770 /* NSFetchedResultsControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A7A9A4426FE4D390CE1FD3286FE1CF /* NSFetchedResultsControllerViewController.swift */; };
 		038BD52EAB22D46BE118968AC900A0F7 /* JVShapeHalfMoon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D853D74E0C637F1B8B9F47C1C1273887 /* JVShapeHalfMoon-dummy.m */; };
 		03B0F5D0CA43D2D70B372A04DF56D11A /* JVLabelCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4B0484151E65765013959A49331BC9 /* JVLabelCounter.swift */; };
 		07C182533C980483919960F022FBC51C /* JVGradientLayer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D83700A85D607398B4992C1040323DB /* JVGradientLayer-dummy.m */; };
 		0A38AE0C4A5995B31DA13225621E24A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		0ABE23D436EA12D7FB3E5414BC86A5F0 /* ShapeHalfMoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F898B4E951FEFD4750FFB8FF48B82325 /* ShapeHalfMoon.swift */; };
 		0C1AD17314CCBE3AB1958E8DEEEB6847 /* ContentTypeStarLabelTextCountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2395EA0B70B6A80EFCDA3D84EAB7128 /* ContentTypeStarLabelTextCountingLabel.swift */; };
-		0CA87E8B3123DE73E7FAFC5F699584E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		0F74A0B2940B86133F202CB14116E154 /* JVCurrentDevice-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3546F82D03CEB2AAE84CF5B273FCFE9B /* JVCurrentDevice-dummy.m */; };
 		10B1C2D03B97302D7D806BE2C1AA650B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		13671C0936884EF08C1834979B9C7B59 /* ContentTypeStarButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2AE7682EA8B1214174A1746FEE3EE /* ContentTypeStarButtonText.swift */; };
@@ -23,6 +24,7 @@
 		15B84BB9E4021330DFE9B4F3988E9E92 /* RestartableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00A844CE37F5D0D543728B66404B3AF /* RestartableState.swift */; };
 		16D8A2BAA44E55041983BA12A5F4D361 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		1851F8F33EF5BECA3F1471E3C8F8DE27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
+		19BD2AF823653EFC965ACB3462D19BD9 /* JVGenericTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61886564059CB39F23FD54D5FB3D8D63 /* JVGenericTableView.framework */; };
 		19D7A40753331FA65076AC6E833D2151 /* CAShapeLayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5178D5F1B7683ED7B539D70565618880 /* CAShapeLayerExtensions.swift */; };
 		1A8C1475892058A0FCB8C95DC4EC03EE /* Pods-JVNSFetchedResultsControllerTableView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0706A7AE5866503292F1A5B77A7724 /* Pods-JVNSFetchedResultsControllerTableView_Tests-dummy.m */; };
 		208EE70ECB0938381C8EA6827258875A /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8755EC2E0B0BAF2F53231515C05A1F4 /* CGFloatExtensions.swift */; };
@@ -32,16 +34,20 @@
 		26B61FC8E0D592FDD90347BA0D3FEA15 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AB17AA03405C3C114933866898FA8 /* Anchor.swift */; };
 		2AD2FB1C4D1F22440F7F7682548CC4A0 /* ContentTypeStarLabelCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7199B82A2DC69A5DD1538A29D73A91BD /* ContentTypeStarLabelCounter.swift */; };
 		2BA1A7B8CE3E93329F9B2EBAE97FA1A3 /* ContentTypeInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB9D5DEA3BD6F1FC8CB8B627482BB76 /* ContentTypeInitializable.swift */; };
+		302A3EDB778A61ABE9067FFA74660F99 /* ControllerRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696D51FAF8F7AB9C664BB44F4D664EF6 /* ControllerRefresh.swift */; };
+		32253F979B63C20A746B399DC84336E5 /* JVNSFetchedResultsControllerTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D1F573F01487696DD4350D9087A7822 /* JVNSFetchedResultsControllerTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32E196FD94C3DDEA4C4BAF9BEE9AFAC1 /* JVContentType-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B044310ED88D07B0607F7BF478591DBB /* JVContentType-dummy.m */; };
 		32F87AC8E8A84CB7FDAD4D06F2968C0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
-		339DFE86B04C88E1662E4F91F8FD3769 /* ConfigurableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E97B9CB030129FC3F3C330A231AA590 /* ConfigurableTableViewCell.swift */; };
 		3770A82936F3514D3FE76C364D34032F /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E64BBE9478D340CF0B430B3D5AF2359 /* ContentType.swift */; };
 		3969BC14D01BF9C4391DFC0477A1AA08 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9474B2FB06E320717A1D884BDA38AB64 /* CollectionExtensions.swift */; };
 		3A640E4AAF847DF3B8F4C193168ABC4B /* JVShapeHalfMoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81273ECAA904B59E5455C8FA1EC0FCC6 /* JVShapeHalfMoon.framework */; };
+		3A6A9ABB71CF7DAFFE453DE82BEB4CFB /* MiddleTextViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A026D134938E534781084739534814 /* MiddleTextViewPresenter.swift */; };
 		3A83DC79F978764102643A6DFA63067E /* JVCAShapeLayerExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CF0F6151900AF9FE4441A05D1C4C893 /* JVCAShapeLayerExtensions-dummy.m */; };
+		3AB4A46082AD58D1550D6D224FD9F360 /* LoadOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C92597FB07672128D085F0EEE08596C /* LoadOffset.swift */; };
 		3BBE8CDE844D97B1FD23C59F6942D149 /* JVCAGradientLayerExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE110770D8A468398199F3ADAA9F8A73 /* JVCAGradientLayerExtensions.framework */; };
 		3CB340501B17DDEFA8FC2C0784C20F65 /* ContentTypeStarButtonTextEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C7C15542A9FCA9B25DC08653CB83B5 /* ContentTypeStarButtonTextEdges.swift */; };
 		3F52F3AFA88313AB109626AECFEC9864 /* JVLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2622E0948DE8C94578B96F72AA6974 /* JVLabel.swift */; };
+		439404F84B8458F09FC3D5A6CB32929E /* ConfigurableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AA5C25C784BFBF39021EF814388BC3 /* ConfigurableTableViewCell.swift */; };
 		441642FB16220C3202A00B1F0717BE1C /* ContentTypeStarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5991DAED1AE2E12AC44DA522E8246A /* ContentTypeStarButton.swift */; };
 		47C65E6C319584DD182F0A28DB1128AB /* JVView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 15145B89B39691ADB41A149A69B4AFAC /* JVView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		486580846090430218FFFA54C4442D8C /* ContentTypeAttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50122069F6A47AD9CC19A770B650F56A /* ContentTypeAttributedText.swift */; };
@@ -51,7 +57,6 @@
 		5607ADCB5F7498F7FCECC9A9778EEF9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		57B02576734CD33BEC7594A68E4588F7 /* JVCAShapeLayerExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E18A01845867741FBBF97EFE083D8C /* JVCAShapeLayerExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A7FABC10C32556D3E06EEADF16A9128 /* MiddleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716D830C04EF9565BA493B378E16DC97 /* MiddleTextView.swift */; };
-		5B49D7382634EC593FD03A2AA72C9784 /* JVGenericTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61886564059CB39F23FD54D5FB3D8D63 /* JVGenericTableView.framework */; };
 		5E7CC8CBC86D3B91F08E6CA5F12BF3C0 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B745665CB299846A48082747295A021 /* CollectionExtensions.swift */; };
 		5F362ED54FBAF67FB0E15F9A5F1EA117 /* ContentTypeStarLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080699DF284BC47AA10E38313BADF410 /* ContentTypeStarLabel.swift */; };
 		62AF6B28CAD8535E979193309E329FD5 /* JVContentType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46F311BF032B59AE2DC92B833B570E /* JVContentType.framework */; };
@@ -60,7 +65,6 @@
 		648671D01B3C3C04DCEDBF6173C8323F /* JVFontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDFE0CD325C06E20B2A6205588E322D /* JVFontUtils.swift */; };
 		6602D62AEB386E58D9C8D363B776EEDA /* JVContentType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46F311BF032B59AE2DC92B833B570E /* JVContentType.framework */; };
 		682005892C4DEF6D6E82914C31EF5D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
-		699CA555161D81215365B0B780C0A073 /* JVNSFetchedResultsControllerTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C09972857EA296F65248C0B52C2103 /* JVNSFetchedResultsControllerTableView-dummy.m */; };
 		6A1D25432F6F08F9FFB5B735E959F394 /* JVContentType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46F311BF032B59AE2DC92B833B570E /* JVContentType.framework */; };
 		6AE9A4A0321CF2ED9A595E911CF9EF34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		6CF2CDFA854E99323EFEB85BD7E9F1AC /* GenericTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C34FAF0BC710BDBE4C66C75BC6F46A3 /* GenericTableView.swift */; };
@@ -77,6 +81,8 @@
 		83A71C6ADBACD29218C42713B2DD2868 /* JVGradientLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634874E323D5D1FF5BFAA8F3E8382165 /* JVGradientLayer.framework */; };
 		83DF81E234304DD170F8067C44110EBE /* MirrorAligment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078712E9255465AF6E6FC7320A4045F3 /* MirrorAligment.swift */; };
 		8402D8FFFA6D253D2F05AAC87D725561 /* ContentTypeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702A3399CE2E38D96E5EB80BA2ED3937 /* ContentTypeTextView.swift */; };
+		841A618629DCDFA66A47BDBFAF53F04A /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310B6264EDAE3406DABD83933F617D61 /* Mode.swift */; };
+		86B52862EB851AA684686790EC0842F9 /* NSFetchedResultsControllerTableViewAutoScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = D710DDFC80CDB39D2B3108E763282EF0 /* NSFetchedResultsControllerTableViewAutoScroll.swift */; };
 		88F18ECDE2AE456B635960717E50EFF5 /* Restartable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A6DF7089CFFD6505ABE89D0326B1E9 /* Restartable.swift */; };
 		8B6282F69C006D60C94F27B87F86D358 /* JVRestartable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A4768852720008FECEA5EB6C6512A3 /* JVRestartable.framework */; };
 		8C17C84E8D5E2E9F0B23F43686B664D8 /* JVButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DFAA8310B10C1DC001AA47625A70A /* JVButtonDelegate.swift */; };
@@ -94,35 +100,32 @@
 		98BB215235A14BFFCD514FD9CD0BECBC /* JVSizeable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4055F29CF76C44E32EAC87DC1E9678BF /* JVSizeable.framework */; };
 		9934FF7C166FA4BC3FD1048BEBCC47F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		9B029D05CD4C524AE1BB19719CC17E98 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F37B7F0690AD6828188EF907A5E017 /* Mode.swift */; };
+		9E0D67B00D6EEB073E758263FEE3429F /* JVNSFetchedResultsControllerTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A45AB14AABA8A66DE3EC5FD3950CA660 /* JVNSFetchedResultsControllerTableView-dummy.m */; };
 		A0846F3965FF4A77EC1965A82EB000DF /* DeviceKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC0E13810D844B9F52532134691761E3 /* DeviceKit.framework */; };
+		A23F3AC1E19A656545BB9CD55F1E294D /* NSFetchedResultsControllerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074627E5C8DE9462FFD39FFE1CD4733F /* NSFetchedResultsControllerTableView.swift */; };
 		A3C7F11B0D204A3EE32A45BE4E4B598C /* ContentTypeShapeHalfMoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C30437A99150CBCE00020FAB12A30A1 /* ContentTypeShapeHalfMoon.swift */; };
 		A631F5A52794D6C6221751290E80DDDB /* UIViewFillExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB94B5568F88CD24FF8FB3D4E70CB02B /* UIViewFillExtension.swift */; };
 		AB4811FBAC0A06ACDE74080B6DE3968A /* JVSizeable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F58C24B1668652BC903B244A67994D74 /* JVSizeable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AD0C47FEE0DBB5EBA2E9E381A74DD8C3 /* JVNSFetchedResultsControllerTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE430DC3CB7C7E026E103D873DB0D09 /* JVNSFetchedResultsControllerTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B09C156DC77A8C50671F6E753BFACE6F /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E92CCE4B0B65C964FE97A84AC552B1 /* StringExtensions.swift */; };
 		B497A11140FAA4D62960B09D04CA5694 /* JVLabelCounterAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B1FD1C4E6AC0E0CFB9F77995C226D5 /* JVLabelCounterAnimations.swift */; };
 		B498426BB4FF1BF1437A1794BF3CEE95 /* JVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27811C23CC9B14B7752EB9DDC0FB79A5 /* JVButton.swift */; };
 		B5AECC1F8C4B839D706C0707865AAD33 /* JVLabelUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C4C27FDED8DCBA108EE80DD2A009B34 /* JVLabelUtils.swift */; };
 		B8D295C596A9F319409CA16B6D5057CC /* ContentTypeTextFontEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7557B6E16B706F997B651BDE6AE8A949 /* ContentTypeTextFontEdges.swift */; };
 		BA4451E1BE2A1A42479A4E8E98AF0A97 /* RestartableStateable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B731E8C20C476E893A7418B4842CAA /* RestartableStateable.swift */; };
-		BB69A63CAE0D8AC159F654C8A0CE10C2 /* NSFetchedResultsControllerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0903404EF2A928283E4807E3BD99D670 /* NSFetchedResultsControllerTableView.swift */; };
 		BB744F7DD7C787EFF74230772BAA808F /* JVConstraintEdges.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B916047DD450CCE9C6D5867B74FBE0 /* JVConstraintEdges.framework */; };
 		BB78C90CC2823C96ECD65F3012F3A1D7 /* JVTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D21DCFE47462A8602CCC3A076A13162 /* JVTextView.swift */; };
 		BE85820249467971088C5ED5F7093D95 /* JVCAShapeLayerExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257086054679284FE9ED0B155E6AD57C /* JVCAShapeLayerExtensions.framework */; };
 		BFBA62F2B9803D9321250B9D575EFDAB /* JVSizeable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4055F29CF76C44E32EAC87DC1E9678BF /* JVSizeable.framework */; };
 		C127B55040B0CD5A796F6FD4FA567CCD /* JVRestartable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6F728E387BF82FFAABDF7430AEF63 /* JVRestartable-dummy.m */; };
-		C13E1718B1E21535AEE8CB3B81023C48 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA5998ABF5A55546D30302080D31843 /* Mode.swift */; };
 		C16A845B7ED5FF15BFAD5BABA0101EE9 /* Device.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813731FB992F210EF5D341714DE151D4 /* Device.generated.swift */; };
 		C1F18B989888FBDAA89AF81A118CDE10 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478B14841B259829A3BCC52D1EE93EAB /* StringExtensions.swift */; };
 		C34A731210158BD78FA41E3E34B51249 /* ContentTypeGroupInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B4727EAE809476CC245668F605CFB /* ContentTypeGroupInitializable.swift */; };
 		C4AA24EDAB0B088C70CB2579A6D7C009 /* RestartableManageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA2DF19A58B97335EA6491EE72FEF90 /* RestartableManageable.swift */; };
 		D2F8F9986AA02F760BC12C3D105A6714 /* JVGenericTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E156C2F393762C59081C9266418607 /* JVGenericTableView-dummy.m */; };
-		D333FA69513B2586090825B34AA6F637 /* ControllerRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3D2F9467F918F3AF2DCA8D3E0F05BE /* ControllerRefresh.swift */; };
 		D3636F172C9B03FB3482ECA587A4C5D2 /* ContentTypeStarLabelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDD13B2307E3465B2144C022DA7CAA /* ContentTypeStarLabelText.swift */; };
 		D43C42581EDD87BA1BE4D11723D8F615 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C807DB9AEEFD0B5BF4BEC14055E814FB /* DeviceType.swift */; };
 		D59E38B26DFAD8F58C636466794B2EF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
-		D70A198368E6E987B76BAF27DD0020AE /* NSFetchedResultsControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1266C4DD39643155AA9CB80C85D7C70 /* NSFetchedResultsControllerViewController.swift */; };
-		D81F79EB1DB54CE833B828FA0DDD9DEF /* MiddleTextViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE59512E5EC9BB51677BD13E97745E7 /* MiddleTextViewPresenter.swift */; };
+		DC885038318F8C6F86FE137FCE45DE6F /* JVMiddleTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7A2BD29E6011779DC25933119AADC2 /* JVMiddleTextView.framework */; };
 		DD1DF14FCADA66C00E41D81AFFF40D56 /* JVView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFB3140011A7506CC31D07ED1A871F4 /* JVView.framework */; };
 		DD274DAF15C994A765DFCC9AE69D2C31 /* ContentTypeStarLabelAttributedTextCountingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DFE84F7D68430294FBC3AEEE0627FC /* ContentTypeStarLabelAttributedTextCountingLabel.swift */; };
 		E04AD7D0C407709A3C46138D12BCEF1A /* JVCAGradientLayerExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA160EFDB27CF57133FD2C5B8EAB9380 /* JVCAGradientLayerExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -135,11 +138,9 @@
 		EE03E17527F5C48009D0825CDF2FD45A /* ConstraintEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855AA6842F91F2EDB98E0BB2FF48CC3B /* ConstraintEdges.swift */; };
 		F2EE800562F355AF4E02A2AEB21CF46F /* CurrentDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C39429A505948BAA44B0F181B43AE9 /* CurrentDevice.swift */; };
 		F35DF82C7C9FA630190E6E2BE1632871 /* JVGradientLayer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE08CA76B0750054B69E685DE46242F /* JVGradientLayer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7EB16EFCC538884DF4EE9C014F0DC48 /* NSFetchedResultsControllerTableViewAutoScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800ADC3F01F0A8C1CCFBA9F601E1896C /* NSFetchedResultsControllerTableViewAutoScroll.swift */; };
-		F971FD87246F40417C72E21B12207ACB /* BatchTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109EF64851E3F551A7A3F50CD625AB5C /* BatchTableView.swift */; };
 		F9EB389E235C9B8CD2DDB357CDAA8CE7 /* JVShapeHalfMoon-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC21970EAA90A288AC7FB571DC8A25FC /* JVShapeHalfMoon-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCB9918A59C9C88DB911E69E0E7A5DEA /* JVMiddleTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7A2BD29E6011779DC25933119AADC2 /* JVMiddleTextView.framework */; };
 		FD5618C1A5DDDB0B8A3F15C49D3CDA85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
+		FE942477AAAE8A7F380DA8AF9734353A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		FFCB3C7AE968FF2A9E99AA0B8D7B5A2C /* JVContentType-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 08D072046275F1A3DA8D0788718AEE07 /* JVContentType-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -186,13 +187,6 @@
 			remoteGlobalIDString = AA5FAC3FB3F8A77E4D6C047047457FE1;
 			remoteInfo = JVGradientLayer;
 		};
-		407328B2A4D379DEC51405CD44B2413D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C0E29C7D50B247C2A466A966F4B5A39D;
-			remoteInfo = JVGenericTableView;
-		};
 		410AE3C7300F358A891D75327A4C24B4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -228,6 +222,13 @@
 			remoteGlobalIDString = ED5411ECE341B49A67FD226B129D24DA;
 			remoteInfo = JVView;
 		};
+		621DB0CA738D85DCFCA2172A935A74A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A099CE8A1865EF3295E27F271ABABE30;
+			remoteInfo = JVMiddleTextView;
+		};
 		62855EE5C186CAC016AF767711FEBE32 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -241,6 +242,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5BFF987C1EEB1A860312C7334458D4D0;
 			remoteInfo = JVFontUtils;
+		};
+		6CC1EDE24EB79439BCB09C7BDE1E4390 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0E29C7D50B247C2A466A966F4B5A39D;
+			remoteInfo = JVGenericTableView;
 		};
 		87E6D61C96D9ABD9C1FAF9F7C1A85071 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -276,13 +284,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 519BDE3F69A25A27F2BF5FD66AC7560F;
 			remoteInfo = JVContentType;
-		};
-		8D2DD34AB9CB722D2051A69B143129CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A099CE8A1865EF3295E27F271ABABE30;
-			remoteInfo = JVMiddleTextView;
 		};
 		8EA00D005BEA5FB3E67684AED2C060C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -386,20 +387,18 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 39830B97F4A75662BE934D422887AB3C;
+			remoteGlobalIDString = 9D2DF5A0B1470DAFC89D2DCDAC15A5CC;
 			remoteInfo = JVNSFetchedResultsControllerTableView;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		05185FEA01D1699912030E2615DA73E4 /* JVCAGradientLayerExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVCAGradientLayerExtensions.modulemap; sourceTree = "<group>"; };
-		06C09972857EA296F65248C0B52C2103 /* JVNSFetchedResultsControllerTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVNSFetchedResultsControllerTableView-dummy.m"; sourceTree = "<group>"; };
+		074627E5C8DE9462FFD39FFE1CD4733F /* NSFetchedResultsControllerTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableView.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableView.swift; sourceTree = "<group>"; };
 		078712E9255465AF6E6FC7320A4045F3 /* MirrorAligment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MirrorAligment.swift; path = JVView/Classes/MirrorAligment.swift; sourceTree = "<group>"; };
 		080699DF284BC47AA10E38313BADF410 /* ContentTypeStarLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabel.swift; path = JVView/Classes/ContentTypeStarLabel.swift; sourceTree = "<group>"; };
 		08D072046275F1A3DA8D0788718AEE07 /* JVContentType-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVContentType-umbrella.h"; sourceTree = "<group>"; };
-		0903404EF2A928283E4807E3BD99D670 /* NSFetchedResultsControllerTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableView.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableView.swift; sourceTree = "<group>"; };
 		09F1049255CA8FA6535A6F17FBA769B5 /* DeviceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-prefix.pch"; sourceTree = "<group>"; };
-		0A3B34430150FA5E1BE08421650A0E28 /* JVNSFetchedResultsControllerTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVNSFetchedResultsControllerTableView-prefix.pch"; sourceTree = "<group>"; };
 		0A5991DAED1AE2E12AC44DA522E8246A /* ContentTypeStarButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarButton.swift; path = JVView/Classes/ContentTypeStarButton.swift; sourceTree = "<group>"; };
 		0B396F292324EA4A7D3F338453B4576D /* JVFontUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVFontUtils.modulemap; sourceTree = "<group>"; };
 		0D83700A85D607398B4992C1040323DB /* JVGradientLayer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVGradientLayer-dummy.m"; sourceTree = "<group>"; };
@@ -407,7 +406,7 @@
 		0EE3A02BD1B34813B127F73E0F4961FF /* JVCurrentDevice.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVCurrentDevice.xcconfig; sourceTree = "<group>"; };
 		0F41787D1997BFA7B2E4856E40BDD37B /* LoadCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadCell.swift; path = JVGenericTableView/Classes/LoadCell.swift; sourceTree = "<group>"; };
 		0F5166BCC45150143204EF8838EB8B8D /* JVCAGradientLayerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVCAGradientLayerExtensions.swift; path = JVCAGradientLayerExtensions/Classes/JVCAGradientLayerExtensions.swift; sourceTree = "<group>"; };
-		109EF64851E3F551A7A3F50CD625AB5C /* BatchTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatchTableView.swift; path = JVNSFetchedResultsControllerTableView/Classes/BatchTableView.swift; sourceTree = "<group>"; };
+		0F67230EADA4E151E2AEAC1203AA0391 /* JVNSFetchedResultsControllerTableView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVNSFetchedResultsControllerTableView-Info.plist"; sourceTree = "<group>"; };
 		10E18A01845867741FBBF97EFE083D8C /* JVCAShapeLayerExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVCAShapeLayerExtensions-umbrella.h"; sourceTree = "<group>"; };
 		117E8B49C3A18B6487BF6D316F7A95F6 /* JVRestartable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVRestartable-Info.plist"; sourceTree = "<group>"; };
 		12AA90B4C812E5933E43FED3A194D7BE /* JVCAGradientLayerExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVCAGradientLayerExtensions-dummy.m"; sourceTree = "<group>"; };
@@ -422,7 +421,6 @@
 		1C4C27FDED8DCBA108EE80DD2A009B34 /* JVLabelUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVLabelUtils.swift; path = JVView/Classes/JVLabelUtils.swift; sourceTree = "<group>"; };
 		1CA2DF19A58B97335EA6491EE72FEF90 /* RestartableManageable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestartableManageable.swift; path = JVRestartable/Classes/RestartableManageable.swift; sourceTree = "<group>"; };
 		1E0B49161B0BE6C1DCA6A6E6F893E0D0 /* JVRestartable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVRestartable.framework; path = JVRestartable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E844F9FA5E192B1304976A1C1F4E3A1 /* JVNSFetchedResultsControllerTableView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVNSFetchedResultsControllerTableView-Info.plist"; sourceTree = "<group>"; };
 		1F3AB17AA03405C3C114933866898FA8 /* Anchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Anchor.swift; path = JVConstraintEdges/Classes/Anchor.swift; sourceTree = "<group>"; };
 		20B1670CB7912E05CA36769AB6E762E2 /* JVCAGradientLayerExtensions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVCAGradientLayerExtensions.xcconfig; sourceTree = "<group>"; };
 		22C7C15542A9FCA9B25DC08653CB83B5 /* ContentTypeStarButtonTextEdges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarButtonTextEdges.swift; path = JVView/Classes/ContentTypeStarButtonTextEdges.swift; sourceTree = "<group>"; };
@@ -437,17 +435,18 @@
 		29B916047DD450CCE9C6D5867B74FBE0 /* JVConstraintEdges.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVConstraintEdges.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D3DDE9531CCCB69BB781983D613D97 /* ContentTypeStarLabelAttributedText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabelAttributedText.swift; path = JVView/Classes/ContentTypeStarLabelAttributedText.swift; sourceTree = "<group>"; };
 		2C1B46E32026F91498BF2C2C712E539E /* Pods-JVNSFetchedResultsControllerTableView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JVNSFetchedResultsControllerTableView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		310B6264EDAE3406DABD83933F617D61 /* Mode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mode.swift; path = JVNSFetchedResultsControllerTableView/Classes/Mode.swift; sourceTree = "<group>"; };
 		3447C155ABF268FCE025CD8FF1BE9BC9 /* JVMiddleTextView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVMiddleTextView-Info.plist"; sourceTree = "<group>"; };
 		351113AE8741A698E4F918678FC6FA09 /* JVCurrentDevice-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVCurrentDevice-Info.plist"; sourceTree = "<group>"; };
 		3546F82D03CEB2AAE84CF5B273FCFE9B /* JVCurrentDevice-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVCurrentDevice-dummy.m"; sourceTree = "<group>"; };
 		376892FD64140B6C990F8A8D1C277FAF /* JVGenericTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVGenericTableView.modulemap; sourceTree = "<group>"; };
+		37AA5C25C784BFBF39021EF814388BC3 /* ConfigurableTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfigurableTableViewCell.swift; path = JVNSFetchedResultsControllerTableView/Classes/ConfigurableTableViewCell.swift; sourceTree = "<group>"; };
 		37D3720F0DA8196F86E352BD474991E7 /* Pods-JVNSFetchedResultsControllerTableView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JVNSFetchedResultsControllerTableView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		3BD6F728E387BF82FFAABDF7430AEF63 /* JVRestartable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVRestartable-dummy.m"; sourceTree = "<group>"; };
 		3C30437A99150CBCE00020FAB12A30A1 /* ContentTypeShapeHalfMoon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeShapeHalfMoon.swift; path = JVShapeHalfMoon/Classes/ContentTypeShapeHalfMoon.swift; sourceTree = "<group>"; };
 		3CF0F6151900AF9FE4441A05D1C4C893 /* JVCAShapeLayerExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVCAShapeLayerExtensions-dummy.m"; sourceTree = "<group>"; };
 		3D21DCFE47462A8602CCC3A076A13162 /* JVTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVTextView.swift; path = JVView/Classes/JVTextView.swift; sourceTree = "<group>"; };
-		3E97B9CB030129FC3F3C330A231AA590 /* ConfigurableTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConfigurableTableViewCell.swift; path = JVNSFetchedResultsControllerTableView/Classes/ConfigurableTableViewCell.swift; sourceTree = "<group>"; };
-		3EE59512E5EC9BB51677BD13E97745E7 /* MiddleTextViewPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MiddleTextViewPresenter.swift; path = JVNSFetchedResultsControllerTableView/Classes/MiddleTextViewPresenter.swift; sourceTree = "<group>"; };
+		3F5BD38B1B44F2EF0C5FF28DD6BD0F29 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		3FEBC60FC757CCA2FA5E2CE45368C8FD /* JVMiddleTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVMiddleTextView-umbrella.h"; sourceTree = "<group>"; };
 		4055F29CF76C44E32EAC87DC1E9678BF /* JVSizeable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVSizeable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41051C482EDAFBBB4634960305664665 /* JVCurrentDevice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVCurrentDevice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -462,6 +461,7 @@
 		4A80C0487AFD4ED1385A7EB9D3A3F781 /* JVRestartable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVRestartable.xcconfig; sourceTree = "<group>"; };
 		4AE08CA76B0750054B69E685DE46242F /* JVGradientLayer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVGradientLayer-umbrella.h"; sourceTree = "<group>"; };
 		4C976CBDF0372EF51C2FBFF074613CBC /* JVView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVView-prefix.pch"; sourceTree = "<group>"; };
+		4D1F573F01487696DD4350D9087A7822 /* JVNSFetchedResultsControllerTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVNSFetchedResultsControllerTableView-umbrella.h"; sourceTree = "<group>"; };
 		4D88EC9767F98831E1C5C0CC384D1207 /* JVConstraintEdges-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVConstraintEdges-prefix.pch"; sourceTree = "<group>"; };
 		50122069F6A47AD9CC19A770B650F56A /* ContentTypeAttributedText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeAttributedText.swift; path = JVView/Classes/ContentTypeAttributedText.swift; sourceTree = "<group>"; };
 		504EE3943CEE1969E53FA92E50D535E9 /* JVMiddleTextView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVMiddleTextView.xcconfig; sourceTree = "<group>"; };
@@ -481,8 +481,10 @@
 		61886564059CB39F23FD54D5FB3D8D63 /* JVGenericTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVGenericTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		634874E323D5D1FF5BFAA8F3E8382165 /* JVGradientLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVGradientLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		655ECDF50783C1151583B587FC3C1B01 /* JVShapeHalfMoon-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVShapeHalfMoon-Info.plist"; sourceTree = "<group>"; };
+		696D51FAF8F7AB9C664BB44F4D664EF6 /* ControllerRefresh.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControllerRefresh.swift; path = JVNSFetchedResultsControllerTableView/Classes/ControllerRefresh.swift; sourceTree = "<group>"; };
 		6AB9D5DEA3BD6F1FC8CB8B627482BB76 /* ContentTypeInitializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeInitializable.swift; path = JVContentType/Classes/ContentTypeInitializable.swift; sourceTree = "<group>"; };
 		6B745665CB299846A48082747295A021 /* CollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = JVRestartable/Classes/CollectionExtensions.swift; sourceTree = "<group>"; };
+		6C92597FB07672128D085F0EEE08596C /* LoadOffset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadOffset.swift; path = JVNSFetchedResultsControllerTableView/Classes/LoadOffset.swift; sourceTree = "<group>"; };
 		6D6A1BA057FE31D4E1C56C60C1671824 /* JVCAGradientLayerExtensions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVCAGradientLayerExtensions-Info.plist"; sourceTree = "<group>"; };
 		6EDC2E0C91F07839123C838ABC7F2D14 /* JVMiddleTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVMiddleTextView-dummy.m"; sourceTree = "<group>"; };
 		6EE1F076AB0F4FB44A124FC848453320 /* JVConstraintEdges.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVConstraintEdges.xcconfig; sourceTree = "<group>"; };
@@ -492,8 +494,8 @@
 		71666794264D7D952FF942FBC46A3CD1 /* JVGradientLayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVGradientLayer-prefix.pch"; sourceTree = "<group>"; };
 		716D830C04EF9565BA493B378E16DC97 /* MiddleTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MiddleTextView.swift; path = JVMiddleTextView/Classes/MiddleTextView.swift; sourceTree = "<group>"; };
 		7199B82A2DC69A5DD1538A29D73A91BD /* ContentTypeStarLabelCounter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabelCounter.swift; path = JVView/Classes/ContentTypeStarLabelCounter.swift; sourceTree = "<group>"; };
-		71E19AEB6F34540B17DAE2743EB3A7A4 /* JVNSFetchedResultsControllerTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVNSFetchedResultsControllerTableView.xcconfig; sourceTree = "<group>"; };
 		7236A5CD8C851E8F049FF8B1FC9BFC7F /* JVFontUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVFontUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A7A9A4426FE4D390CE1FD3286FE1CF /* NSFetchedResultsControllerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerViewController.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerViewController.swift; sourceTree = "<group>"; };
 		7557B6E16B706F997B651BDE6AE8A949 /* ContentTypeTextFontEdges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeTextFontEdges.swift; path = JVView/Classes/ContentTypeTextFontEdges.swift; sourceTree = "<group>"; };
 		772C185AC8446526B3B07055CBB4928F /* JVCAGradientLayerExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVCAGradientLayerExtensions-prefix.pch"; sourceTree = "<group>"; };
 		7A13ACAC26631DDA9B021FFB4CCC182C /* JVView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVView.modulemap; sourceTree = "<group>"; };
@@ -501,15 +503,18 @@
 		7C34FAF0BC710BDBE4C66C75BC6F46A3 /* GenericTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericTableView.swift; path = JVGenericTableView/Classes/GenericTableView.swift; sourceTree = "<group>"; };
 		7D647097709EB61C71371378452AE7F4 /* JVContentType-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVContentType-Info.plist"; sourceTree = "<group>"; };
 		7ECDD13B2307E3465B2144C022DA7CAA /* ContentTypeStarLabelText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabelText.swift; path = JVView/Classes/ContentTypeStarLabelText.swift; sourceTree = "<group>"; };
-		800ADC3F01F0A8C1CCFBA9F601E1896C /* NSFetchedResultsControllerTableViewAutoScroll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableViewAutoScroll.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableViewAutoScroll.swift; sourceTree = "<group>"; };
 		81273ECAA904B59E5455C8FA1EC0FCC6 /* JVShapeHalfMoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVShapeHalfMoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		813731FB992F210EF5D341714DE151D4 /* Device.generated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Device.generated.swift; path = Source/Device.generated.swift; sourceTree = "<group>"; };
 		855AA6842F91F2EDB98E0BB2FF48CC3B /* ConstraintEdges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintEdges.swift; path = JVConstraintEdges/Classes/ConstraintEdges.swift; sourceTree = "<group>"; };
+		8627B40A9F5173CBABD94C23F82908AD /* JVNSFetchedResultsControllerTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVNSFetchedResultsControllerTableView.xcconfig; sourceTree = "<group>"; };
+		882B3D22DD5859E33DFA089BF07216C4 /* JVNSFetchedResultsControllerTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVNSFetchedResultsControllerTableView.modulemap; sourceTree = "<group>"; };
+		896A416EA7569F4DC056B10B478B4128 /* JVNSFetchedResultsControllerTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = JVNSFetchedResultsControllerTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		8DC032BE29F3C3E83F1E340034C16D89 /* ContentTypeJVGradientLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeJVGradientLayer.swift; path = JVGradientLayer/Classes/ContentTypeJVGradientLayer.swift; sourceTree = "<group>"; };
 		8E2899BCEBCC46C3185BB912E0CA9BD1 /* JVNSFetchedResultsControllerTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVNSFetchedResultsControllerTableView.framework; path = JVNSFetchedResultsControllerTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E64BBE9478D340CF0B430B3D5AF2359 /* ContentType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentType.swift; path = JVContentType/Classes/ContentType.swift; sourceTree = "<group>"; };
 		8FDFE0CD325C06E20B2A6205588E322D /* JVFontUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVFontUtils.swift; path = JVFontUtils/Classes/JVFontUtils.swift; sourceTree = "<group>"; };
 		90044EA2939D5FD52899C2B9400D3F9F /* JVView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVView.xcconfig; sourceTree = "<group>"; };
+		9386B3DF9DA4D3F574F6523F338A80ED /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9474B2FB06E320717A1D884BDA38AB64 /* CollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = JVContentType/Classes/CollectionExtensions.swift; sourceTree = "<group>"; };
 		94A1A56B8789243CF39A1511D6CFD8B8 /* JVShapeHalfMoon-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVShapeHalfMoon-prefix.pch"; sourceTree = "<group>"; };
@@ -518,29 +523,27 @@
 		9ADFABCE71A2E046D31DF7BD4BA6F0D0 /* JVShapeHalfMoon.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVShapeHalfMoon.xcconfig; sourceTree = "<group>"; };
 		9D86A8118E66920C5B5659DEA39884F4 /* ContentTypeConstraintEdges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeConstraintEdges.swift; path = JVConstraintEdges/Classes/ContentTypeConstraintEdges.swift; sourceTree = "<group>"; };
 		9FF5D514A2543FDBC3829AAB4AE43B94 /* JVMiddleTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVMiddleTextView.framework; path = JVMiddleTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A45AB14AABA8A66DE3EC5FD3950CA660 /* JVNSFetchedResultsControllerTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVNSFetchedResultsControllerTableView-dummy.m"; sourceTree = "<group>"; };
 		A5B731E8C20C476E893A7418B4842CAA /* RestartableStateable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestartableStateable.swift; path = JVRestartable/Classes/RestartableStateable.swift; sourceTree = "<group>"; };
 		A7FD2F34039A1C345BA40B7E332A37B2 /* JVMiddleTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVMiddleTextView.modulemap; sourceTree = "<group>"; };
 		A8DFE84F7D68430294FBC3AEEE0627FC /* ContentTypeStarLabelAttributedTextCountingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabelAttributedTextCountingLabel.swift; path = JVView/Classes/ContentTypeStarLabelAttributedTextCountingLabel.swift; sourceTree = "<group>"; };
 		AC21970EAA90A288AC7FB571DC8A25FC /* JVShapeHalfMoon-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVShapeHalfMoon-umbrella.h"; sourceTree = "<group>"; };
-		ACE430DC3CB7C7E026E103D873DB0D09 /* JVNSFetchedResultsControllerTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVNSFetchedResultsControllerTableView-umbrella.h"; sourceTree = "<group>"; };
 		AE98CE13A8458E4C352D782131F8D7E1 /* JVConstraintEdges-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVConstraintEdges-umbrella.h"; sourceTree = "<group>"; };
 		B039D40ABFCCD1741966C938D000527F /* JVConstraintEdges-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVConstraintEdges-Info.plist"; sourceTree = "<group>"; };
 		B044310ED88D07B0607F7BF478591DBB /* JVContentType-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVContentType-dummy.m"; sourceTree = "<group>"; };
 		B05DFAA8310B10C1DC001AA47625A70A /* JVButtonDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVButtonDelegate.swift; path = JVView/Classes/JVButtonDelegate.swift; sourceTree = "<group>"; };
+		B2183612F24C36720890AC4C75E50B33 /* JVNSFetchedResultsControllerTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVNSFetchedResultsControllerTableView-prefix.pch"; sourceTree = "<group>"; };
 		B338819182AC38C56BE0DA4CE3F44376 /* JVGradientLayer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVGradientLayer.xcconfig; sourceTree = "<group>"; };
-		B33FD5F330A4242FC54601DF0BDFB4BB /* JVNSFetchedResultsControllerTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVNSFetchedResultsControllerTableView.modulemap; sourceTree = "<group>"; };
 		B3F5CC26F041DA7DAEE8C8A5F5FB3ADA /* JVGenericTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVGenericTableView-prefix.pch"; sourceTree = "<group>"; };
-		B544AEBE078826F8FF6BF6F7A7A29868 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		B548375A84B8219EA90F78B85AC7A082 /* JVGradientLayer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVGradientLayer-Info.plist"; sourceTree = "<group>"; };
+		B7A026D134938E534781084739534814 /* MiddleTextViewPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MiddleTextViewPresenter.swift; path = JVNSFetchedResultsControllerTableView/Classes/MiddleTextViewPresenter.swift; sourceTree = "<group>"; };
 		B854B880290709A8750792ADCDBBC0C9 /* JVGradientLayer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVGradientLayer.modulemap; sourceTree = "<group>"; };
 		BA054ACDDBC534D622E0FBD3AA72CF42 /* JVSizeable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVSizeable.modulemap; sourceTree = "<group>"; };
-		BB3D2F9467F918F3AF2DCA8D3E0F05BE /* ControllerRefresh.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ControllerRefresh.swift; path = JVNSFetchedResultsControllerTableView/Classes/ControllerRefresh.swift; sourceTree = "<group>"; };
 		BC637CB273AC1112CB6F54892CD9D2BC /* JVFontUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFontUtils-umbrella.h"; sourceTree = "<group>"; };
 		BE051885FECCFB89D7A1F356963F0EE7 /* JVRestartable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVRestartable.modulemap; sourceTree = "<group>"; };
 		BFE73384D64AA8B65318163B962AB182 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = JVConstraintEdges/Classes/StringExtensions.swift; sourceTree = "<group>"; };
 		C09CCBC05033A9103DBE996574C2A90D /* Pods-JVNSFetchedResultsControllerTableView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JVNSFetchedResultsControllerTableView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C0CDB2AE8CA1BD07D860AC2D99A809BA /* JVCurrentDevice-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVCurrentDevice-prefix.pch"; sourceTree = "<group>"; };
-		C7369978E380308BC6FB1245FED0E01F /* JVNSFetchedResultsControllerTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = JVNSFetchedResultsControllerTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C7A1E9E8A1F982141D9982E4CC92EB60 /* JVRestartable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVRestartable-umbrella.h"; sourceTree = "<group>"; };
 		C7EA11F3AD603A733FCB1CE16259168B /* JVFontUtils-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFontUtils-prefix.pch"; sourceTree = "<group>"; };
 		C807DB9AEEFD0B5BF4BEC14055E814FB /* DeviceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceType.swift; path = JVCurrentDevice/Classes/DeviceType.swift; sourceTree = "<group>"; };
@@ -553,12 +556,11 @@
 		CDF518E9BDD571A843B40179A4ACFADE /* JVSizeable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVSizeable-Info.plist"; sourceTree = "<group>"; };
 		CEC7E3A75192AF6EAA6BAD84E3B01B15 /* JVCAShapeLayerExtensions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVCAShapeLayerExtensions.xcconfig; sourceTree = "<group>"; };
 		CF05A33A00EEABDBAFA587BD59497FB7 /* JVCurrentDevice.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVCurrentDevice.modulemap; sourceTree = "<group>"; };
-		D1266C4DD39643155AA9CB80C85D7C70 /* NSFetchedResultsControllerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerViewController.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerViewController.swift; sourceTree = "<group>"; };
 		D16DE45F816875266BB838B84B9C834A /* JVView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVView.framework; path = JVView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F37B7F0690AD6828188EF907A5E017 /* Mode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mode.swift; path = JVMiddleTextView/Classes/Mode.swift; sourceTree = "<group>"; };
+		D710DDFC80CDB39D2B3108E763282EF0 /* NSFetchedResultsControllerTableViewAutoScroll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableViewAutoScroll.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableViewAutoScroll.swift; sourceTree = "<group>"; };
 		D853D74E0C637F1B8B9F47C1C1273887 /* JVShapeHalfMoon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVShapeHalfMoon-dummy.m"; sourceTree = "<group>"; };
 		D8C39429A505948BAA44B0F181B43AE9 /* CurrentDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrentDevice.swift; path = JVCurrentDevice/Classes/CurrentDevice.swift; sourceTree = "<group>"; };
-		D957DEFA5F3AD269EC7C3397F6E947F8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		DB94B5568F88CD24FF8FB3D4E70CB02B /* UIViewFillExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewFillExtension.swift; path = JVConstraintEdges/Classes/UIViewFillExtension.swift; sourceTree = "<group>"; };
 		DC2622E0948DE8C94578B96F72AA6974 /* JVLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVLabel.swift; path = JVView/Classes/JVLabel.swift; sourceTree = "<group>"; };
 		DC4B0484151E65765013959A49331BC9 /* JVLabelCounter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVLabelCounter.swift; path = JVView/Classes/JVLabelCounter.swift; sourceTree = "<group>"; };
@@ -570,6 +572,7 @@
 		E2395EA0B70B6A80EFCDA3D84EAB7128 /* ContentTypeStarLabelTextCountingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabelTextCountingLabel.swift; path = JVView/Classes/ContentTypeStarLabelTextCountingLabel.swift; sourceTree = "<group>"; };
 		E3B96E3012E1D6F09307051361D28D03 /* JVRestartable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVRestartable-prefix.pch"; sourceTree = "<group>"; };
 		E441BBF1A52F0C115D3E29C209F9A87F /* Copyable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Copyable.swift; path = JVContentType/Classes/Copyable.swift; sourceTree = "<group>"; };
+		E5E1F9DFBA9E313DF31640AF90B4B1A9 /* NSFetchedResultsControllerTableViewLoadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableViewLoadable.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableViewLoadable.swift; sourceTree = "<group>"; };
 		E6E92CCE4B0B65C964FE97A84AC552B1 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = JVGradientLayer/Classes/StringExtensions.swift; sourceTree = "<group>"; };
 		E9236AF72399369EB2B6BAB74320CCCF /* JVConstraintEdges.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVConstraintEdges.modulemap; sourceTree = "<group>"; };
 		EA0706A7AE5866503292F1A5B77A7724 /* Pods-JVNSFetchedResultsControllerTableView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JVNSFetchedResultsControllerTableView_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -589,7 +592,6 @@
 		FB2A482ABA37107B536C7CFFE2103D79 /* JVMiddleTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVMiddleTextView-prefix.pch"; sourceTree = "<group>"; };
 		FB5033F7A3951422D57B07312B22EB2D /* JVSizeable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVSizeable-dummy.m"; sourceTree = "<group>"; };
 		FB9A15BCD3F1FE01AA30F317EA3BDB12 /* Pods-JVNSFetchedResultsControllerTableView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JVNSFetchedResultsControllerTableView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		FBA5998ABF5A55546D30302080D31843 /* Mode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mode.swift; path = JVNSFetchedResultsControllerTableView/Classes/Mode.swift; sourceTree = "<group>"; };
 		FE4FEF946159BC7E31D5038723BEA3BD /* JVCAGradientLayerExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVCAGradientLayerExtensions.framework; path = JVCAGradientLayerExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFD9D13E5A7AD9DB01BD225A98B558FC /* Pods-JVNSFetchedResultsControllerTableView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JVNSFetchedResultsControllerTableView_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -617,16 +619,6 @@
 			files = (
 				32F87AC8E8A84CB7FDAD4D06F2968C0D /* Foundation.framework in Frameworks */,
 				E3E73D17F83D5FAFE44CD88B46FC5217 /* JVConstraintEdges.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		09912402021E9DEA8A8E894F649C1E6A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0CA87E8B3123DE73E7FAFC5F699584E1 /* Foundation.framework in Frameworks */,
-				5B49D7382634EC593FD03A2AA72C9784 /* JVGenericTableView.framework in Frameworks */,
-				FCB9918A59C9C88DB911E69E0E7A5DEA /* JVMiddleTextView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,6 +663,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5F1E3719AEF4E3FCAFA369EA1FDFF73 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60E222FFD143E43960692264B4DADB13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE942477AAAE8A7F380DA8AF9734353A /* Foundation.framework in Frameworks */,
+				19BD2AF823653EFC965ACB3462D19BD9 /* JVGenericTableView.framework in Frameworks */,
+				DC885038318F8C6F86FE137FCE45DE6F /* JVMiddleTextView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,24 +784,6 @@
 			path = "../Target Support Files/JVFontUtils";
 			sourceTree = "<group>";
 		};
-		16533D7C155D4A1D4A28E2892046255B /* JVNSFetchedResultsControllerTableView */ = {
-			isa = PBXGroup;
-			children = (
-				109EF64851E3F551A7A3F50CD625AB5C /* BatchTableView.swift */,
-				3E97B9CB030129FC3F3C330A231AA590 /* ConfigurableTableViewCell.swift */,
-				BB3D2F9467F918F3AF2DCA8D3E0F05BE /* ControllerRefresh.swift */,
-				3EE59512E5EC9BB51677BD13E97745E7 /* MiddleTextViewPresenter.swift */,
-				FBA5998ABF5A55546D30302080D31843 /* Mode.swift */,
-				0903404EF2A928283E4807E3BD99D670 /* NSFetchedResultsControllerTableView.swift */,
-				800ADC3F01F0A8C1CCFBA9F601E1896C /* NSFetchedResultsControllerTableViewAutoScroll.swift */,
-				D1266C4DD39643155AA9CB80C85D7C70 /* NSFetchedResultsControllerViewController.swift */,
-				F431D8423DDFE2E61B22492357CFA32B /* Pod */,
-				FE4C47A56459FAD4E991C89200AAB693 /* Support Files */,
-			);
-			name = JVNSFetchedResultsControllerTableView;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		2A1C426A088A78E73879839CE0DF4CFA /* JVGenericTableView */ = {
 			isa = PBXGroup;
 			children = (
@@ -885,6 +869,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		42014D2CC3993274B933A012120C47B2 /* JVNSFetchedResultsControllerTableView */ = {
+			isa = PBXGroup;
+			children = (
+				37AA5C25C784BFBF39021EF814388BC3 /* ConfigurableTableViewCell.swift */,
+				696D51FAF8F7AB9C664BB44F4D664EF6 /* ControllerRefresh.swift */,
+				6C92597FB07672128D085F0EEE08596C /* LoadOffset.swift */,
+				B7A026D134938E534781084739534814 /* MiddleTextViewPresenter.swift */,
+				310B6264EDAE3406DABD83933F617D61 /* Mode.swift */,
+				074627E5C8DE9462FFD39FFE1CD4733F /* NSFetchedResultsControllerTableView.swift */,
+				D710DDFC80CDB39D2B3108E763282EF0 /* NSFetchedResultsControllerTableViewAutoScroll.swift */,
+				E5E1F9DFBA9E313DF31640AF90B4B1A9 /* NSFetchedResultsControllerTableViewLoadable.swift */,
+				74A7A9A4426FE4D390CE1FD3286FE1CF /* NSFetchedResultsControllerViewController.swift */,
+				61E39C1B18792BBBEF2ABFB3FD0ED4D6 /* Pod */,
+				BF0E76F2B92E8D85581A87B524C4A135 /* Support Files */,
+			);
+			name = JVNSFetchedResultsControllerTableView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		4D1871383299E644BA0E5DFD619F6EC1 /* JVSizeable */ = {
 			isa = PBXGroup;
 			children = (
@@ -893,14 +896,6 @@
 			);
 			name = JVSizeable;
 			path = JVSizeable;
-			sourceTree = "<group>";
-		};
-		4FF363D847C3C828A164EDC0D2C248E6 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				16533D7C155D4A1D4A28E2892046255B /* JVNSFetchedResultsControllerTableView */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		510842894D8F38117F92E055AD9CD21C /* JVRestartable */ = {
@@ -970,6 +965,16 @@
 			path = "../Target Support Files/JVGradientLayer";
 			sourceTree = "<group>";
 		};
+		61E39C1B18792BBBEF2ABFB3FD0ED4D6 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				896A416EA7569F4DC056B10B478B4128 /* JVNSFetchedResultsControllerTableView.podspec */,
+				3F5BD38B1B44F2EF0C5FF28DD6BD0F29 /* LICENSE */,
+				9386B3DF9DA4D3F574F6523F338A80ED /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		6E07288F4DF06EE82091F586CBF21D21 /* JVConstraintEdges */ = {
 			isa = PBXGroup;
 			children = (
@@ -985,11 +990,19 @@
 			path = JVConstraintEdges;
 			sourceTree = "<group>";
 		};
+		7C11355CCBA421F03A15EF6DD0ECAB22 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42014D2CC3993274B933A012120C47B2 /* JVNSFetchedResultsControllerTableView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				4FF363D847C3C828A164EDC0D2C248E6 /* Development Pods */,
+				7C11355CCBA421F03A15EF6DD0ECAB22 /* Development Pods */,
 				0C8CB4FF68EDC30AC1343B734EB1B758 /* Frameworks */,
 				41E3A40CC830D18E92E1C39236DF41AE /* Pods */,
 				A1CDDBE600870414B13DF690A10CA54C /* Products */,
@@ -1108,6 +1121,20 @@
 			path = "Target Support Files/Pods-JVNSFetchedResultsControllerTableView_Tests";
 			sourceTree = "<group>";
 		};
+		BF0E76F2B92E8D85581A87B524C4A135 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				882B3D22DD5859E33DFA089BF07216C4 /* JVNSFetchedResultsControllerTableView.modulemap */,
+				8627B40A9F5173CBABD94C23F82908AD /* JVNSFetchedResultsControllerTableView.xcconfig */,
+				A45AB14AABA8A66DE3EC5FD3950CA660 /* JVNSFetchedResultsControllerTableView-dummy.m */,
+				0F67230EADA4E151E2AEAC1203AA0391 /* JVNSFetchedResultsControllerTableView-Info.plist */,
+				B2183612F24C36720890AC4C75E50B33 /* JVNSFetchedResultsControllerTableView-prefix.pch */,
+				4D1F573F01487696DD4350D9087A7822 /* JVNSFetchedResultsControllerTableView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JVNSFetchedResultsControllerTableView";
+			sourceTree = "<group>";
+		};
 		CA813DB3600AA8CEC97AA6FA4EB21CD2 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -1206,16 +1233,6 @@
 			path = "../Target Support Files/JVCurrentDevice";
 			sourceTree = "<group>";
 		};
-		F431D8423DDFE2E61B22492357CFA32B /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C7369978E380308BC6FB1245FED0E01F /* JVNSFetchedResultsControllerTableView.podspec */,
-				B544AEBE078826F8FF6BF6F7A7A29868 /* LICENSE */,
-				D957DEFA5F3AD269EC7C3397F6E947F8 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		F6E161ECC2605AB0CE9CA4D8DB19DDF6 /* JVView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1273,20 +1290,6 @@
 			path = "../Target Support Files/DeviceKit";
 			sourceTree = "<group>";
 		};
-		FE4C47A56459FAD4E991C89200AAB693 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B33FD5F330A4242FC54601DF0BDFB4BB /* JVNSFetchedResultsControllerTableView.modulemap */,
-				71E19AEB6F34540B17DAE2743EB3A7A4 /* JVNSFetchedResultsControllerTableView.xcconfig */,
-				06C09972857EA296F65248C0B52C2103 /* JVNSFetchedResultsControllerTableView-dummy.m */,
-				1E844F9FA5E192B1304976A1C1F4E3A1 /* JVNSFetchedResultsControllerTableView-Info.plist */,
-				0A3B34430150FA5E1BE08421650A0E28 /* JVNSFetchedResultsControllerTableView-prefix.pch */,
-				ACE430DC3CB7C7E026E103D873DB0D09 /* JVNSFetchedResultsControllerTableView-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/JVNSFetchedResultsControllerTableView";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1303,14 +1306,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB4811FBAC0A06ACDE74080B6DE3968A /* JVSizeable-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2BC851B567834316131DB05AFE24646D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AD0C47FEE0DBB5EBA2E9E381A74DD8C3 /* JVNSFetchedResultsControllerTableView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1410,6 +1405,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5A83C75A4FE4C5237731A7C12BC1007 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32253F979B63C20A746B399DC84336E5 /* JVNSFetchedResultsControllerTableView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F8F4E67A30AE42598B804A09E5D1C547 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1497,26 +1500,6 @@
 			productReference = 555E78D05C2C0B1534A374F14C395073 /* JVConstraintEdges.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		39830B97F4A75662BE934D422887AB3C /* JVNSFetchedResultsControllerTableView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E344E8036E07F1ACABABCB37EAEF8E59 /* Build configuration list for PBXNativeTarget "JVNSFetchedResultsControllerTableView" */;
-			buildPhases = (
-				2BC851B567834316131DB05AFE24646D /* Headers */,
-				6E1E4E5800083E8AB93C3410B192D842 /* Sources */,
-				09912402021E9DEA8A8E894F649C1E6A /* Frameworks */,
-				7FBAA483752561C7D60B7D29F3F9FD8B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				86D12158A6AA211D99F2DD3ACDCA8E71 /* PBXTargetDependency */,
-				23F4A2B5482E78F2C9B7D0B5FD8B20AE /* PBXTargetDependency */,
-			);
-			name = JVNSFetchedResultsControllerTableView;
-			productName = JVNSFetchedResultsControllerTableView;
-			productReference = 8E2899BCEBCC46C3185BB912E0CA9BD1 /* JVNSFetchedResultsControllerTableView.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		519BDE3F69A25A27F2BF5FD66AC7560F /* JVContentType */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11B5B30EBDB023A63302BB36084679CC /* Build configuration list for PBXNativeTarget "JVContentType" */;
@@ -1569,6 +1552,26 @@
 			name = JVCAGradientLayerExtensions;
 			productName = JVCAGradientLayerExtensions;
 			productReference = FE4FEF946159BC7E31D5038723BEA3BD /* JVCAGradientLayerExtensions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9D2DF5A0B1470DAFC89D2DCDAC15A5CC /* JVNSFetchedResultsControllerTableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A8DB89C3BEF76F22574CCC6F65FE9682 /* Build configuration list for PBXNativeTarget "JVNSFetchedResultsControllerTableView" */;
+			buildPhases = (
+				F5A83C75A4FE4C5237731A7C12BC1007 /* Headers */,
+				8ED8FB7D74D29B41A643BA8C4AE1F26C /* Sources */,
+				60E222FFD143E43960692264B4DADB13 /* Frameworks */,
+				4F831EB32ABC6BA2B83A92EE1FB6B9C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B5C4B977ABB5788ABE21BDB3208348B /* PBXTargetDependency */,
+				8FF9F0B7AC337753E2D2177DD74C89FD /* PBXTargetDependency */,
+			);
+			name = JVNSFetchedResultsControllerTableView;
+			productName = JVNSFetchedResultsControllerTableView;
+			productReference = 8E2899BCEBCC46C3185BB912E0CA9BD1 /* JVNSFetchedResultsControllerTableView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A099CE8A1865EF3295E27F271ABABE30 /* JVMiddleTextView */ = {
@@ -1775,7 +1778,7 @@
 				C0E29C7D50B247C2A466A966F4B5A39D /* JVGenericTableView */,
 				AA5FAC3FB3F8A77E4D6C047047457FE1 /* JVGradientLayer */,
 				A099CE8A1865EF3295E27F271ABABE30 /* JVMiddleTextView */,
-				39830B97F4A75662BE934D422887AB3C /* JVNSFetchedResultsControllerTableView */,
+				9D2DF5A0B1470DAFC89D2DCDAC15A5CC /* JVNSFetchedResultsControllerTableView */,
 				129A3A3B72E665D4CE6BE79AFBF9FC09 /* JVRestartable */,
 				0EE58BF3FC12B468EE070BD8819F0FE9 /* JVShapeHalfMoon */,
 				EB32AC3E11B4E953F0A87FC01C240D47 /* JVSizeable */,
@@ -1801,6 +1804,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4049C70A10708FBE420BA09C8FC666F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F831EB32ABC6BA2B83A92EE1FB6B9C9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1836,13 +1846,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7DFFF72DC01C2280D8485CCA7DF676FA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7FBAA483752561C7D60B7D29F3F9FD8B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1993,22 +1996,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6E1E4E5800083E8AB93C3410B192D842 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F971FD87246F40417C72E21B12207ACB /* BatchTableView.swift in Sources */,
-				339DFE86B04C88E1662E4F91F8FD3769 /* ConfigurableTableViewCell.swift in Sources */,
-				D333FA69513B2586090825B34AA6F637 /* ControllerRefresh.swift in Sources */,
-				699CA555161D81215365B0B780C0A073 /* JVNSFetchedResultsControllerTableView-dummy.m in Sources */,
-				D81F79EB1DB54CE833B828FA0DDD9DEF /* MiddleTextViewPresenter.swift in Sources */,
-				C13E1718B1E21535AEE8CB3B81023C48 /* Mode.swift in Sources */,
-				BB69A63CAE0D8AC159F654C8A0CE10C2 /* NSFetchedResultsControllerTableView.swift in Sources */,
-				F7EB16EFCC538884DF4EE9C014F0DC48 /* NSFetchedResultsControllerTableViewAutoScroll.swift in Sources */,
-				D70A198368E6E987B76BAF27DD0020AE /* NSFetchedResultsControllerViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7F86AEFCBB5F40F53887CAE0571E9E58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2027,6 +2014,23 @@
 				07C182533C980483919960F022FBC51C /* JVGradientLayer-dummy.m in Sources */,
 				75C3D06951BFF9109208F985FB5E6C47 /* JVGradientLayer.swift in Sources */,
 				B09C156DC77A8C50671F6E753BFACE6F /* StringExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ED8FB7D74D29B41A643BA8C4AE1F26C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				439404F84B8458F09FC3D5A6CB32929E /* ConfigurableTableViewCell.swift in Sources */,
+				302A3EDB778A61ABE9067FFA74660F99 /* ControllerRefresh.swift in Sources */,
+				9E0D67B00D6EEB073E758263FEE3429F /* JVNSFetchedResultsControllerTableView-dummy.m in Sources */,
+				3AB4A46082AD58D1550D6D224FD9F360 /* LoadOffset.swift in Sources */,
+				3A6A9ABB71CF7DAFFE453DE82BEB4CFB /* MiddleTextViewPresenter.swift in Sources */,
+				841A618629DCDFA66A47BDBFAF53F04A /* Mode.swift in Sources */,
+				A23F3AC1E19A656545BB9CD55F1E294D /* NSFetchedResultsControllerTableView.swift in Sources */,
+				86B52862EB851AA684686790EC0842F9 /* NSFetchedResultsControllerTableViewAutoScroll.swift in Sources */,
+				02A6BDAB2697F1ACB5AAEA3A09DEB090 /* NSFetchedResultsControllerTableViewLoadable.swift in Sources */,
+				034A7DCF4A11CA076380036B88627770 /* NSFetchedResultsControllerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2128,12 +2132,6 @@
 			target = 218EBD2F6738DB57951178484E7B7D2E /* JVConstraintEdges */;
 			targetProxy = B1AF9224653701A0E165B6939B4158ED /* PBXContainerItemProxy */;
 		};
-		23F4A2B5482E78F2C9B7D0B5FD8B20AE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = JVMiddleTextView;
-			target = A099CE8A1865EF3295E27F271ABABE30 /* JVMiddleTextView */;
-			targetProxy = 8D2DD34AB9CB722D2051A69B143129CB /* PBXContainerItemProxy */;
-		};
 		26DB5373669E9BDBB2B2202EB472D316 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JVCurrentDevice;
@@ -2145,6 +2143,12 @@
 			name = JVGradientLayer;
 			target = AA5FAC3FB3F8A77E4D6C047047457FE1 /* JVGradientLayer */;
 			targetProxy = 521B03B187644621C62932787FEE3DCA /* PBXContainerItemProxy */;
+		};
+		3B5C4B977ABB5788ABE21BDB3208348B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JVGenericTableView;
+			target = C0E29C7D50B247C2A466A966F4B5A39D /* JVGenericTableView */;
+			targetProxy = 6CC1EDE24EB79439BCB09C7BDE1E4390 /* PBXContainerItemProxy */;
 		};
 		3C771539771F8DA55D514E042056A809 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2218,16 +2222,16 @@
 			target = AA5FAC3FB3F8A77E4D6C047047457FE1 /* JVGradientLayer */;
 			targetProxy = 3C99677486D3CAE1979D3DDD446B8B44 /* PBXContainerItemProxy */;
 		};
-		86D12158A6AA211D99F2DD3ACDCA8E71 /* PBXTargetDependency */ = {
+		8FF9F0B7AC337753E2D2177DD74C89FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = JVGenericTableView;
-			target = C0E29C7D50B247C2A466A966F4B5A39D /* JVGenericTableView */;
-			targetProxy = 407328B2A4D379DEC51405CD44B2413D /* PBXContainerItemProxy */;
+			name = JVMiddleTextView;
+			target = A099CE8A1865EF3295E27F271ABABE30 /* JVMiddleTextView */;
+			targetProxy = 621DB0CA738D85DCFCA2172A935A74A1 /* PBXContainerItemProxy */;
 		};
 		9F86435E9547A6C1E304954C53733908 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JVNSFetchedResultsControllerTableView;
-			target = 39830B97F4A75662BE934D422887AB3C /* JVNSFetchedResultsControllerTableView */;
+			target = 9D2DF5A0B1470DAFC89D2DCDAC15A5CC /* JVNSFetchedResultsControllerTableView */;
 			targetProxy = FFE7711E55E73B557FCBB4DE06A1B074 /* PBXContainerItemProxy */;
 		};
 		A206A2300720A1BE401D7390B994FADC /* PBXTargetDependency */ = {
@@ -2334,42 +2338,6 @@
 				MODULEMAP_FILE = "Target Support Files/JVShapeHalfMoon/JVShapeHalfMoon.modulemap";
 				PRODUCT_MODULE_NAME = JVShapeHalfMoon;
 				PRODUCT_NAME = JVShapeHalfMoon;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		0BFB04427BCD6EBA4BE2CDFF17DCD453 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71E19AEB6F34540B17DAE2743EB3A7A4 /* JVNSFetchedResultsControllerTableView.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView.modulemap";
-				PRODUCT_MODULE_NAME = JVNSFetchedResultsControllerTableView;
-				PRODUCT_NAME = JVNSFetchedResultsControllerTableView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2751,6 +2719,42 @@
 				MODULEMAP_FILE = "Target Support Files/JVCAShapeLayerExtensions/JVCAShapeLayerExtensions.modulemap";
 				PRODUCT_MODULE_NAME = JVCAShapeLayerExtensions;
 				PRODUCT_NAME = JVCAShapeLayerExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		5B32F07B2813A95FE95D7AE5BB56F050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8627B40A9F5173CBABD94C23F82908AD /* JVNSFetchedResultsControllerTableView.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JVNSFetchedResultsControllerTableView/JVNSFetchedResultsControllerTableView.modulemap";
+				PRODUCT_MODULE_NAME = JVNSFetchedResultsControllerTableView;
+				PRODUCT_NAME = JVNSFetchedResultsControllerTableView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -3216,9 +3220,9 @@
 			};
 			name = Debug;
 		};
-		B44600894EE9B61FD28C77ABBE755DB0 /* Debug */ = {
+		B2B95FF87E8DE805D39220B01917C708 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71E19AEB6F34540B17DAE2743EB3A7A4 /* JVNSFetchedResultsControllerTableView.xcconfig */;
+			baseConfigurationReference = 8627B40A9F5173CBABD94C23F82908AD /* JVNSFetchedResultsControllerTableView.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -3677,6 +3681,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A8DB89C3BEF76F22574CCC6F65FE9682 /* Build configuration list for PBXNativeTarget "JVNSFetchedResultsControllerTableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2B95FF87E8DE805D39220B01917C708 /* Debug */,
+				5B32F07B2813A95FE95D7AE5BB56F050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B19B012FD73766172696CB68DF34EA4B /* Build configuration list for PBXNativeTarget "JVFontUtils" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3691,15 +3704,6 @@
 			buildConfigurations = (
 				2A37413BD02462CC8065562926AD923D /* Debug */,
 				5C65416D324CA105F6D5DFEB1E0DBBE5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E344E8036E07F1ACABABCB37EAEF8E59 /* Build configuration list for PBXNativeTarget "JVNSFetchedResultsControllerTableView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B44600894EE9B61FD28C77ABBE755DB0 /* Debug */,
-				0BFB04427BCD6EBA4BE2CDFF17DCD453 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

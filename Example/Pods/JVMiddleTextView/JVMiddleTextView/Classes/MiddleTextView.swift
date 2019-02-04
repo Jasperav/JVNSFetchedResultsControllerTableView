@@ -10,6 +10,12 @@ open class MiddleTextView: UIView {
     private static let constraintEdgesWidth: CGFloat = 5
     private static let spacingFromMiddle: CGFloat = 5
     
+    public let startMode: StartMode?
+    
+    public var isQueryable: Bool {
+        return queryingText != nil
+    }
+    
     private let notQueryingText: String
     private let queryingText: String?
     private let label: JVLabel
@@ -19,6 +25,7 @@ open class MiddleTextView: UIView {
         self.notQueryingText = notQueryingText
         self.queryingText = startMode?.queryingText
         label = JVLabel(contentType: MiddleTextView.contentType)
+        self.startMode = startMode
         
         super.init(frame: CGRect.zero)
         
@@ -55,11 +62,10 @@ open class MiddleTextView: UIView {
     }
     
     private func addLoadingIndicator() {
-        addSubview(loadingIndicator)
+        loadingIndicator.addAsSubview(to: self)
         
-        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
-        
-        loadingIndicator.bottomAnchor.constraint(equalTo: centerYAnchor, constant: -MiddleTextView.spacingFromMiddle).isActive = true
+        loadingIndicator.spacing(from: .bottom, to: .top, view: label, constant: MiddleTextView.spacingFromMiddle)
+        loadingIndicator.setSameCenterX(view: self)
     }
 
 }

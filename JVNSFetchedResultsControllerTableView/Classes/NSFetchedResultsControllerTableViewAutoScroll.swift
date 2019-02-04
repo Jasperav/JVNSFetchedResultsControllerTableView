@@ -15,26 +15,57 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableVie
         
         super.init(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController, mode: mode, loadPositionOffset: loadPositionOffset, configure: configure)
         
-       // assert(mode == .notQuerying ? middleTextView.)
+        assert(loadPositionOffset == nil ? true :
+            loadPositionOffset!.position == .bottom ? !autoScrollWhenRowsAtBottomAreInserted : true)
     }
     
     public override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        if autoScrollWhenRowsAtBottomAreInserted && controllerRefresh.didOnlyInsertRowsAtBottom() {
+        
+        // The middle text view presenter is currently shown.
+        // The tableview gets updated without any animation.
+        // If there are animations, the cells will jump.
+        if !middleTextViewPresenter.isHidden {
+            updateWithoutAnimation()
+
+            return
+        }
+        
+        // The middle text view is not shown and only rows at the bottom are inserted.
+        // Besides that, the tableview should autoscroll.
+        // This will only happen when the cell at the bottom is completely shown.
+        if autoScrollWhenRowsAtBottomAreInserted && controllerRefresh.hasOnlyInsertedRowsAtBottom {
             autoScrollTableView()
             updateMiddleTextView()
-            
+
             return
         }
         
         // When either the tableView is not scrolled (the user sees the top cell)
         // or only cells are updated, we animate those changes.
         // Else, the tableview gets updated without animation.
-        guard tableViewIsScrolled() || controllerRefresh.hasOnlyUpdated() else {
+        guard tableView.isScrolled || controllerRefresh.hasOnlyUpdated else {
             super.controllerDidChangeContent(controller)
-            
+
             return
         }
         
+        updateWithoutAnimationKeepContentOffset()
+    }
+    
+    private func updateWithoutAnimation() {
+        UIView.performWithoutAnimation {
+            tableView.endUpdates()
+            tableView.layoutIfNeeded()
+            
+            if autoScrollWhenRowsAtBottomAreInserted {
+                scrollToBottom(animated: false)
+            }
+        }
+        
+        updateMiddleTextView()
+    }
+    
+    private func updateWithoutAnimationKeepContentOffset() {
         updateMiddleTextView()
         
         // It isn't allowed to combine an insert with any other row change.
@@ -49,8 +80,9 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableVie
             tableView.endUpdates()
             tableView.layoutIfNeeded()
             
-            guard tableView.contentSize.height > tableView.bounds.height else {
+            guard tableView.allContentIsCompletelyVisible else {
                 // No need to apply content offset since the user sees the whole tableview.
+ 
                 return
             }
             
@@ -70,11 +102,10 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableVie
         
         guard cellAtBottomIsFullyVisible else { return }
         
-        // TODO: Animated should be conditionally
-        tableView.scrollToRow(at: IndexPath(row: tableView.numberOfRows(inSection: 0) - 1, section: 0), at: .bottom, animated: true)
+        scrollToBottom(animated: true)
     }
     
-    private func tableViewIsScrolled() -> Bool {
-        return tableView.contentOffset.y != 0
+    private func scrollToBottom(animated: Bool) {
+        tableView.scrollToRow(at: IndexPath(row: tableView.numberOfRows(inSection: 0) - 1, section: 0), at: .bottom, animated: animated)
     }
 }

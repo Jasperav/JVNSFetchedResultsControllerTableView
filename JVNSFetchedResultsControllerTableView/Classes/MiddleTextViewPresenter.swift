@@ -2,8 +2,17 @@ import JVMiddleTextView
 import UIKit
 import CoreData
 
-/// Handles the 
+/// Handles the middle view when the table view isn't visible.
+/// This presenter class presents two cases:
+///  1. Querying status -> Loading indicator with text
+///  2. Nothing found -> text
 struct MiddleTextViewPresenter {
+    
+    var isHidden: Bool {
+        return middleTextView.isHidden
+    }
+    
+    /// Reference to the view where the tableView and middleTextView are subviews from.
     private unowned let view: UIView
     private unowned let middleTextView: MiddleTextView
     private unowned let tableView: UITableView
@@ -12,8 +21,13 @@ struct MiddleTextViewPresenter {
         self.view = view
         self.middleTextView = middleTextView
         self.tableView = tableView
+        
+        assert((tableView.superview! === middleTextView.superview!) && (tableView.superview! === view))
+        assert(view.subviews.count == 2)
     }
     
+    /// Gets called the very first time this view gets presented.
+    /// param: hasMinimalOneRow should be filled if the tableView contains at least one configurable cell.
     func setup(hasMinimalOneRow: Bool) {
         if hasMinimalOneRow {
             removeMiddleTextView()

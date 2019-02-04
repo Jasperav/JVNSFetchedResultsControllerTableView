@@ -20,11 +20,15 @@ struct ControllerRefresh {
     /// This value is used for auto scrolling.
     var didInsertRowAtBottom = true
     
-    func hasOnlyUpdated() -> Bool {
+    /// Returns only true if the result controller updated cells
+    var hasOnlyUpdated: Bool {
         return !didInsert && !didDelete && didUpdate && !didMove
     }
     
-    func didOnlyInsertRowsAtBottom() -> Bool {
+    /// Returns only true if the rsult controller inserted rows at the bottom.
+    /// At the bottom means below the current configurable cell if any.
+    /// Alien cells are therefore excluded.
+    var hasOnlyInsertedRowsAtBottom: Bool {
         return didInsertRowAtBottom && didInsert && !didDelete && !didUpdate && !didMove
     }
 }

@@ -64,13 +64,17 @@ open class NSFetchedResultsControllerViewControllerAutoScoll<T: ConfigurableTabl
     }
     
     public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard nsFetchedResultsControllerTableView.middleTextViewPresenter.isHidden else { return }
+        
+        print(scrollView.contentOffset.y)
+        
         switch nsFetchedResultsControllerTableView.mode {
         case .notQuerying:
-            nsFetchedResultsControllerTableView.loadPositionOffset?.didScroll()
-            
-            assert(nsFetchedResultsControllerTableView.loadPositionOffset == nil ? true : nsFetchedResultsControllerTableView.loadPositionOffset!.reached != nil)
+            break
         case .querying:
-            break // Don't do anything.
+            nsFetchedResultsControllerTableView.loadPositionOffset?.didScroll()
+
+            assert(nsFetchedResultsControllerTableView.loadPositionOffset == nil ? true : nsFetchedResultsControllerTableView.loadPositionOffset!.reached != nil)
         }
     }
 }

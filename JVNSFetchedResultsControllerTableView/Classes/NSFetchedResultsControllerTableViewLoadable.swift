@@ -5,8 +5,7 @@ import JVMiddleTextView
 open class NSFetchedResultsControllerTableViewLoadable<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult>: NSFetchedResultsControllerTableView<T, U> {
     
     var loadPositionOffset: NSFetchedResultsControllerTableViewLoadCellOffset?
-    internal (set) var mode: NSFetchedResultsControllerTableViewMode
-
+    var mode: NSFetchedResultsControllerTableViewMode
     
     public init(tableView: GenericTableView<T>, view: UIView, middleTextView: MiddleTextView, resultController: NSFetchedResultsController<U>, mode: NSFetchedResultsControllerTableViewMode, loadPositionOffset: LoadCellOffset? = nil, configure: ((_ cell: T, _ result: U) -> ())?) {
         self.mode = mode
@@ -15,6 +14,7 @@ open class NSFetchedResultsControllerTableViewLoadable<T: ConfigurableTableViewC
         }
         
         assert(mode == .querying ? loadPositionOffset != nil : true)
+        assert(mode == .querying ? middleTextView.startMode != nil : true)
 
         super.init(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController, configure: configure)
     }
@@ -24,17 +24,35 @@ open class NSFetchedResultsControllerTableViewLoadable<T: ConfigurableTableViewC
         loadPositionOffset!.reached = reached
     }
     
-    public func receivedData() {
+    /// Call this after the result controller updated the view
+    /// and data is downloaded.
+    /// param count: filled with the amount of newly inserted cells.
+    /// param hasMoreResults: explicitly tells if the server will send more results or not.
+    public func receivedInsertedData(count: Int, hasMoreResults: Bool) {
         loadPositionOffset!.receivedData()
+
+        assert(mode == .querying)
+        
+        if !hasMoreResults {
+            mode = .notQuerying
+            changedMode()
+        }
+        
+        let hasMinimalOneRow = resultController.fetchedObjects!.count > 0
+        
+        middleTextViewPresenter.updateMiddleTextView(hasMinimalOneRow: hasMinimalOneRow, mode: mode)
     }
     
-    public func change(mode: NSFetchedResultsControllerTableViewMode) {
-        guard self.mode != mode else { return }
-        
-        assert(mode == .querying ? loadPositionOffset != nil : true)
-        
-        self.mode = mode
+    func changedMode() {
         let indexPath = IndexPath(row: tableView.numberOfRows(inSection: 0), section: 0)
+        
+//        switch loadPositionOffset!.position {
+//            // Set correct position
+//        case .top:
+//            <#code#>
+//        case .bottom:
+//            <#code#>
+//        }
         
         switch mode {
         case .notQuerying:

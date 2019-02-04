@@ -69,7 +69,7 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
         controllerRefresh = ControllerRefresh()
         
         cellCountBeforeUpdate = determineAlienCellCount() - tableView.numberOfRows(inSection: 0)
-        
+
         tableView.beginUpdates()
     }
     
