@@ -15,7 +15,7 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableVie
         
         super.init(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController, mode: mode, loadPositionOffset: loadPositionOffset, configure: configure)
         
-        assert(mode == .notQuerying ? middleTextView.)
+       // assert(mode == .notQuerying ? middleTextView.)
     }
     
     public override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
