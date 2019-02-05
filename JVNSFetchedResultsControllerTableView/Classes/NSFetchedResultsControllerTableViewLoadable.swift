@@ -26,11 +26,12 @@ open class NSFetchedResultsControllerTableViewLoadable<T: ConfigurableTableViewC
     
     /// Call this after the result controller updated the view
     /// and data is downloaded.
-    /// param count: filled with the amount of newly inserted cells.
     /// param hasMoreResults: explicitly tells if the server will send more results or not.
-    public func receivedInsertedData(count: Int, hasMoreResults: Bool) {
+    public func receivedInsertedData(hasMoreResults: Bool) {
         loadPositionOffset!.receivedData()
 
+        // No such support from a non-quering table view to a queryable tableview
+        // Although this isn't reflected back in changedMode().
         assert(mode == .querying)
         
         if !hasMoreResults {
@@ -44,21 +45,20 @@ open class NSFetchedResultsControllerTableViewLoadable<T: ConfigurableTableViewC
     }
     
     func changedMode() {
-        let indexPath = IndexPath(row: tableView.numberOfRows(inSection: 0), section: 0)
-        
-//        switch loadPositionOffset!.position {
-//            // Set correct position
-//        case .top:
-//            <#code#>
-//        case .bottom:
-//            <#code#>
-//        }
+        let position = loadPositionOffset!.position
         
         switch mode {
         case .notQuerying:
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            switch position {
+            case .top:
+                tableView.deleteRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+            case .bottom:
+                tableView.deleteRows(at: [IndexPath(row: tableView.numberOfRows(inSection: 0) - 1, section: 0)], with: .automatic)
+            }
         case .querying:
-            tableView.insertRows(at: [indexPath], with: .automatic)
+            assert(false)
+            // Currently not supported...
+            break
         }
     }
     

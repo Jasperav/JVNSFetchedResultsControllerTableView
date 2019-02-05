@@ -22,13 +22,15 @@ struct MiddleTextViewPresenter {
         self.middleTextView = middleTextView
         self.tableView = tableView
         
-        assert((tableView.superview! === middleTextView.superview!) && (tableView.superview! === view))
-        assert(view.subviews.count == 2)
+        
     }
     
     /// Gets called the very first time this view gets presented.
     /// param: hasMinimalOneRow should be filled if the tableView contains at least one configurable cell.
     func setup(hasMinimalOneRow: Bool) {
+        assert((tableView.superview! === middleTextView.superview!) && (tableView.superview! === view))
+        assert(view.subviews.count == 2)
+        
         if hasMinimalOneRow {
             removeMiddleTextView()
         } else {

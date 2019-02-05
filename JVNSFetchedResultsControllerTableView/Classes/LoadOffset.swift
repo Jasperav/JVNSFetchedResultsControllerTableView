@@ -16,9 +16,9 @@ public struct LoadCellOffset {
     
     var reached: (() -> ())!
     let position: NSFetchedResultsControllerTableViewLoadCellPosition
+    let offset: CGFloat
     
     private var watch = true
-    private let offset: CGFloat
     
     /// I'd rather have this an unowned let than a force unwrapped
     /// weak var. Con: user needs to manually add twice the tableview

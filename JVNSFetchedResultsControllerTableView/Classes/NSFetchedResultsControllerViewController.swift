@@ -46,9 +46,7 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
     
     // This is needed else it won't be called on the subclasses.
     // This is a bug...
-    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-    }
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {}
 }
 
 
@@ -65,16 +63,17 @@ open class NSFetchedResultsControllerViewControllerAutoScoll<T: ConfigurableTabl
     
     public override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard nsFetchedResultsControllerTableView.middleTextViewPresenter.isHidden else { return }
-        
-        print(scrollView.contentOffset.y)
-        
+
         switch nsFetchedResultsControllerTableView.mode {
         case .notQuerying:
             break
         case .querying:
-            nsFetchedResultsControllerTableView.loadPositionOffset?.didScroll()
+            // If this assertion is triggered it means your loading cell is always visible.
+            // This should never happen.
+            assert((tableView.contentSize.height - nsFetchedResultsControllerTableView.loadPositionOffset!.offset) > 0)
+            nsFetchedResultsControllerTableView.loadPositionOffset!.didScroll()
 
-            assert(nsFetchedResultsControllerTableView.loadPositionOffset == nil ? true : nsFetchedResultsControllerTableView.loadPositionOffset!.reached != nil)
+            assert(nsFetchedResultsControllerTableView.loadPositionOffset!.reached != nil)
         }
     }
 }

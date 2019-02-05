@@ -16,7 +16,7 @@ open class NSFetchedResultsControllerTableViewAutoScroll<T: ConfigurableTableVie
         super.init(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController, mode: mode, loadPositionOffset: loadPositionOffset, configure: configure)
         
         assert(loadPositionOffset == nil ? true :
-            loadPositionOffset!.position == .bottom ? !autoScrollWhenRowsAtBottomAreInserted : true)
+            loadPositionOffset!.position == .bottom ? !autoScrollWhenRowsAtBottomAreInserted : true, "A loadable cell has been added to the bottom, but the auto scroll is also set to the bottom. This is illegal. Just think about it how stupid it will look.")
     }
     
     public override func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {

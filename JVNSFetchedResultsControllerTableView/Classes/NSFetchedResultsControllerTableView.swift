@@ -14,14 +14,13 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
     let resultController: NSFetchedResultsController<U>
     let middleTextViewPresenter: MiddleTextViewPresenter
     unowned let tableView: GenericTableView<T>
-
-    /// Viewcontrollers view property
-    private unowned let view: UIView
-    private unowned let middleTextView: MiddleTextView
     
     /// Describes the cells that aren't Configurable table view cells
     /// but are present in the table view datasource minus the cellcount before update.
     private var cellCountBeforeUpdate = 0
+    /// Viewcontrollers view property
+    private unowned let view: UIView
+    private unowned let middleTextView: MiddleTextView
     
     public init(tableView: GenericTableView<T>,
                 view: UIView,
