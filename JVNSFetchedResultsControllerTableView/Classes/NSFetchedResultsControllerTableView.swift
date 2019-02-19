@@ -11,14 +11,15 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
     
     /// Subclasses may use those values to determine the correct content offset y when the controller did refresh.
     var controllerRefresh = ControllerRefresh()
+    
     let resultController: NSFetchedResultsController<U>
     let middleTextViewPresenter: MiddleTextViewPresenter
+    
     unowned let tableView: GenericTableView<T>
     
     /// Describes the cells that aren't Configurable table view cells
     /// but are present in the table view datasource minus the cellcount before update.
     private var cellCountBeforeUpdate = 0
-    /// Viewcontrollers view property
     private unowned let view: UIView
     private unowned let middleTextView: MiddleTextView
     

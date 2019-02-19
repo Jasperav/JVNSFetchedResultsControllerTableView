@@ -1,18 +1,21 @@
 import UIKit
 
 public struct LoadCellOffset {
+    
+    public static var defaultOffset: CGFloat = -1
+    
     let reached: (() -> ())!
     let position: NSFetchedResultsControllerTableViewLoadCellPosition
     let offset: CGFloat
     
-    public init(position: NSFetchedResultsControllerTableViewLoadCellPosition, offset: CGFloat, reached: (() -> ())? = nil) {
+    public init(position: NSFetchedResultsControllerTableViewLoadCellPosition, offset: CGFloat = LoadCellOffset.defaultOffset, reached: (() -> ())? = nil) {
         self.position = position
         self.offset = offset
         self.reached = reached
     }
 }
 
- public struct NSFetchedResultsControllerTableViewLoadCellOffset {
+struct NSFetchedResultsControllerTableViewLoadCellOffset {
     
     var reached: (() -> ())!
     let position: NSFetchedResultsControllerTableViewLoadCellPosition
@@ -26,14 +29,14 @@ public struct LoadCellOffset {
     /// to make sure this scrollView always points to the tableView.
     unowned let scrollView: UIScrollView
     
-    public init(position: NSFetchedResultsControllerTableViewLoadCellPosition, offset: CGFloat, scrollView: UIScrollView, reached: (() -> ())? = nil) {
+    init(position: NSFetchedResultsControllerTableViewLoadCellPosition, offset: CGFloat, scrollView: UIScrollView, reached: (() -> ())? = nil) {
         self.position = position
         self.offset = offset
         self.reached = reached
         self.scrollView = scrollView
     }
     
-    public mutating func receivedData() {
+    mutating func receivedData() {
         watch = false
     }
     
@@ -47,7 +50,7 @@ public struct LoadCellOffset {
     
     private func offsetIsReached() -> Bool {
         let currentPosition = scrollView.contentOffset.y
-
+        
         switch position {
         case .top:
             return offsetTopIsReached(currentPosition: currentPosition)
