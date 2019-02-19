@@ -8,6 +8,14 @@ import CoreData
 /// This class is the only UITableViewCell that can be used by NSFetchedResultsControllerTableView.
 open class ConfigurableTableViewCell<T: NSFetchRequestResult>: UITableViewCell {
     
+    public class var rowHeight: CGFloat {
+        fatalError()
+    }
+    
+    public class var estimatedRowHeight: CGFloat {
+        fatalError()
+    }
+    
     /// Configure the cell based on fetchRequestResult.
     /// Crashes by default.
     open func configure(fetchRequestResult: T) {

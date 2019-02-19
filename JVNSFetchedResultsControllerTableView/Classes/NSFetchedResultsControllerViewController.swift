@@ -9,8 +9,8 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
     public let tableView: GenericTableView<T>
     public internal (set) var nsFetchedResultsControllerTableView: Q!
     
-    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableViewMode, configure: ((_ cell: T, _ result: U) -> ())?, tapped: ((U) -> ())? = nil) {
-        tableView = GenericTableView(cellType: T.self, style: .plain, rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight)
+    public init(middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableViewMode, configure: ((_ cell: T, _ result: U) -> ())?, tapped: ((U) -> ())? = nil) {
+        tableView = GenericTableView(cellType: T.self, style: .plain, rowHeight: T.rowHeight, estimatedRowHeight: T.estimatedRowHeight)
         self.tapped = tapped
         
         super.init(nibName: nil, bundle: nil)
@@ -51,8 +51,8 @@ open class NSFetchedResultsControllerViewController<T: UITableViewCell, U: NSFet
 
 
 open class NSFetchedResultsControllerViewControllerAutoScoll<T: ConfigurableTableViewCell<U>, U: NSFetchRequestResult>: NSFetchedResultsControllerViewController<T, U, NSFetchedResultsControllerTableViewAutoScroll<T, U>> {
-    public init(rowHeight: CGFloat, estimatedRowHeight: CGFloat, middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableViewMode, autoScrollWhenRowsAtBottomAreInserted: Bool, loadPositionOffset: LoadCellOffset? = nil, configure: ((_ cell: T, _ result: U) -> ())?, resultController: NSFetchedResultsController<U>? = nil, tapped: ((U) -> ())? = nil) {
-        super.init(rowHeight: rowHeight, estimatedRowHeight: estimatedRowHeight, middleTextView: middleTextView, tableViewMode: tableViewMode, configure: configure, tapped: tapped)
+    public init(middleTextView: MiddleTextView, tableViewMode: NSFetchedResultsControllerTableViewMode, autoScrollWhenRowsAtBottomAreInserted: Bool, loadPositionOffset: LoadCellOffset? = nil, configure: ((_ cell: T, _ result: U) -> ())?, resultController: NSFetchedResultsController<U>? = nil, tapped: ((U) -> ())? = nil) {
+        super.init(middleTextView: middleTextView, tableViewMode: tableViewMode, configure: configure, tapped: tapped)
         
         nsFetchedResultsControllerTableView = NSFetchedResultsControllerTableViewAutoScroll(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController ?? createResultControllerDynamic(), mode: tableViewMode, loadPositionOffset: loadPositionOffset, autoScrollWhenRowsAtBottomAreInserted: autoScrollWhenRowsAtBottomAreInserted, configure: configure)
     }
