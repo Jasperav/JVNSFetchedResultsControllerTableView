@@ -21,8 +21,6 @@ struct MiddleTextViewPresenter {
         self.view = view
         self.middleTextView = middleTextView
         self.tableView = tableView
-        
-        
     }
     
     /// Gets called the very first time this view gets presented.
@@ -34,8 +32,13 @@ struct MiddleTextViewPresenter {
         if hasMinimalOneRow {
             removeMiddleTextView()
         } else {
+            // This is kinda weird.
+            // If we set the alpha/isHidden property on the tableview,
+            // a glitch appears when NSFetchedResultsControllerTableView
+            // is appeared. This glitch isn't present when we
+            // use the bringSubviewToFront method.
+            view.bringSubviewToFront(middleTextView)
             middleTextView.isHidden = false
-            tableView.isHidden = true
         }
     }
     
@@ -63,6 +66,7 @@ struct MiddleTextViewPresenter {
     }
     
     private func removeMiddleTextView() {
+        view.bringSubviewToFront(tableView)
         middleTextView.isHidden = true
         tableView.isHidden = false
     }

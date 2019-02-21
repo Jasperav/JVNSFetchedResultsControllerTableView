@@ -51,12 +51,9 @@ open class NSFetchedResultsControllerTableView<T: ConfigurableTableViewCell<U>, 
         middleTextView.fill(toSuperview: view, toSafeMargins: true)
         tableView.fill(toSuperview: view, toSafeMargins: true)
         
-        // Setting the initial state to isHidden makes it easier for the middleTextViewPresenter
-        middleTextView.isHidden = true
-        
         resultController.delegate = self
         
-        try! resultController.performFetch() // Error handling.
+        try! resultController.performFetch()
         
         // The delegate of the tableview needs to be after the fetch have been performed.
         tableView.dataSource = self
