@@ -9,8 +9,12 @@ open class NSFetchedResultsControllerViewControllerAutoScoll<T: ConfigurableTabl
     }
     
     /// Use this when no query is needed to populate the screen
-    public convenience init(nothingSavedText: String, configure: ((_ cell: T, _ result: U) -> ())? = nil, resultController: NSFetchedResultsController<U>? = nil, tapped: ((U) -> ())? = nil) {
-        self.init(middleTextView: MiddleTextView(notQueryingText: nothingSavedText), tableViewMode: .notQuerying, autoScrollWhenRowsAtBottomAreInserted: false, configure: configure, tapped: tapped)
+    public init(nothingSavedText: String, configure: ((_ cell: T, _ result: U) -> ())? = nil, resultController: NSFetchedResultsController<U>? = nil, tapped: ((U) -> ())? = nil) {
+        let middleTextView = MiddleTextView(notQueryingText: nothingSavedText)
+        
+        super.init(middleTextView: middleTextView, configure: configure, tapped: tapped)
+        
+        nsFetchedResultsControllerTableView = NSFetchedResultsControllerTableViewAutoScroll(tableView: tableView, view: view, middleTextView: middleTextView, resultController: resultController ?? createResultControllerDynamic(), mode: .notQuerying, loadPositionOffset: nil, autoScrollWhenRowsAtBottomAreInserted: false, configure: configure)
     }
     
     public required init?(coder aDecoder: NSCoder) {
