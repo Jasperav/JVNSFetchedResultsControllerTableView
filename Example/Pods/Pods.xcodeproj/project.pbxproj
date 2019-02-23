@@ -63,6 +63,7 @@
 		648671D01B3C3C04DCEDBF6173C8323F /* JVFontUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A97E879F3FFCAB9BCDBAF4A85229288 /* JVFontUtils.swift */; };
 		6602D62AEB386E58D9C8D363B776EEDA /* JVContentType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46F311BF032B59AE2DC92B833B570E /* JVContentType.framework */; };
 		682005892C4DEF6D6E82914C31EF5D37 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
+		69111BE22221C7C6005F3122 /* NSFetchedResultsControllerViewControllerAutoScoll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69111BE12221C7C6005F3122 /* NSFetchedResultsControllerViewControllerAutoScoll.swift */; };
 		6A1D25432F6F08F9FFB5B735E959F394 /* JVContentType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46F311BF032B59AE2DC92B833B570E /* JVContentType.framework */; };
 		6AE9A4A0321CF2ED9A595E911CF9EF34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */; };
 		6C63B02804E85BA533CC0CA5114387F8 /* ControllerRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285436E80FCAC891D62187F80749D22 /* ControllerRefresh.swift */; };
@@ -414,7 +415,7 @@
 		1CEA10A01A3E9FC5A7FC7E874D2B577C /* JVNSFetchedResultsControllerTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVNSFetchedResultsControllerTableView-dummy.m"; sourceTree = "<group>"; };
 		1DD2BB4034F68DCF7D67C9637BF8C33E /* ContentTypeTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeTextView.swift; path = JVView/Classes/ContentTypeTextView.swift; sourceTree = "<group>"; };
 		1DE957E86337214936C9BD116754353C /* JVMiddleTextView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVMiddleTextView.xcconfig; sourceTree = "<group>"; };
-		1E0B49161B0BE6C1DCA6A6E6F893E0D0 /* JVRestartable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVRestartable.framework; path = JVRestartable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E0B49161B0BE6C1DCA6A6E6F893E0D0 /* JVRestartable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVRestartable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E931A8765CCE5EA62DE54D016EBE68B /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = JVConstraintEdges/Classes/CGFloatExtensions.swift; sourceTree = "<group>"; };
 		1F01C26AF0D6C297A52E8E06CB4D44BB /* CollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = JVRestartable/Classes/CollectionExtensions.swift; sourceTree = "<group>"; };
 		1FD25DAF3E7553C7BC81DC32279D90B2 /* NSFetchedResultsControllerTableViewLoadable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerTableViewLoadable.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerTableViewLoadable.swift; sourceTree = "<group>"; };
@@ -422,15 +423,15 @@
 		2105FB59052BAD25F2CFB4578A2F0A03 /* JVGenericTableView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVGenericTableView-Info.plist"; sourceTree = "<group>"; };
 		226A8A569D17EE9BADABA3F531E32BCB /* Mode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mode.swift; path = JVMiddleTextView/Classes/Mode.swift; sourceTree = "<group>"; };
 		22DEBDE0349E907713D0BF1D6D947E4F /* JVContentType-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVContentType-dummy.m"; sourceTree = "<group>"; };
-		22E19C864746C0B08B3C13D379F40FBC /* JVCAShapeLayerExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVCAShapeLayerExtensions.framework; path = JVCAShapeLayerExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22E19C864746C0B08B3C13D379F40FBC /* JVCAShapeLayerExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVCAShapeLayerExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23E2F46E8E5A766CADC396AF214C98A0 /* Pods-JVNSFetchedResultsControllerTableView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JVNSFetchedResultsControllerTableView_Tests-umbrella.h"; sourceTree = "<group>"; };
-		242ACC63E1787C2490B01DC459B0D577 /* Pods_JVNSFetchedResultsControllerTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JVNSFetchedResultsControllerTableView_Tests.framework; path = "Pods-JVNSFetchedResultsControllerTableView_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		242ACC63E1787C2490B01DC459B0D577 /* Pods_JVNSFetchedResultsControllerTableView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JVNSFetchedResultsControllerTableView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		257086054679284FE9ED0B155E6AD57C /* JVCAShapeLayerExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVCAShapeLayerExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2579336753202F54D912847A2D3A11A7 /* JVView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVView.modulemap; sourceTree = "<group>"; };
 		25C5FFEB71D25C2AB9E57917A43D0620 /* ContentTypeGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeGroup.swift; path = JVContentType/Classes/ContentTypeGroup.swift; sourceTree = "<group>"; };
 		2614C072FF8A4DA21A98A68DE99A27F3 /* JVContentType.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVContentType.modulemap; sourceTree = "<group>"; };
 		2662206C0AEBCEED380F0FA86D1563A3 /* ContentTypeStarLabelText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabelText.swift; path = JVView/Classes/ContentTypeStarLabelText.swift; sourceTree = "<group>"; };
-		271CB15E920910B11D907B011903EE77 /* JVFontUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVFontUtils.framework; path = JVFontUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		271CB15E920910B11D907B011903EE77 /* JVFontUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVFontUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B916047DD450CCE9C6D5867B74FBE0 /* JVConstraintEdges.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVConstraintEdges.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A5389A93AE4EB1BE0D3E52DC009D238 /* JVNSFetchedResultsControllerTableView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVNSFetchedResultsControllerTableView-Info.plist"; sourceTree = "<group>"; };
 		2A65C3F8E8D4E3A0EC5152B3456EC17C /* JVCAShapeLayerExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVCAShapeLayerExtensions.modulemap; sourceTree = "<group>"; };
@@ -456,20 +457,20 @@
 		46C962A2EACFA6C1D9037A6EEC48CA09 /* JVShapeHalfMoon.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVShapeHalfMoon.modulemap; sourceTree = "<group>"; };
 		47A40BCFD63AB1AE33DA70D99F28FF66 /* RestartableState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestartableState.swift; path = JVRestartable/Classes/RestartableState.swift; sourceTree = "<group>"; };
 		48228E38F1D917290294DA7DE6019239 /* Pods-JVNSFetchedResultsControllerTableView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JVNSFetchedResultsControllerTableView_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		4A2E3C20E1F294F45ADDD025D253A3E8 /* DeviceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DeviceKit.framework; path = DeviceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2E3C20E1F294F45ADDD025D253A3E8 /* DeviceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C990FB76EB34A80A63BF1169E8CEB2F /* JVGenericTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVGenericTableView-prefix.pch"; sourceTree = "<group>"; };
 		4D17BA647FCD583E9A1322C4D5D06632 /* ContentTypeStarLabelAttributedTextCountingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabelAttributedTextCountingLabel.swift; path = JVView/Classes/ContentTypeStarLabelAttributedTextCountingLabel.swift; sourceTree = "<group>"; };
 		4DE9F1558166FC3B2EEA345B23E595D8 /* ModelCreator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ModelCreator.swift; path = JVConstraintEdges/Classes/ModelCreator.swift; sourceTree = "<group>"; };
 		505B2B4E52EADB667F3CC3909E751218 /* JVMiddleTextView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVMiddleTextView-prefix.pch"; sourceTree = "<group>"; };
-		511D5FD82DB25A02625C97631E467041 /* JVGradientLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVGradientLayer.framework; path = JVGradientLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		511D5FD82DB25A02625C97631E467041 /* JVGradientLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVGradientLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51F5B5311CB6C63E86E638011C8322B9 /* JVNSFetchedResultsControllerTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVNSFetchedResultsControllerTableView.modulemap; sourceTree = "<group>"; };
 		528AAAD346F93124021B366A493915BA /* JVGradientLayer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVGradientLayer-prefix.pch"; sourceTree = "<group>"; };
 		532F87FE0CAD2648B890E5C4812DEABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		53A28EFBCA0A950CB8B3319FAF00714A /* JVRestartable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVRestartable-Info.plist"; sourceTree = "<group>"; };
-		54836C38D3E170EF87F78E8AE61876EB /* JVGenericTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVGenericTableView.framework; path = JVGenericTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		54836C38D3E170EF87F78E8AE61876EB /* JVGenericTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVGenericTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54A4768852720008FECEA5EB6C6512A3 /* JVRestartable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVRestartable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54C144351F66849654389182DEA80C66 /* JVFontUtils-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFontUtils-umbrella.h"; sourceTree = "<group>"; };
-		555E78D05C2C0B1534A374F14C395073 /* JVConstraintEdges.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVConstraintEdges.framework; path = JVConstraintEdges.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		555E78D05C2C0B1534A374F14C395073 /* JVConstraintEdges.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVConstraintEdges.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5701E3A38D4BC47ACA3FA50EA9F99881 /* CurrentDevice.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrentDevice.swift; path = JVCurrentDevice/Classes/CurrentDevice.swift; sourceTree = "<group>"; };
 		581644999996A45FDA3403806040CBDE /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = JVConstraintEdges/Classes/StringExtensions.swift; sourceTree = "<group>"; };
 		5B5492E06F8B8190C2823B3CB78AFED8 /* MirrorAligment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MirrorAligment.swift; path = JVView/Classes/MirrorAligment.swift; sourceTree = "<group>"; };
@@ -482,6 +483,7 @@
 		64F0A7FE0AE4CC3E9FC864169C3C5BDA /* JVFontUtils-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVFontUtils-dummy.m"; sourceTree = "<group>"; };
 		657E18CCC1F68183EE2B0427D0673E74 /* JVMiddleTextView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVMiddleTextView.modulemap; sourceTree = "<group>"; };
 		65E8D7480CD893109777781FC9B9DCD8 /* JVView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVView-dummy.m"; sourceTree = "<group>"; };
+		69111BE12221C7C6005F3122 /* NSFetchedResultsControllerViewControllerAutoScoll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NSFetchedResultsControllerViewControllerAutoScoll.swift; path = JVNSFetchedResultsControllerTableView/Classes/NSFetchedResultsControllerViewControllerAutoScoll.swift; sourceTree = "<group>"; };
 		69AD111CA59050D24D4785C77DF72CA5 /* JVNSFetchedResultsControllerTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVNSFetchedResultsControllerTableView-umbrella.h"; sourceTree = "<group>"; };
 		6C3B25F48D287CE6D4F640125452C2CD /* ContentTypeInitializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeInitializable.swift; path = JVContentType/Classes/ContentTypeInitializable.swift; sourceTree = "<group>"; };
 		6D48373AC1FDE538DC0D2CAC8B7A9256 /* ConstraintEdges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintEdges.swift; path = JVConstraintEdges/Classes/ConstraintEdges.swift; sourceTree = "<group>"; };
@@ -491,7 +493,7 @@
 		7AA0DB714789418D8CC106D6B0BF83B7 /* JVRestartable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVRestartable.xcconfig; sourceTree = "<group>"; };
 		7AA39B6EB2D1231107767A47B314F304 /* JVTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVTextView.swift; path = JVView/Classes/JVTextView.swift; sourceTree = "<group>"; };
 		7AEEC31C47A97C0E7DAFFDC95262A3B9 /* ContentTypeTextFontEdges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeTextFontEdges.swift; path = JVView/Classes/ContentTypeTextFontEdges.swift; sourceTree = "<group>"; };
-		7BCCB4E87008DDE1C60072140137B5A6 /* JVContentType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVContentType.framework; path = JVContentType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BCCB4E87008DDE1C60072140137B5A6 /* JVContentType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVContentType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BFD75F316CD74BB3CB181FCC27EE384 /* JVSizeable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVSizeable-prefix.pch"; sourceTree = "<group>"; };
 		7E14483AF87ACBB518A9C25594B7E892 /* JVSizeable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVSizeable-umbrella.h"; sourceTree = "<group>"; };
 		7E4A7C8B2624B86E009F49032682BAA2 /* JVCAShapeLayerExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVCAShapeLayerExtensions-umbrella.h"; sourceTree = "<group>"; };
@@ -507,11 +509,11 @@
 		863B7CFBA21436DDCDA69E6C422ADACA /* JVMiddleTextView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVMiddleTextView-umbrella.h"; sourceTree = "<group>"; };
 		88C90A832900A6AA926E146F01634D1F /* JVSizeable-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVSizeable-Info.plist"; sourceTree = "<group>"; };
 		8E0FF09E04807AB2A4CAA8B01234C22B /* LoadOffset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LoadOffset.swift; path = JVNSFetchedResultsControllerTableView/Classes/LoadOffset.swift; sourceTree = "<group>"; };
-		8E2899BCEBCC46C3185BB912E0CA9BD1 /* JVNSFetchedResultsControllerTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVNSFetchedResultsControllerTableView.framework; path = JVNSFetchedResultsControllerTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E2899BCEBCC46C3185BB912E0CA9BD1 /* JVNSFetchedResultsControllerTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVNSFetchedResultsControllerTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E41B261977D6032B3BB4C6CE4C2D938 /* JVCAGradientLayerExtensions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVCAGradientLayerExtensions-Info.plist"; sourceTree = "<group>"; };
 		90A1443D5C0BED271D488275BCF6619E /* RestartableStateable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RestartableStateable.swift; path = JVRestartable/Classes/RestartableStateable.swift; sourceTree = "<group>"; };
 		926CC55101D47CC6E98BA52F34994197 /* JVView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVView-prefix.pch"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95F22E1E1B8A8B3D96F38C6EBF5D42A4 /* JVShapeHalfMoon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVShapeHalfMoon-dummy.m"; sourceTree = "<group>"; };
 		98E88420BB3F1D4A51FB92BE98F8379C /* ContentTypeStarLabelAttributedText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabelAttributedText.swift; path = JVView/Classes/ContentTypeStarLabelAttributedText.swift; sourceTree = "<group>"; };
 		9930A680C3943E166C042A4C1C2FC2AE /* CollectionExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CollectionExtensions.swift; path = JVContentType/Classes/CollectionExtensions.swift; sourceTree = "<group>"; };
@@ -519,7 +521,7 @@
 		9C4A4B339638C6CD13A47FE2EA6BF8B7 /* JVLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVLabel.swift; path = JVView/Classes/JVLabel.swift; sourceTree = "<group>"; };
 		9C59C9E198E17ABE5685C16458FC0E09 /* JVCurrentDevice.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVCurrentDevice.xcconfig; sourceTree = "<group>"; };
 		9DBCC1B02341CEF01B521513487181FA /* JVSizeable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVSizeable.xcconfig; sourceTree = "<group>"; };
-		9FF5D514A2543FDBC3829AAB4AE43B94 /* JVMiddleTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVMiddleTextView.framework; path = JVMiddleTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FF5D514A2543FDBC3829AAB4AE43B94 /* JVMiddleTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVMiddleTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A132A45E09735BA13877277F39AFAC16 /* MiddleTextViewPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MiddleTextViewPresenter.swift; path = JVNSFetchedResultsControllerTableView/Classes/MiddleTextViewPresenter.swift; sourceTree = "<group>"; };
 		A32E9AB787FA355CF23C7361BCB59733 /* ContentTypeStarLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarLabel.swift; path = JVView/Classes/ContentTypeStarLabel.swift; sourceTree = "<group>"; };
 		A4E628D5A8AA798A00D8299C9CDAD5AB /* JVLabelCounterAnimations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVLabelCounterAnimations.swift; path = JVView/Classes/JVLabelCounterAnimations.swift; sourceTree = "<group>"; };
@@ -552,14 +554,14 @@
 		C73CBBEC7E3CD631E12947D0C6499111 /* MiddleTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MiddleTextView.swift; path = JVMiddleTextView/Classes/MiddleTextView.swift; sourceTree = "<group>"; };
 		C7FB5E9050B9BB5EA4156970E6C5B5BF /* JVFontUtils.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVFontUtils.xcconfig; sourceTree = "<group>"; };
 		C8A5157BEDB624130BC5B724A7748E0D /* GenericTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericTableView.swift; path = JVGenericTableView/Classes/GenericTableView.swift; sourceTree = "<group>"; };
-		CAA614FC55B450040553A6DD673FE34E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		CAA614FC55B450040553A6DD673FE34E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CB46F311BF032B59AE2DC92B833B570E /* JVContentType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVContentType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB98D40B899468FC4DE6E333A00A2081 /* DeviceType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DeviceType.swift; path = JVCurrentDevice/Classes/DeviceType.swift; sourceTree = "<group>"; };
 		CC0E13810D844B9F52532134691761E3 /* DeviceKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeviceKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC8492D0B4D92E01B39C8B5AFA6A8006 /* DeviceKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-prefix.pch"; sourceTree = "<group>"; };
 		CF2B6EB2FF6A3588A4536A62655A298D /* Mode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mode.swift; path = JVNSFetchedResultsControllerTableView/Classes/Mode.swift; sourceTree = "<group>"; };
 		D08D0F60D90CB0A9F974F97AD9643562 /* JVCurrentDevice-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVCurrentDevice-dummy.m"; sourceTree = "<group>"; };
-		D16DE45F816875266BB838B84B9C834A /* JVView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVView.framework; path = JVView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D16DE45F816875266BB838B84B9C834A /* JVView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D334F534141DB75119CBED5885E44ABD /* JVLabelUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVLabelUtils.swift; path = JVView/Classes/JVLabelUtils.swift; sourceTree = "<group>"; };
 		D3E7B3FC605B13C7B55B28C11DC0F3AD /* JVMiddleTextView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVMiddleTextView-dummy.m"; sourceTree = "<group>"; };
 		D4352706CDB78A60E031582953A502F2 /* JVGenericTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVGenericTableView-umbrella.h"; sourceTree = "<group>"; };
@@ -571,7 +573,7 @@
 		DA109FFF058A3FC1E43D19D1AFD9D7B4 /* ContentTypeJVGradientLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeJVGradientLayer.swift; path = JVGradientLayer/Classes/ContentTypeJVGradientLayer.swift; sourceTree = "<group>"; };
 		DA3588126117D78872D4EB0F337048D3 /* DeviceKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeviceKit-umbrella.h"; sourceTree = "<group>"; };
 		DB164A9264F6B913976E57FD0F8F0E64 /* ContentTypeStarButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentTypeStarButton.swift; path = JVView/Classes/ContentTypeStarButton.swift; sourceTree = "<group>"; };
-		DCAE6E417D55839DC0159B3A588FD746 /* JVSizeable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVSizeable.framework; path = JVSizeable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCAE6E417D55839DC0159B3A588FD746 /* JVSizeable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVSizeable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE110770D8A468398199F3ADAA9F8A73 /* JVCAGradientLayerExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVCAGradientLayerExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF36D2072DD20941967B61F6AD0FA141 /* Pods-JVNSFetchedResultsControllerTableView_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JVNSFetchedResultsControllerTableView_Tests-Info.plist"; sourceTree = "<group>"; };
 		DF43BC6FDD3CF858323FF2012B912A35 /* JVConstraintEdges-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVConstraintEdges-umbrella.h"; sourceTree = "<group>"; };
@@ -580,22 +582,22 @@
 		E2BEEFC87DEC84F3F3C7B6BAB98C007F /* JVGenericTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVGenericTableView.modulemap; sourceTree = "<group>"; };
 		E394ADF80B16C3B134E6222A5C2396BF /* JVRestartable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVRestartable-dummy.m"; sourceTree = "<group>"; };
 		E47B8C91CEB3D96DE8D340785AA660FF /* Sizeable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Sizeable.swift; path = JVSizeable/Classes/Sizeable.swift; sourceTree = "<group>"; };
-		E4F52209568C525C20594940EBF13D64 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E4F52209568C525C20594940EBF13D64 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		EA0706A7AE5866503292F1A5B77A7724 /* Pods-JVNSFetchedResultsControllerTableView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JVNSFetchedResultsControllerTableView_Tests-dummy.m"; sourceTree = "<group>"; };
 		EB5705C912E2DE963730B0F1808BFBA3 /* JVCAShapeLayerExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVCAShapeLayerExtensions-prefix.pch"; sourceTree = "<group>"; };
 		ECCEAD3EC39FCF7943B0CF7E93D452B5 /* JVConstraintEdges-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVConstraintEdges-dummy.m"; sourceTree = "<group>"; };
 		ECF34F53667133F5DEF58137532A10C7 /* JVFontUtils-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JVFontUtils-Info.plist"; sourceTree = "<group>"; };
 		ED7A2BD29E6011779DC25933119AADC2 /* JVMiddleTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVMiddleTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFCE9C114A0AFAEF76FABB3EE6AC5EDF /* JVCurrentDevice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVCurrentDevice.framework; path = JVCurrentDevice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCE9C114A0AFAEF76FABB3EE6AC5EDF /* JVCurrentDevice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVCurrentDevice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20B301054E8206E088FDC2D2282E51F /* JVView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVView-umbrella.h"; sourceTree = "<group>"; };
 		F48AE2A77044ABD9E8E0A5C1E8C4A6F4 /* JVGradientLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVGradientLayer.swift; path = JVGradientLayer/Classes/JVGradientLayer.swift; sourceTree = "<group>"; };
-		F6CCAB9D1EA91CE052C9BE5DABC5A0DB /* JVShapeHalfMoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVShapeHalfMoon.framework; path = JVShapeHalfMoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6FDFD8424E167AF30BB6EB772F93A6A /* JVNSFetchedResultsControllerTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = JVNSFetchedResultsControllerTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		F6CCAB9D1EA91CE052C9BE5DABC5A0DB /* JVShapeHalfMoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVShapeHalfMoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6FDFD8424E167AF30BB6EB772F93A6A /* JVNSFetchedResultsControllerTableView.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = JVNSFetchedResultsControllerTableView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		F84D33DEDBDE2B6EEAC3685EBA80E1F8 /* JVButtonText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JVButtonText.swift; path = JVView/Classes/JVButtonText.swift; sourceTree = "<group>"; };
 		F914BB55F276645D0969A7DA26BD649C /* JVConstraintEdges.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JVConstraintEdges.modulemap; sourceTree = "<group>"; };
 		FB9A15BCD3F1FE01AA30F317EA3BDB12 /* Pods-JVNSFetchedResultsControllerTableView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JVNSFetchedResultsControllerTableView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC8CD59B6C2FB7310263FC68B1BCDE0D /* JVNSFetchedResultsControllerTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVNSFetchedResultsControllerTableView.xcconfig; sourceTree = "<group>"; };
-		FE4FEF946159BC7E31D5038723BEA3BD /* JVCAGradientLayerExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JVCAGradientLayerExtensions.framework; path = JVCAGradientLayerExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE4FEF946159BC7E31D5038723BEA3BD /* JVCAGradientLayerExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JVCAGradientLayerExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF10D1B4067927506A6B383BF38E3C0 /* JVConstraintEdges-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVConstraintEdges-prefix.pch"; sourceTree = "<group>"; };
 		FFD9D13E5A7AD9DB01BD225A98B558FC /* Pods-JVNSFetchedResultsControllerTableView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JVNSFetchedResultsControllerTableView_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -802,6 +804,7 @@
 				C565F299FDDA75539C28773C064D8EC7 /* TableViewExtensions.swift */,
 				FD9A8C4864E56544B2BB9EEB97046341 /* Pod */,
 				E674C67DD4552D18E35764B718D4C4D2 /* Support Files */,
+				69111BE12221C7C6005F3122 /* NSFetchedResultsControllerViewControllerAutoScoll.swift */,
 			);
 			name = JVNSFetchedResultsControllerTableView;
 			path = ../..;
@@ -813,7 +816,6 @@
 				B8E3C02A540CED467DAD5C910D2DE8ED /* CAShapeLayerExtensions.swift */,
 				23BB07166E5901173305D86BAB1AD4B7 /* Support Files */,
 			);
-			name = JVCAShapeLayerExtensions;
 			path = JVCAShapeLayerExtensions;
 			sourceTree = "<group>";
 		};
@@ -859,7 +861,6 @@
 				9A97E879F3FFCAB9BCDBAF4A85229288 /* JVFontUtils.swift */,
 				0369BC2EFCE1E3BF07569561FB736C92 /* Support Files */,
 			);
-			name = JVFontUtils;
 			path = JVFontUtils;
 			sourceTree = "<group>";
 		};
@@ -891,7 +892,6 @@
 				D4A41EA08668F452AEF93CD59CBC0EF7 /* Device.generated.swift */,
 				DFD80B4BF862C6E3E27AD20ACE384699 /* Support Files */,
 			);
-			name = DeviceKit;
 			path = DeviceKit;
 			sourceTree = "<group>";
 		};
@@ -924,7 +924,6 @@
 				6448E8DC9E662CC4369D80C5D099EE8A /* StringExtensions.swift */,
 				D4A56435616CCDA8F04661CD4AE87ECC /* Support Files */,
 			);
-			name = JVView;
 			path = JVView;
 			sourceTree = "<group>";
 		};
@@ -949,7 +948,6 @@
 				61360EA730DB723EFD73B30842656895 /* ShapeHalfMoon.swift */,
 				CA7E0893E97D6F31ED4C3A47B7A4500F /* Support Files */,
 			);
-			name = JVShapeHalfMoon;
 			path = JVShapeHalfMoon;
 			sourceTree = "<group>";
 		};
@@ -973,7 +971,6 @@
 				E47B8C91CEB3D96DE8D340785AA660FF /* Sizeable.swift */,
 				322EE547C1A3610FEED89E40555E5257 /* Support Files */,
 			);
-			name = JVSizeable;
 			path = JVSizeable;
 			sourceTree = "<group>";
 		};
@@ -983,7 +980,6 @@
 				080C5D50D745165050B41422D4C84AFC /* JVCAGradientLayerExtensions.swift */,
 				9AE9DCDF03B68AFD6C2363992F1FE822 /* Support Files */,
 			);
-			name = JVCAGradientLayerExtensions;
 			path = JVCAGradientLayerExtensions;
 			sourceTree = "<group>";
 		};
@@ -1008,7 +1004,6 @@
 				CB98D40B899468FC4DE6E333A00A2081 /* DeviceType.swift */,
 				C38976C2B3C7AF4F3220BC123CF21A5C /* Support Files */,
 			);
-			name = JVCurrentDevice;
 			path = JVCurrentDevice;
 			sourceTree = "<group>";
 		};
@@ -1021,7 +1016,6 @@
 				A6D07081A99360566FF73D275A93FBBA /* StringExtensions.swift */,
 				2AB06B1E2BC4BA953384B4FF6EDF87B1 /* Support Files */,
 			);
-			name = JVGradientLayer;
 			path = JVGradientLayer;
 			sourceTree = "<group>";
 		};
@@ -1032,7 +1026,6 @@
 				397E53EE2C1AFD9A0980FF1EAC305B39 /* LoadCell.swift */,
 				AEFBE86EEA1E488E827AA0ED664C18CA /* Support Files */,
 			);
-			name = JVGenericTableView;
 			path = JVGenericTableView;
 			sourceTree = "<group>";
 		};
@@ -1043,7 +1036,6 @@
 				226A8A569D17EE9BADABA3F531E32BCB /* Mode.swift */,
 				1492DE28AF3B1E26500F328D83A614FB /* Support Files */,
 			);
-			name = JVMiddleTextView;
 			path = JVMiddleTextView;
 			sourceTree = "<group>";
 		};
@@ -1128,7 +1120,6 @@
 				90A1443D5C0BED271D488275BCF6619E /* RestartableStateable.swift */,
 				8BAE13307B7834463A0F777B3D7437E1 /* Support Files */,
 			);
-			name = JVRestartable;
 			path = JVRestartable;
 			sourceTree = "<group>";
 		};
@@ -1202,7 +1193,6 @@
 				80575B98171F8286359E2824D1E952C0 /* Copyable.swift */,
 				4E920AC7A2DAF50CFB5736C0E249170C /* Support Files */,
 			);
-			name = JVContentType;
 			path = JVContentType;
 			sourceTree = "<group>";
 		};
@@ -1268,7 +1258,6 @@
 				16B2BDE8204009514CED21CF1E06F47E /* UIViewFillExtension.swift */,
 				AD238A879020B3E2756F2D713E717899 /* Support Files */,
 			);
-			name = JVConstraintEdges;
 			path = JVConstraintEdges;
 			sourceTree = "<group>";
 		};
@@ -2008,6 +1997,7 @@
 				DCA672AECEC2B61B856CF316DF564D14 /* NSFetchedResultsControllerTableViewLoadable.swift in Sources */,
 				7DBAF4539BFE383DE1D94D6DCE5010DC /* NSFetchedResultsControllerViewController.swift in Sources */,
 				BD6E7AD6F6D46EDC1692EB169F456A19 /* TableViewExtensions.swift in Sources */,
+				69111BE22221C7C6005F3122 /* NSFetchedResultsControllerViewControllerAutoScoll.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2383,8 +2373,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2487,8 +2476,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2557,8 +2545,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2728,8 +2715,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2764,8 +2750,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2834,8 +2819,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2870,8 +2854,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2905,8 +2888,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2941,8 +2923,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3146,8 +3127,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3182,8 +3162,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3277,8 +3256,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3313,8 +3291,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3352,8 +3329,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -3421,8 +3397,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3525,8 +3500,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
